@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% block title %}All Students{% endblock %}
+{% block page_title %}<i class="bi bi-people-fill me-2 text-primary"></i>All Students{% endblock %}
+
+{% block content %}
+<!-- Filters -->
+<div class="card mb-4">
+  <div class="card-body py-3">
+    <form method="GET" action="{{ url_for('students.list_students') }}" class="row g-2 align-items-end">
+      <div class="col-md-5">
+        <label class="form-label mb-1">Search</label>
+        <input type="text" name="search" class="form-control" placeholder="Name, ID, or email…" value="{{ search }}"/>
+      </div>
+      <div class="col-md-3">
+        <label class="form-label mb-1">Department</label>
+        <select name="department" class="form-select">
+          <option value="">All Departments</option>
+          {% for d in departments %}
+          <option value="{{ d }}" {% if selected_dept==d %}selected{% endif %}>{{ d }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary"><i class="bi bi-search me-1"></i>Filter</button>
+        <a href="{{ url_for('students.list_students') }}" class="btn btn-outline-secondary ms-1">Reset</a>
+      </div>
+      <div class="col-auto ms-auto">
+        <a href="{{ url_for('students.add_student') }}" class="btn btn-success">
+          <i class="bi bi-person-plus-fill me-1"></i>Add Student
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Table -->
+<div class="card">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <span>{{ pagination.total }} student(s) found</span>
+  </div>
+  <div class="table-responsive">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th class="px-3">#</th>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Avg Marks</th>
+          <th>Attendance</th>
+          <th>Latest Prediction</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+        {% set pred = student.latest_prediction %}
+        <tr>
+          <td class="px-3 text-muted">{{ loop.index + (pagination.page-1)*15 }}</td>
+          <td><code style="font-size:.8rem">{{ student.student_id }}</code></td>
+          <td>
+            <a href="{{ url_for('students.view_student', student_id=student.id) }}" class="text-decoration-none fw-500">
+              {{ student.name }}
+            </a>
+            <div style="font-size:.75rem;color:#94a3b8">{{ student.email }}</div>
+          </td>
+          <td><span class="badge bg-light text-secondary">{{ student.department }}</span></td>
+          <td>
+            <span class="fw-600 {% if student.average_marks >= 60 %}text-success{% elif student.average_marks >= 40 %}text-warning{% else %}text-danger{% endif %}">
+              {{ student.average_marks }}
+            </span>
+          </td>
+          <td>
+            <div class="d-flex align-items-center gap-2">
+              <div class="prob-bar" style="width:60px">
+                <div class="prob-bar-fill {% if student.attendance_pct >= 75 %}bg-success{% elif student.attendance_pct >= 60 %}bg-warning{% else %}bg-danger{% endif %}"
+                     style="width:{{ student.attendance_pct }}%"></div>
+              </div>
+              <small>{{ student.attendance_pct }}%</small>
+            </div>
+          </td>
+          <td>
+            {% if pred %}
+              <span class="badge-{{ pred.result.lower() }}">{{ pred.result }}</span>
+              <div style="font-size:.72rem;color:#94a3b8">{{ "%.1f"|format(pred.pass_probability*100) }}% pass</div>
+            {% else %}
+              <span class="text-muted" style="font-size:.8rem">—</span>
+            {% endif %}
+          </td>
+          <td>
+            <div class="d-flex gap-1">
+              <a href="{{ url_for('students.view_student', student_id=student.id) }}"
+                 class="btn btn-sm btn-outline-primary" title="View"><i class="bi bi-eye-fill"></i></a>
+              <a href="{{ url_for('students.edit_student', student_id=student.id) }}"
+                 class="btn btn-sm btn-outline-secondary" title="Edit"><i class="bi bi-pencil-fill"></i></a>
+              <form method="POST" action="{{ url_for('students.delete_student', student_id=student.id) }}"
+                    style="display:inline" onsubmit="return confirm('Delete {{ student.name }}?')">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </form>
+            </div>
+          </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="8" class="text-center text-muted py-5">
+            <i class="bi bi-people fs-2 d-block mb-2"></i>
+            No students found. <a href="{{ url_for('students.add_student') }}">Add the first student →</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  {% if pagination.pages > 1 %}
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small class="text-muted">Page {{ pagination.page }} of {{ pagination.pages }}</small>
+    <nav>
+      <ul class="pagination pagination-sm mb-0">
+        <li class="page-item {% if not pagination.has_prev %}disabled{% endif %}">
+          <a class="page-link" href="?page={{ pagination.prev_num }}&search={{ search }}&department={{ selected_dept }}">‹</a>
+        </li>
+        {% for p in pagination.iter_pages() %}
+          {% if p %}
+          <li class="page-item {% if p==pagination.page %}active{% endif %}">
+            <a class="page-link" href="?page={{ p }}&search={{ search }}&department={{ selected_dept }}">{{ p }}</a>
+          </li>
+          {% else %}
+          <li class="page-item disabled"><span class="page-link">…</span></li>
+          {% endif %}
+        {% endfor %}
+        <li class="page-item {% if not pagination.has_next %}disabled{% endif %}">
+          <a class="page-link" href="?page={{ pagination.next_num }}&search={{ search }}&department={{ selected_dept }}">›</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

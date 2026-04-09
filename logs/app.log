@@ -1,0 +1,45 @@
+[2026-04-07 16:33:32] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-04-07 16:33:33] INFO     | __init__             | ✅  Default admin user created.
+[2026-04-07 16:33:33] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-04-07 16:33:34] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-04-07 16:33:34] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-04-07 16:35:10] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-04-07 16:35:25] ERROR    | ml_service           | Failed to load model artifacts: No module named 'numpy._core'
+[2026-04-07 16:35:25] ERROR    | ml_service           | Failed to load model artifacts: No module named 'numpy._core'
+[2026-04-07 16:35:25] ERROR    | ml_service           | Failed to load model artifacts: No module named 'numpy._core'
+[2026-04-07 16:35:25] ERROR    | ml_service           | Failed to load model artifacts: No module named 'numpy._core'
+[2026-04-07 16:36:21] ERROR    | ml_service           | Failed to load model artifacts: No module named 'numpy._core'
+[2026-04-07 16:36:21] ERROR    | ml_service           | Failed to load model artifacts: No module named 'numpy._core'
+[2026-04-07 16:36:21] ERROR    | ml_service           | Failed to load model artifacts: No module named 'numpy._core'
+[2026-04-07 16:36:21] ERROR    | ml_service           | Failed to load model artifacts: No module named 'numpy._core'
+[2026-04-07 16:39:59] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-04-07 17:05:14] INFO     | students             | Student BCA2024004 added. Prediction: {'result': 'PASS', 'pass_probability': 0.9986262829150012, 'fail_probability': 0.0013737170849987823, 'model_name': 'Logistic Regression', 'model_version': '20260407_163934', 'confidence_level': 'Very High', 'feature_importance': []}
+[2026-04-07 20:46:36] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-04-07 20:46:36] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-04-07 20:46:38] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-04-07 20:46:38] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-04-07 20:47:19] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-04-07 20:47:22] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-04-07 20:49:48] INFO     | students             | Student MCA20240011 added. Prediction: {'result': 'FAIL', 'pass_probability': 0.019365677441060818, 'fail_probability': 0.9806343225589392, 'model_name': 'Logistic Regression', 'model_version': '20260407_163934', 'confidence_level': 'Very High', 'feature_importance': []}
+[2026-04-07 20:52:11] INFO     | students             | Student MCA20260012 added. Prediction: {'result': 'PASS', 'pass_probability': 0.9975675643864369, 'fail_probability': 0.0024324356135631, 'model_name': 'Logistic Regression', 'model_version': '20260407_163934', 'confidence_level': 'Very High', 'feature_importance': []}
+[2026-04-08 07:41:12] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-04-08 07:41:12] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-04-08 07:41:14] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-04-08 07:41:14] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-04-08 07:42:08] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-04-08 07:42:10] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-04-08 07:45:40] INFO     | students             | Student MCA2026001 added. Prediction: {'result': 'PASS', 'pass_probability': 0.9993751101542885, 'fail_probability': 0.0006248898457115182, 'model_name': 'Logistic Regression', 'model_version': '20260408_074050', 'confidence_level': 'Very High', 'feature_importance': []}
+[2026-04-08 08:04:41] INFO     | students             | Student BCA2026001 added. Prediction: {'result': 'PASS', 'pass_probability': 0.9999026926453959, 'fail_probability': 9.730735460411477e-05, 'model_name': 'Logistic Regression', 'model_version': '20260408_074050', 'confidence_level': 'Very High', 'feature_importance': []}
+[2026-04-09 09:55:46] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-04-09 09:55:46] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-04-09 09:55:47] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-04-09 09:55:47] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-04-09 09:56:09] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-04-09 09:56:24] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-04-09 10:12:55] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-04-09 10:12:55] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-04-09 10:12:57] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-04-09 10:12:57] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-04-09 10:13:09] WARNING  | auth                 | Failed login attempt for 'adminr' from 127.0.0.1
+[2026-04-09 10:13:26] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-04-09 10:13:28] INFO     | ml_service           | Loaded model: Logistic Regression

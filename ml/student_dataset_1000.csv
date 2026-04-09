@@ -1,0 +1,1001 @@
+student_id,name,email,department,semester,subject1_marks,subject2_marks,subject3_marks,subject4_marks,subject5_marks,internal_marks,attendance_pct,study_hours_per_day,assignments_submitted,previous_backlogs,average_marks,result
+CS2024001,Radha Desai,radha.desai1@student.edu,Computer Science,3,43.8,54.2,53.6,49.3,55.7,13.8,49.9,3.4,5,2,51.32,0
+CS2024002,Yogesh Chaudhary,yogesh.chaudhary2@student.edu,Computer Science,1,45.1,45.5,50.8,49.8,50.1,24.5,63.2,1.9,3,3,48.26,0
+EC2024003,Jyoti Mishra,jyoti.mishra3@student.edu,Electronics,2,78.9,77.7,70.4,75.8,75.1,40.7,78.2,4.4,9,0,75.58,1
+MCA2024004,Bhavna Yadav,bhavna.yadav4@student.edu,MCA,1,91.3,90.3,92.5,100.0,89.0,47.8,96.0,8.8,10,0,92.62,1
+CS2024005,Vivek Gupta,vivek.gupta5@student.edu,Computer Science,4,53.5,54.4,55.7,64.2,62.0,27.7,67.5,2.6,6,0,57.96,1
+CS2024006,Pooja Malhotra,pooja.malhotra6@student.edu,Computer Science,4,69.2,63.5,66.4,69.2,69.0,32.1,65.0,2.6,7,0,67.46,1
+MCA2024007,Shalini Tiwari,shalini.tiwari7@student.edu,MCA,4,74.5,64.6,71.2,61.2,65.5,35.5,77.0,6.9,8,0,67.4,1
+BCA2024008,Smita Patel,smita.patel8@student.edu,BCA,2,78.0,76.7,86.2,75.1,70.4,41.4,78.0,6.6,10,0,77.28,1
+BCA2024009,Yogesh Shah,yogesh.shah9@student.edu,BCA,2,70.9,65.7,58.2,61.0,68.9,36.5,85.0,4.5,8,0,64.94,1
+BCA2024010,Sachin Tripathi,sachin.tripathi10@student.edu,BCA,6,58.6,65.9,60.4,58.5,53.3,28.1,66.8,3.3,6,0,59.34,0
+MCA2024011,Deepak Sinha,deepak.sinha11@student.edu,MCA,4,78.1,60.4,70.4,60.0,71.0,29.8,63.9,4.8,8,0,67.98,1
+MCA2024012,Anil Kapoor,anil.kapoor12@student.edu,MCA,6,66.9,65.2,67.6,73.7,67.2,41.7,82.4,7.0,9,1,68.12,1
+MCA2024013,Vishal Tiwari,vishal.tiwari13@student.edu,MCA,4,92.5,77.1,78.4,87.6,81.4,34.3,79.1,4.4,7,0,83.4,1
+MCA2024014,Kunal Pandey,kunal.pandey14@student.edu,MCA,2,73.3,76.5,84.0,70.6,78.7,39.6,77.1,5.5,7,0,76.62,1
+BCA2024015,Gaurav Tiwari,gaurav.tiwari15@student.edu,BCA,4,26.3,27.1,40.8,37.0,20.6,6.4,53.1,0.0,2,4,30.36,0
+CS2024016,Seema Mishra,seema.mishra16@student.edu,Computer Science,1,88.6,91.8,89.7,94.4,84.4,45.3,97.6,6.9,9,0,89.78,1
+MCA2024017,Amit Chauhan,amit.chauhan17@student.edu,MCA,4,35.6,41.8,39.7,34.8,36.3,16.3,49.3,2.5,3,2,37.64,0
+MCA2024018,Aakash Yadav,aakash.yadav18@student.edu,MCA,1,91.0,90.6,86.3,92.5,90.1,43.2,96.2,7.6,9,0,90.1,1
+BCA2024019,Sneha Sinha,sneha.sinha19@student.edu,BCA,1,81.0,78.2,68.8,72.6,77.1,33.3,76.7,6.5,7,1,75.54,1
+MCA2024020,Asha Rao,asha.rao20@student.edu,MCA,3,64.9,56.6,69.1,77.5,57.9,25.7,70.3,3.5,8,1,65.2,1
+BCA2024021,Sanjay Patel,sanjay.patel21@student.edu,BCA,4,86.6,88.9,82.2,84.4,79.8,43.0,90.6,5.4,10,0,84.38,1
+CS2024022,Pratibha Sen,pratibha.sen22@student.edu,Computer Science,5,76.9,70.3,74.2,86.4,81.1,44.2,76.6,6.2,7,0,77.78,1
+MCA2024023,Dinesh Ghosh,dinesh.ghosh23@student.edu,MCA,4,92.9,91.5,93.6,100.0,78.7,44.7,90.1,8.3,9,0,91.34,1
+MCA2024024,Ravi Sen,ravi.sen24@student.edu,MCA,1,59.8,60.0,53.2,57.5,57.5,34.6,75.9,4.2,5,0,57.6,1
+BCA2024025,Jyoti Bhatt,jyoti.bhatt25@student.edu,BCA,2,66.2,66.1,64.4,75.0,59.8,35.8,78.9,4.5,7,0,66.3,1
+CS2024026,Sumit Ghosh,sumit.ghosh26@student.edu,Computer Science,1,69.7,68.2,58.0,52.6,66.8,26.2,67.3,3.6,7,0,63.06,1
+MCA2024027,Arjun Kumar,arjun.kumar27@student.edu,MCA,6,64.2,67.9,60.6,66.1,61.4,24.0,63.6,4.7,8,0,64.04,1
+CS2024028,Shweta Kumar,shweta.kumar28@student.edu,Computer Science,5,88.5,90.0,81.6,90.1,82.5,42.0,76.0,6.4,7,1,86.54,1
+CS2024029,Sneha Saxena,sneha.saxena29@student.edu,Computer Science,1,78.4,68.2,84.8,75.6,76.0,32.6,91.7,5.8,9,0,76.6,1
+CS2024030,Neha Nair,neha.nair30@student.edu,Computer Science,4,50.9,59.6,55.2,52.1,55.0,31.8,79.0,3.3,6,0,54.56,1
+MCA2024031,Anil Joshi,anil.joshi31@student.edu,MCA,2,61.1,66.9,70.8,71.8,85.2,34.8,85.4,5.9,10,0,71.16,1
+CS2024032,Bhavna Agarwal,bhavna.agarwal32@student.edu,Computer Science,4,63.1,78.6,64.4,71.6,63.6,28.0,67.7,4.5,7,0,68.26,1
+BCA2024033,Ananya Tiwari,ananya.tiwari33@student.edu,BCA,5,80.0,84.5,79.9,87.4,70.8,32.7,83.4,4.3,7,1,80.52,1
+IT2024034,Rekha Sharma,rekha.sharma34@student.edu,Information Technology,2,79.6,73.7,79.8,67.7,75.2,44.9,77.0,5.1,10,1,75.2,1
+MCA2024035,Gaurav Bhatt,gaurav.bhatt35@student.edu,MCA,3,67.2,76.7,65.7,77.0,69.1,44.9,89.2,7.0,10,1,71.14,1
+MCA2024036,Anil Tripathi,anil.tripathi36@student.edu,MCA,1,21.5,31.2,25.8,30.9,37.4,20.2,52.7,1.7,4,1,29.36,0
+CS2024037,Jyoti Sharma,jyoti.sharma37@student.edu,Computer Science,1,75.3,73.9,71.3,69.6,68.3,43.1,80.8,6.5,8,0,71.68,1
+IT2024038,Mamta Chakraborty,mamta.chakraborty38@student.edu,Information Technology,4,72.9,63.1,71.4,73.3,66.4,37.8,78.3,4.1,8,1,69.42,1
+CS2024039,Sumit Kumar,sumit.kumar39@student.edu,Computer Science,3,65.1,46.0,48.0,54.5,62.7,13.6,62.4,3.4,5,2,55.26,0
+CS2024040,Seema Roy,seema.roy40@student.edu,Computer Science,4,68.9,56.8,70.6,64.0,75.1,44.8,75.7,6.3,8,0,67.08,1
+IT2024041,Monika Nair,monika.nair41@student.edu,Information Technology,5,89.4,81.9,79.0,91.0,88.2,47.1,88.6,6.4,10,0,85.9,1
+IT2024042,Shweta Malhotra,shweta.malhotra42@student.edu,Information Technology,1,57.3,49.1,73.2,78.8,61.1,31.4,62.5,3.5,7,1,63.9,0
+MCA2024043,Nitin Verma,nitin.verma43@student.edu,MCA,6,64.7,65.8,70.4,56.3,67.7,35.9,80.8,6.2,8,1,64.98,1
+MCA2024044,Nikhil Chatterjee,nikhil.chatterjee44@student.edu,MCA,2,90.9,81.7,73.5,83.5,78.2,46.3,88.2,7.8,9,0,81.56,1
+MCA2024045,Ritu Dubey,ritu.dubey45@student.edu,MCA,2,50.6,47.7,59.9,48.1,47.9,15.4,62.8,2.5,5,0,50.84,0
+BCA2024046,Pratibha Dey,pratibha.dey46@student.edu,BCA,6,75.3,63.5,63.7,68.2,64.8,29.9,78.2,4.5,6,0,67.1,1
+MCA2024047,Kavya Mishra,kavya.mishra47@student.edu,MCA,1,66.0,72.6,60.5,60.8,69.7,33.5,82.7,5.5,10,0,65.92,1
+MCA2024048,Tarun Shukla,tarun.shukla48@student.edu,MCA,1,32.9,28.9,34.4,41.8,21.3,18.0,58.2,2.2,4,1,31.86,0
+MCA2024049,Amit Bhatt,amit.bhatt49@student.edu,MCA,2,22.6,21.9,25.6,25.8,11.3,6.8,41.5,1.4,0,2,21.44,0
+CS2024050,Ananya Kapoor,ananya.kapoor50@student.edu,Computer Science,4,29.7,35.2,33.3,29.0,47.4,22.8,65.1,2.5,3,0,34.92,0
+IT2024051,Sanjay Ghosh,sanjay.ghosh51@student.edu,Information Technology,2,36.3,47.5,43.7,39.3,57.1,12.4,52.3,2.0,5,0,44.78,0
+IT2024052,Ravi Chatterjee,ravi.chatterjee52@student.edu,Information Technology,4,67.6,67.4,78.7,73.2,67.9,44.9,86.8,4.5,8,0,70.96,1
+BCA2024053,Sachin Chauhan,sachin.chauhan53@student.edu,BCA,4,72.0,72.4,72.2,66.2,60.9,32.2,85.1,4.9,8,1,68.74,1
+CS2024054,Pooja Shukla,pooja.shukla54@student.edu,Computer Science,4,61.7,66.7,62.1,61.4,67.0,22.2,79.7,3.5,6,0,63.78,1
+MCA2024055,Rohan Sen,rohan.sen55@student.edu,MCA,6,69.2,69.2,68.3,76.3,53.0,41.5,89.6,6.7,7,0,67.2,1
+MCA2024056,Nikhil Sinha,nikhil.sinha56@student.edu,MCA,6,62.4,51.2,61.5,50.4,51.7,12.3,50.0,1.5,4,2,55.44,0
+CS2024057,Rajesh Desai,rajesh.desai57@student.edu,Computer Science,3,70.7,71.3,57.1,72.7,62.8,23.8,70.4,3.0,6,0,66.92,1
+IT2024058,Neha Shah,neha.shah58@student.edu,Information Technology,2,62.7,73.1,69.1,57.4,57.0,32.6,83.9,5.4,10,0,63.86,1
+CS2024059,Ananya Joshi,ananya.joshi59@student.edu,Computer Science,5,52.1,39.7,44.5,49.7,51.3,16.3,67.6,3.4,4,0,47.46,0
+MCA2024060,Rajesh Iyer,rajesh.iyer60@student.edu,MCA,5,63.8,74.2,61.0,77.1,63.3,32.6,67.3,3.4,6,0,67.88,1
+IT2024061,Bhavna Sharma,bhavna.sharma61@student.edu,Information Technology,1,62.2,67.2,47.7,57.1,53.8,26.8,66.4,4.3,5,1,57.6,1
+BCA2024062,Varsha Patel,varsha.patel62@student.edu,BCA,3,67.7,70.6,62.6,64.3,53.8,35.3,69.8,2.8,8,0,63.8,1
+MCA2024063,Seema Yadav,seema.yadav63@student.edu,MCA,6,79.5,55.3,66.8,79.9,80.0,44.9,82.9,5.2,9,0,72.3,1
+MCA2024064,Smita Gupta,smita.gupta64@student.edu,MCA,5,64.4,64.8,56.8,63.5,60.6,28.1,76.3,3.0,5,2,62.02,1
+MCA2024065,Manoj Saxena,manoj.saxena65@student.edu,MCA,4,86.1,86.2,74.3,84.8,87.9,39.8,80.4,6.2,9,0,83.86,1
+BCA2024066,Rohit Banerjee,rohit.banerjee66@student.edu,BCA,6,80.6,77.7,69.2,72.0,74.4,35.3,71.6,4.1,5,0,74.78,1
+BCA2024067,Ravi Bose,ravi.bose67@student.edu,BCA,4,77.7,75.4,65.8,81.8,70.2,40.5,82.5,4.4,10,0,74.18,1
+CS2024068,Vikram Pandey,vikram.pandey68@student.edu,Computer Science,1,71.5,55.1,65.6,54.7,68.0,34.6,79.8,6.0,7,1,62.98,1
+EC2024069,Sunil Roy,sunil.roy69@student.edu,Electronics,2,54.5,44.7,56.3,54.7,51.1,35.1,69.2,4.7,8,0,52.26,1
+IT2024070,Swati Reddy,swati.reddy70@student.edu,Information Technology,6,46.3,63.4,55.5,57.0,55.3,18.7,62.9,2.9,3,2,55.5,0
+MCA2024071,Smita Patel,smita.patel71@student.edu,MCA,5,37.2,31.7,37.0,28.8,32.9,13.9,48.2,1.8,4,2,33.52,0
+CS2024072,Sonia Agarwal,sonia.agarwal72@student.edu,Computer Science,6,18.9,13.0,12.1,25.3,19.7,16.5,33.4,1.6,2,3,17.8,0
+CS2024073,Rohit Shukla,rohit.shukla73@student.edu,Computer Science,4,46.8,43.7,43.6,43.1,33.4,9.1,42.9,0.2,3,6,42.12,0
+IT2024074,Ankita Sharma,ankita.sharma74@student.edu,Information Technology,3,80.5,86.8,77.8,82.1,74.0,33.9,88.6,5.5,10,1,80.24,1
+BCA2024075,Amit Saxena,amit.saxena75@student.edu,BCA,5,86.4,90.2,87.6,100.0,90.8,48.6,97.9,6.7,9,0,91.0,1
+CS2024076,Vikas Chakraborty,vikas.chakraborty76@student.edu,Computer Science,3,48.4,47.1,42.0,50.4,50.5,22.5,55.4,1.5,3,0,47.68,0
+MCA2024077,Varsha Kapoor,varsha.kapoor77@student.edu,MCA,4,55.7,56.3,48.8,51.9,52.7,25.1,77.8,4.9,8,0,53.08,1
+MCA2024078,Aakash Shukla,aakash.shukla78@student.edu,MCA,1,55.2,60.6,61.9,62.2,51.8,33.6,66.7,3.5,7,1,58.34,1
+MCA2024079,Hemant Patel,hemant.patel79@student.edu,MCA,1,81.4,87.4,94.5,94.7,75.5,38.2,86.0,4.5,10,0,86.7,1
+MCA2024080,Arjun Sen,arjun.sen80@student.edu,MCA,2,48.2,67.2,55.3,58.8,50.6,27.1,64.4,4.7,5,0,56.02,1
+MCA2024081,Mohit Joshi,mohit.joshi81@student.edu,MCA,1,93.6,95.8,85.7,94.3,95.5,48.2,89.5,9.4,10,0,92.98,1
+IT2024082,Arjun Saxena,arjun.saxena82@student.edu,Information Technology,1,25.2,30.1,33.4,33.7,39.3,10.2,42.3,1.9,2,3,32.34,0
+BCA2024083,Sunita Mehta,sunita.mehta83@student.edu,BCA,3,71.8,57.9,64.5,58.3,58.9,28.3,78.7,4.8,7,0,62.28,1
+MCA2024084,Bhavna Malhotra,bhavna.malhotra84@student.edu,MCA,1,52.8,61.8,61.7,61.3,67.0,25.6,65.9,3.9,6,1,60.92,1
+IT2024085,Priya Chatterjee,priya.chatterjee85@student.edu,Information Technology,3,67.7,68.6,85.5,81.1,82.2,47.4,96.2,8.3,9,0,77.02,1
+BCA2024086,Sunita Roy,sunita.roy86@student.edu,BCA,3,58.8,64.2,61.3,62.4,68.5,44.6,88.2,5.5,10,0,63.04,1
+BCA2024087,Geeta Agarwal,geeta.agarwal87@student.edu,BCA,3,28.1,34.6,35.5,43.2,30.9,15.3,40.6,0.7,0,2,34.46,0
+CS2024088,Meera Reddy,meera.reddy88@student.edu,Computer Science,1,48.0,56.8,62.0,46.3,51.1,29.3,73.1,2.6,6,0,52.84,1
+IT2024089,Vivek Chauhan,vivek.chauhan89@student.edu,Information Technology,6,94.4,88.6,85.5,100.0,93.7,44.3,98.5,8.5,9,0,92.44,1
+IT2024090,Suresh Dey,suresh.dey90@student.edu,Information Technology,1,34.5,33.7,34.3,35.2,34.5,7.0,32.9,0.1,1,5,34.44,0
+MCA2024091,Mamta Dey,mamta.dey91@student.edu,MCA,1,86.7,74.7,84.1,86.5,87.6,44.7,76.6,6.6,7,1,83.92,1
+EC2024092,Sanjay Kumar,sanjay.kumar92@student.edu,Electronics,4,52.6,61.1,53.6,55.1,68.0,23.3,69.0,3.4,8,0,58.08,1
+MCA2024093,Deepak Das,deepak.das93@student.edu,MCA,6,72.4,71.8,79.5,76.9,79.2,34.0,90.9,6.9,7,0,75.96,1
+IT2024094,Suresh Tripathi,suresh.tripathi94@student.edu,Information Technology,4,59.8,54.1,52.7,52.7,56.3,18.1,55.0,1.2,3,0,55.12,0
+CS2024095,Meera Banerjee,meera.banerjee95@student.edu,Computer Science,3,80.9,78.9,76.8,61.7,72.0,38.5,77.9,6.8,10,0,74.06,1
+MCA2024096,Shweta Dubey,shweta.dubey96@student.edu,MCA,4,74.2,75.8,80.8,77.1,75.4,43.7,75.9,6.9,8,0,76.66,1
+IT2024097,Swati Malhotra,swati.malhotra97@student.edu,Information Technology,4,78.5,70.5,70.1,69.7,67.6,42.6,86.4,6.9,9,0,71.28,1
+CS2024098,Mohit Kapoor,mohit.kapoor98@student.edu,Computer Science,4,43.2,43.8,41.1,42.4,45.1,14.8,50.2,3.4,2,0,43.12,0
+BCA2024099,Mamta Rao,mamta.rao99@student.edu,BCA,1,73.1,64.3,75.4,64.1,67.8,38.3,77.2,5.7,10,0,68.94,1
+MCA2024100,Swati Bhatt,swati.bhatt100@student.edu,MCA,3,73.1,75.2,57.8,59.7,71.1,33.7,87.8,4.9,8,0,67.38,1
+CS2024101,Smita Dubey,smita.dubey101@student.edu,Computer Science,5,31.2,19.5,36.0,35.6,34.1,6.1,52.2,1.8,2,3,31.28,0
+MCA2024102,Usha Shah,usha.shah102@student.edu,MCA,2,53.4,51.3,60.1,50.5,41.3,16.4,67.9,3.2,6,2,51.32,0
+MCA2024103,Monika Chakraborty,monika.chakraborty103@student.edu,MCA,1,100.0,100.0,96.2,94.7,97.9,41.9,92.8,9.3,9,0,97.76,1
+MCA2024104,Swati Chakraborty,swati.chakraborty104@student.edu,MCA,2,27.3,25.2,16.6,17.7,25.5,15.1,40.7,0.9,4,3,22.46,0
+MCA2024105,Mohit Gupta,mohit.gupta105@student.edu,MCA,2,60.3,63.5,57.9,57.7,65.2,24.6,63.6,3.5,6,0,60.92,1
+BCA2024106,Seema Roy,seema.roy106@student.edu,BCA,3,31.4,38.0,48.1,43.0,41.1,18.6,62.6,2.9,6,0,40.32,0
+MCA2024107,Ankita Sinha,ankita.sinha107@student.edu,MCA,2,63.1,71.2,68.0,72.3,74.8,37.2,91.0,5.2,10,1,69.88,1
+IT2024108,Meera Chauhan,meera.chauhan108@student.edu,Information Technology,2,95.5,97.3,100.0,85.0,100.0,47.6,91.7,8.5,10,0,95.56,1
+CS2024109,Nisha Iyer,nisha.iyer109@student.edu,Computer Science,5,54.7,51.6,52.7,63.4,59.0,30.2,64.1,3.1,6,0,56.28,1
+MCA2024110,Pankaj Das,pankaj.das110@student.edu,MCA,5,45.2,41.6,30.3,35.8,34.4,13.3,52.9,2.0,2,3,37.46,0
+BCA2024111,Sunil Desai,sunil.desai111@student.edu,BCA,6,39.3,32.0,34.9,37.8,48.4,23.6,63.4,1.8,3,2,38.48,0
+IT2024112,Anil Patel,anil.patel112@student.edu,Information Technology,1,80.7,76.4,86.4,81.1,98.2,43.3,75.9,6.2,8,0,84.56,1
+EC2024113,Shweta Kumar,shweta.kumar113@student.edu,Electronics,4,63.9,61.4,51.2,68.7,64.2,24.8,71.6,3.7,5,1,61.88,1
+IT2024114,Anil Chatterjee,anil.chatterjee114@student.edu,Information Technology,2,76.0,69.8,63.6,66.1,69.7,44.9,76.5,4.4,10,0,69.04,1
+CS2024115,Pooja Chatterjee,pooja.chatterjee115@student.edu,Computer Science,3,56.6,67.8,62.0,51.1,63.0,25.6,68.2,3.7,5,1,60.1,1
+CS2024116,Usha Tripathi,usha.tripathi116@student.edu,Computer Science,2,82.6,89.0,92.4,72.6,79.2,35.8,90.5,4.9,7,0,83.16,1
+CS2024117,Vivek Srivastava,vivek.srivastava117@student.edu,Computer Science,1,56.3,55.5,58.6,50.4,68.4,25.3,63.6,3.1,6,1,57.84,1
+BCA2024118,Amit Joshi,amit.joshi118@student.edu,BCA,3,68.9,72.0,71.4,55.2,66.6,34.9,63.3,3.8,8,0,66.82,1
+MCA2024119,Amit Mishra,amit.mishra119@student.edu,MCA,3,49.4,52.3,47.8,47.2,50.2,14.3,48.6,2.4,6,3,49.38,0
+BCA2024120,Anil Sen,anil.sen120@student.edu,BCA,4,52.2,59.0,60.6,57.9,53.4,15.7,52.5,1.7,6,0,56.62,0
+MCA2024121,Kunal Reddy,kunal.reddy121@student.edu,MCA,3,41.4,34.4,43.6,44.5,41.6,23.2,56.8,3.5,4,3,41.1,0
+CS2024122,Hemant Shah,hemant.shah122@student.edu,Computer Science,2,67.7,60.8,65.2,71.5,63.7,35.0,78.2,6.6,8,0,65.78,1
+MCA2024123,Sunil Rao,sunil.rao123@student.edu,MCA,1,58.9,56.6,52.2,51.4,49.2,28.2,77.3,2.9,7,0,53.66,1
+MCA2024124,Swati Sharma,swati.sharma124@student.edu,MCA,2,75.3,73.0,54.7,68.8,73.0,26.2,72.8,4.9,7,0,68.96,1
+BCA2024125,Divya Gupta,divya.gupta125@student.edu,BCA,4,52.6,63.9,62.0,56.2,68.3,30.4,76.6,4.3,5,0,60.6,1
+IT2024126,Vikram Sinha,vikram.sinha126@student.edu,Information Technology,2,32.5,38.0,30.7,38.4,38.7,22.7,66.5,3.4,6,0,35.66,0
+CS2024127,Asha Malhotra,asha.malhotra127@student.edu,Computer Science,3,52.7,45.9,49.6,47.0,58.3,28.6,75.3,2.7,7,1,50.7,1
+BCA2024128,Shweta Joshi,shweta.joshi128@student.edu,BCA,6,49.5,46.7,54.9,46.9,41.2,25.4,77.5,3.4,5,1,47.84,1
+CS2024129,Rekha Kapoor,rekha.kapoor129@student.edu,Computer Science,2,89.8,82.4,94.0,81.3,86.8,48.5,97.0,7.1,10,0,86.86,1
+BCA2024130,Rekha Tripathi,rekha.tripathi130@student.edu,BCA,1,83.5,77.3,76.9,79.4,88.9,37.7,75.8,4.9,10,0,81.2,1
+MCA2024131,Rajesh Ghosh,rajesh.ghosh131@student.edu,MCA,1,72.4,75.3,69.5,69.3,66.0,39.7,81.7,6.4,7,0,70.5,1
+MCA2024132,Meera Sharma,meera.sharma132@student.edu,MCA,4,38.0,36.7,43.3,42.2,32.3,25.7,63.8,2.6,6,3,38.5,0
+BCA2024133,Neha Chakraborty,neha.chakraborty133@student.edu,BCA,5,75.6,74.4,70.6,78.1,77.5,44.3,91.6,5.4,7,0,75.24,1
+MCA2024134,Rohit Shukla,rohit.shukla134@student.edu,MCA,3,51.8,41.0,47.9,41.6,44.6,19.4,53.6,3.1,6,1,45.38,0
+MCA2024135,Manoj Yadav,manoj.yadav135@student.edu,MCA,4,76.1,75.1,72.7,65.4,76.7,43.1,80.9,6.2,8,0,73.2,1
+MCA2024136,Shweta Sinha,shweta.sinha136@student.edu,MCA,4,72.5,91.5,82.8,83.4,79.3,41.3,90.9,5.8,7,0,81.9,1
+MCA2024137,Lakshmi Sinha,lakshmi.sinha137@student.edu,MCA,6,58.1,65.6,66.1,52.9,60.3,35.6,76.8,4.7,8,0,60.6,1
+MCA2024138,Radha Pandey,radha.pandey138@student.edu,MCA,4,39.7,42.3,39.4,43.5,39.1,15.1,42.6,1.1,0,3,40.8,0
+IT2024139,Arjun Tripathi,arjun.tripathi139@student.edu,Information Technology,1,43.8,29.1,30.6,36.7,37.7,15.4,32.3,1.3,0,5,35.58,0
+MCA2024140,Sunil Yadav,sunil.yadav140@student.edu,MCA,2,67.9,62.7,68.0,67.4,68.7,26.6,66.9,4.7,6,0,66.94,1
+BCA2024141,Vishal Kapoor,vishal.kapoor141@student.edu,BCA,5,89.5,86.3,92.0,83.8,82.4,38.8,88.3,6.9,9,0,86.8,1
+CS2024142,Rekha Srivastava,rekha.srivastava142@student.edu,Computer Science,1,61.2,59.9,67.7,69.9,68.3,31.3,63.2,3.8,7,0,65.4,1
+BCA2024143,Jyoti Shukla,jyoti.shukla143@student.edu,BCA,1,100.0,100.0,87.7,93.6,94.3,49.2,93.5,9.5,9,0,95.12,1
+BCA2024144,Ashish Gupta,ashish.gupta144@student.edu,BCA,1,52.8,41.5,28.9,34.1,29.6,21.2,62.1,1.2,4,0,37.38,0
+MCA2024145,Sonia Sharma,sonia.sharma145@student.edu,MCA,2,54.9,56.0,54.6,51.1,52.7,24.8,63.1,3.4,7,0,53.86,1
+CS2024146,Arjun Agarwal,arjun.agarwal146@student.edu,Computer Science,6,74.1,75.9,78.9,63.0,68.3,31.8,76.3,2.6,6,0,72.04,1
+CS2024147,Tarun Srivastava,tarun.srivastava147@student.edu,Computer Science,5,65.7,75.4,63.9,65.2,55.8,29.8,75.6,4.6,7,0,65.2,1
+MCA2024148,Hemant Sharma,hemant.sharma148@student.edu,MCA,1,41.9,55.9,53.2,46.6,40.8,21.9,52.0,1.7,5,3,47.68,0
+CS2024149,Sanjay Bose,sanjay.bose149@student.edu,Computer Science,6,50.9,47.7,30.2,39.7,45.3,18.0,57.7,2.1,2,1,42.76,0
+MCA2024150,Geeta Bhatt,geeta.bhatt150@student.edu,MCA,1,50.4,45.7,26.5,37.3,56.2,17.6,66.4,1.1,3,0,43.22,0
+CS2024151,Tarun Sharma,tarun.sharma151@student.edu,Computer Science,2,28.3,40.5,44.6,45.0,35.2,19.9,56.6,2.7,3,1,38.72,0
+IT2024152,Anil Kumar,anil.kumar152@student.edu,Information Technology,5,77.8,82.6,77.5,92.0,80.5,42.3,88.7,9.4,9,0,82.08,1
+IT2024153,Harish Patel,harish.patel153@student.edu,Information Technology,1,66.1,70.2,75.3,74.6,67.8,27.1,74.0,4.2,8,0,70.8,1
+IT2024154,Bhavna Saxena,bhavna.saxena154@student.edu,Information Technology,4,75.9,79.4,95.5,83.9,85.2,32.1,89.4,4.7,7,0,83.98,1
+CS2024155,Meera Verma,meera.verma155@student.edu,Computer Science,2,95.2,94.6,94.4,90.5,91.9,41.2,99.9,7.0,9,0,93.32,1
+CS2024156,Radha Nair,radha.nair156@student.edu,Computer Science,2,98.8,92.5,90.4,81.3,78.3,39.0,86.6,6.9,7,0,88.26,1
+MCA2024157,Vikas Singh,vikas.singh157@student.edu,MCA,5,95.7,94.6,100.0,87.0,93.1,46.3,96.7,6.3,9,0,94.08,1
+CS2024158,Nikhil Tripathi,nikhil.tripathi158@student.edu,Computer Science,4,59.8,58.2,62.5,64.0,61.3,29.6,80.0,2.9,8,0,61.16,1
+CS2024159,Divya Chatterjee,divya.chatterjee159@student.edu,Computer Science,4,33.3,44.3,42.1,56.9,37.3,19.4,58.8,2.5,5,0,42.78,0
+CS2024160,Kunal Mishra,kunal.mishra160@student.edu,Computer Science,4,71.3,74.5,80.7,86.6,70.5,36.8,89.7,6.2,10,0,76.72,1
+MCA2024161,Divya Dubey,divya.dubey161@student.edu,MCA,2,44.3,48.6,41.9,43.1,46.1,25.4,63.5,3.0,4,1,44.8,0
+IT2024162,Monika Reddy,monika.reddy162@student.edu,Information Technology,3,89.9,95.5,87.3,89.8,92.8,42.8,99.4,9.3,9,0,91.06,1
+MCA2024163,Gaurav Patel,gaurav.patel163@student.edu,MCA,1,89.7,85.7,81.8,79.0,79.1,34.1,77.5,4.7,10,0,83.06,1
+IT2024164,Pankaj Rao,pankaj.rao164@student.edu,Information Technology,4,64.1,62.6,62.2,62.1,63.4,30.2,74.4,2.5,8,2,62.88,1
+MCA2024165,Ajay Iyer,ajay.iyer165@student.edu,MCA,3,83.7,71.2,81.1,91.8,87.7,38.5,77.9,5.0,10,0,83.1,1
+MCA2024166,Jyoti Ghosh,jyoti.ghosh166@student.edu,MCA,4,75.2,66.2,69.8,65.7,61.4,22.6,71.3,4.0,6,0,67.66,1
+BCA2024167,Priya Joshi,priya.joshi167@student.edu,BCA,4,71.3,66.8,65.0,73.7,63.9,23.1,64.2,4.8,6,1,68.14,1
+CS2024168,Ashish Patel,ashish.patel168@student.edu,Computer Science,6,56.3,55.4,54.9,50.6,57.2,27.7,67.3,4.8,6,0,54.88,1
+MCA2024169,Preeti Kapoor,preeti.kapoor169@student.edu,MCA,4,76.0,65.7,83.4,86.9,87.3,42.0,81.0,6.7,10,0,79.86,1
+EC2024170,Suresh Tiwari,suresh.tiwari170@student.edu,Electronics,2,45.1,35.3,40.3,32.5,31.0,8.8,40.6,1.1,4,3,36.84,0
+BCA2024171,Dinesh Singh,dinesh.singh171@student.edu,BCA,2,39.5,47.4,40.8,42.7,34.0,16.1,62.3,2.9,6,2,40.88,0
+IT2024172,Sunita Chatterjee,sunita.chatterjee172@student.edu,Information Technology,4,77.0,68.0,69.8,75.6,63.2,25.2,69.1,3.9,6,0,70.72,1
+MCA2024173,Jyoti Iyer,jyoti.iyer173@student.edu,MCA,3,67.9,57.7,72.2,58.2,58.2,29.0,70.1,3.5,6,0,62.84,1
+CS2024174,Pratibha Mukherjee,pratibha.mukherjee174@student.edu,Computer Science,2,54.4,54.8,61.6,62.0,52.8,35.3,74.1,3.1,5,0,57.12,1
+CS2024175,Hemant Rao,hemant.rao175@student.edu,Computer Science,3,83.0,95.6,74.9,69.9,89.0,34.2,87.1,5.4,9,0,82.48,1
+EC2024176,Mamta Shah,mamta.shah176@student.edu,Electronics,1,51.7,57.7,61.0,57.8,58.6,24.4,76.5,3.4,7,0,57.36,1
+CS2024177,Mamta Bose,mamta.bose177@student.edu,Computer Science,2,76.9,81.6,72.9,80.2,70.1,33.2,78.1,5.6,8,0,76.34,1
+BCA2024178,Sunil Nair,sunil.nair178@student.edu,BCA,1,87.9,85.2,82.5,80.4,81.8,42.4,89.2,4.2,7,1,83.56,1
+MCA2024179,Reena Nair,reena.nair179@student.edu,MCA,1,28.6,33.1,28.5,22.1,28.1,15.4,46.9,1.7,4,2,28.08,0
+MCA2024180,Manoj Chaudhary,manoj.chaudhary180@student.edu,MCA,1,88.0,89.3,86.1,90.5,100.0,46.9,92.2,6.9,9,0,90.78,1
+EC2024181,Radha Das,radha.das181@student.edu,Electronics,5,57.4,66.4,57.5,51.9,68.7,28.9,68.4,4.2,8,2,60.38,1
+MCA2024182,Varsha Dey,varsha.dey182@student.edu,MCA,1,55.3,41.7,52.7,50.9,53.4,16.0,48.8,1.1,2,1,50.8,0
+EC2024183,Ankita Sinha,ankita.sinha183@student.edu,Electronics,4,60.2,57.9,52.9,53.4,51.8,28.5,76.6,4.3,5,0,55.24,1
+CS2024184,Seema Bose,seema.bose184@student.edu,Computer Science,3,55.5,55.0,54.6,51.4,52.2,22.9,65.8,4.0,5,0,53.74,1
+IT2024185,Pankaj Bose,pankaj.bose185@student.edu,Information Technology,4,63.4,70.8,70.2,59.1,59.8,23.5,70.2,3.5,7,0,64.66,1
+BCA2024186,Rekha Verma,rekha.verma186@student.edu,BCA,1,67.4,64.2,58.6,72.0,71.9,38.9,78.7,4.8,9,0,66.82,1
+MCA2024187,Usha Nair,usha.nair187@student.edu,MCA,6,97.2,76.8,88.2,88.1,76.3,46.1,89.8,9.9,10,0,85.32,1
+IT2024188,Rekha Kumar,rekha.kumar188@student.edu,Information Technology,1,23.6,21.3,24.2,23.9,32.3,17.0,46.2,1.9,1,2,25.06,0
+MCA2024189,Pooja Agarwal,pooja.agarwal189@student.edu,MCA,5,87.4,83.9,96.6,88.1,100.0,46.7,100.0,6.0,10,0,91.2,1
+MCA2024190,Mohit Reddy,mohit.reddy190@student.edu,MCA,3,49.0,34.9,40.4,45.1,43.3,15.4,57.4,1.8,4,0,42.54,0
+MCA2024191,Amit Chaudhary,amit.chaudhary191@student.edu,MCA,5,32.6,40.0,36.9,33.5,33.5,11.7,33.8,1.6,0,6,35.3,0
+MCA2024192,Ankita Srivastava,ankita.srivastava192@student.edu,MCA,3,70.9,77.5,70.8,63.5,73.9,40.5,84.8,4.5,9,0,71.32,1
+IT2024193,Deepak Mukherjee,deepak.mukherjee193@student.edu,Information Technology,4,68.3,59.4,63.1,62.9,72.4,39.1,85.3,4.2,9,0,65.22,1
+BCA2024194,Radha Bose,radha.bose194@student.edu,BCA,4,74.0,93.1,82.2,80.1,94.4,35.2,76.7,6.5,9,0,84.76,1
+MCA2024195,Siddharth Malhotra,siddharth.malhotra195@student.edu,MCA,6,47.2,33.9,36.2,42.9,52.2,16.6,53.6,2.8,5,0,42.48,0
+IT2024196,Deepak Banerjee,deepak.banerjee196@student.edu,Information Technology,4,76.7,93.0,80.6,87.0,80.5,44.8,76.1,4.8,8,0,83.56,1
+CS2024197,Yogesh Ghosh,yogesh.ghosh197@student.edu,Computer Science,3,78.8,68.3,71.1,61.6,66.8,34.4,70.3,4.1,7,0,69.32,1
+MCA2024198,Seema Srivastava,seema.srivastava198@student.edu,MCA,4,47.6,68.9,59.8,52.9,62.4,27.7,77.9,3.4,5,0,58.32,1
+IT2024199,Ankita Das,ankita.das199@student.edu,Information Technology,6,74.7,77.9,83.1,73.8,73.4,40.6,85.3,4.8,7,0,76.58,1
+IT2024200,Vikram Shukla,vikram.shukla200@student.edu,Information Technology,6,54.4,58.7,46.1,49.2,55.9,17.5,57.3,1.1,6,0,52.86,0
+MCA2024201,Mamta Banerjee,mamta.banerjee201@student.edu,MCA,4,83.0,78.4,80.8,85.0,81.5,37.9,80.1,4.8,8,0,81.74,1
+MCA2024202,Pallavi Ghosh,pallavi.ghosh202@student.edu,MCA,3,66.2,66.0,64.8,67.0,75.9,44.3,84.2,4.4,8,0,67.98,1
+MCA2024203,Vikram Pandey,vikram.pandey203@student.edu,MCA,5,61.6,75.7,78.7,65.9,71.0,40.3,77.9,7.0,7,1,70.58,1
+MCA2024204,Vikram Singh,vikram.singh204@student.edu,MCA,1,61.0,67.3,72.2,73.8,62.4,44.8,76.0,6.7,8,0,67.34,1
+MCA2024205,Monika Ghosh,monika.ghosh205@student.edu,MCA,4,39.8,33.0,33.7,38.0,34.2,16.3,47.8,2.0,2,2,35.74,0
+MCA2024206,Pallavi Kumar,pallavi.kumar206@student.edu,MCA,1,62.3,59.8,69.3,68.4,71.4,22.4,64.6,3.2,5,0,66.24,1
+IT2024207,Geeta Tripathi,geeta.tripathi207@student.edu,Information Technology,5,50.2,46.6,60.9,59.7,56.6,12.9,61.0,3.3,6,0,54.8,1
+CS2024208,Ajay Dubey,ajay.dubey208@student.edu,Computer Science,2,84.4,95.7,86.5,86.7,79.6,48.1,92.0,7.1,9,0,86.58,1
+BCA2024209,Neha Das,neha.das209@student.edu,BCA,3,92.7,93.4,85.5,91.4,84.1,49.5,89.2,6.7,9,0,89.42,1
+MCA2024210,Lakshmi Yadav,lakshmi.yadav210@student.edu,MCA,3,82.1,84.8,83.3,75.1,72.0,39.2,90.0,5.4,8,1,79.46,1
+MCA2024211,Ankita Yadav,ankita.yadav211@student.edu,MCA,1,44.4,50.7,57.8,43.6,50.2,32.7,70.6,3.3,5,0,49.34,1
+IT2024212,Neha Tiwari,neha.tiwari212@student.edu,Information Technology,3,62.6,53.2,56.7,56.1,60.7,25.9,63.9,4.2,7,0,57.86,1
+BCA2024213,Mohit Verma,mohit.verma213@student.edu,BCA,4,61.4,56.3,54.3,59.5,63.5,28.7,70.8,4.9,6,0,59.0,1
+CS2024214,Smita Srivastava,smita.srivastava214@student.edu,Computer Science,1,31.8,45.4,33.6,40.3,40.3,5.8,43.7,1.2,0,3,38.28,0
+IT2024215,Ankita Roy,ankita.roy215@student.edu,Information Technology,4,45.2,39.2,53.0,37.9,41.1,15.8,65.0,2.3,4,3,43.28,0
+BCA2024216,Priya Rao,priya.rao216@student.edu,BCA,2,44.6,36.2,37.1,35.9,26.7,23.1,50.1,2.3,3,2,36.1,0
+BCA2024217,Sanjay Kapoor,sanjay.kapoor217@student.edu,BCA,2,51.5,66.1,57.2,53.4,58.3,30.2,74.2,4.2,8,0,57.3,1
+IT2024218,Pankaj Verma,pankaj.verma218@student.edu,Information Technology,1,50.6,43.9,44.1,56.8,41.4,24.8,58.1,2.1,4,0,47.36,0
+CS2024219,Vikas Mukherjee,vikas.mukherjee219@student.edu,Computer Science,3,24.8,35.6,33.4,19.1,26.9,5.4,36.7,0.3,1,6,27.96,0
+IT2024220,Usha Mishra,usha.mishra220@student.edu,Information Technology,3,41.2,50.2,52.9,50.9,51.1,19.1,64.3,2.3,2,0,49.26,0
+CS2024221,Sachin Chaudhary,sachin.chaudhary221@student.edu,Computer Science,5,96.4,98.5,89.8,95.7,97.8,44.0,98.3,7.4,9,0,95.64,1
+CS2024222,Amit Rao,amit.rao222@student.edu,Computer Science,6,53.0,67.8,60.9,69.4,58.8,32.1,84.6,5.0,9,0,61.98,1
+CS2024223,Rahul Desai,rahul.desai223@student.edu,Computer Science,4,79.8,75.6,79.8,82.8,83.4,44.9,86.8,5.7,9,0,80.28,1
+MCA2024224,Nitin Ghosh,nitin.ghosh224@student.edu,MCA,2,46.1,44.6,54.4,54.5,45.4,25.5,60.4,1.8,5,1,49.0,0
+IT2024225,Pallavi Kapoor,pallavi.kapoor225@student.edu,Information Technology,6,56.6,68.9,61.8,58.6,45.7,32.5,74.7,4.6,8,1,58.32,1
+IT2024226,Manoj Shah,manoj.shah226@student.edu,Information Technology,4,42.1,49.2,37.0,59.7,45.1,12.0,65.1,2.0,2,1,46.62,0
+EC2024227,Sunil Chakraborty,sunil.chakraborty227@student.edu,Electronics,4,40.0,37.7,51.0,51.3,39.7,12.1,53.0,1.5,4,2,43.94,0
+MCA2024228,Rekha Chatterjee,rekha.chatterjee228@student.edu,MCA,1,56.3,49.0,53.5,39.6,46.1,14.3,49.0,1.0,4,1,48.9,0
+BCA2024229,Reena Sen,reena.sen229@student.edu,BCA,6,80.1,77.2,62.3,69.8,78.2,43.1,83.0,5.4,10,0,73.52,1
+IT2024230,Reena Gupta,reena.gupta230@student.edu,Information Technology,4,72.1,69.5,70.7,68.6,65.8,35.6,71.1,4.8,6,0,69.34,1
+MCA2024231,Mohit Nair,mohit.nair231@student.edu,MCA,3,76.3,71.3,80.7,76.6,65.6,42.0,88.9,4.8,9,0,74.1,1
+CS2024232,Vivek Sen,vivek.sen232@student.edu,Computer Science,2,43.7,39.7,44.2,41.2,41.6,26.0,64.1,1.2,4,0,42.08,0
+MCA2024233,Sanjay Agarwal,sanjay.agarwal233@student.edu,MCA,1,78.3,67.9,76.8,71.1,71.8,43.6,78.8,6.0,8,0,73.18,1
+MCA2024234,Kavya Mehta,kavya.mehta234@student.edu,MCA,3,44.5,58.0,54.7,43.8,51.8,21.0,59.2,3.2,5,2,50.56,0
+IT2024235,Preeti Sen,preeti.sen235@student.edu,Information Technology,2,46.4,38.2,44.7,54.0,55.7,12.7,53.5,1.1,2,0,47.8,0
+MCA2024236,Rekha Verma,rekha.verma236@student.edu,MCA,2,55.3,68.7,67.8,70.0,58.6,32.7,77.7,5.3,7,1,64.08,1
+MCA2024237,Nikhil Chakraborty,nikhil.chakraborty237@student.edu,MCA,2,65.3,68.0,59.9,54.9,72.2,34.3,73.0,3.2,5,1,64.06,1
+BCA2024238,Lakshmi Shah,lakshmi.shah238@student.edu,BCA,1,91.1,76.4,95.1,91.0,86.0,43.8,99.4,8.5,9,0,87.92,1
+MCA2024239,Monika Dey,monika.dey239@student.edu,MCA,1,66.1,69.6,63.9,62.4,74.0,24.1,66.4,3.9,8,0,67.2,1
+CS2024240,Sunil Mishra,sunil.mishra240@student.edu,Computer Science,5,48.6,41.9,48.0,57.6,51.0,20.9,64.0,3.3,6,1,49.42,0
+CS2024241,Pooja Roy,pooja.roy241@student.edu,Computer Science,4,46.7,39.7,43.3,42.5,41.9,8.3,44.3,1.2,4,6,42.82,0
+MCA2024242,Rahul Sen,rahul.sen242@student.edu,MCA,4,73.0,82.6,75.9,72.1,83.3,38.6,80.3,4.6,9,0,77.38,1
+MCA2024243,Smita Desai,smita.desai243@student.edu,MCA,6,70.1,67.6,64.1,60.5,68.4,36.4,79.2,4.2,8,0,66.14,1
+BCA2024244,Yogesh Rao,yogesh.rao244@student.edu,BCA,4,88.9,89.4,92.7,87.3,86.3,48.4,99.5,6.3,10,0,88.92,1
+CS2024245,Ritu Iyer,ritu.iyer245@student.edu,Computer Science,2,69.5,64.6,65.9,60.8,60.3,42.1,77.6,5.7,7,0,64.22,1
+MCA2024246,Nitin Ghosh,nitin.ghosh246@student.edu,MCA,4,70.1,72.5,70.4,70.2,64.3,29.9,76.4,3.9,5,0,69.5,1
+CS2024247,Harish Joshi,harish.joshi247@student.edu,Computer Science,4,40.4,54.4,67.4,48.4,40.6,35.1,75.0,3.9,6,0,50.24,1
+CS2024248,Nisha Shah,nisha.shah248@student.edu,Computer Science,1,39.8,33.0,43.0,29.9,38.0,20.5,61.7,2.6,4,2,36.74,0
+BCA2024249,Mamta Sharma,mamta.sharma249@student.edu,BCA,2,56.9,57.7,60.9,48.8,49.0,28.6,76.5,3.6,7,0,54.66,1
+CS2024250,Manoj Srivastava,manoj.srivastava250@student.edu,Computer Science,3,69.3,79.8,66.1,66.2,78.4,37.4,76.9,4.4,8,1,71.96,1
+BCA2024251,Sonia Patel,sonia.patel251@student.edu,BCA,6,93.3,96.4,99.6,100.0,82.0,41.4,98.2,9.7,9,0,94.26,1
+MCA2024252,Nitin Mukherjee,nitin.mukherjee252@student.edu,MCA,1,76.8,80.8,82.3,90.6,79.4,40.7,87.0,5.6,8,0,81.98,1
+BCA2024253,Vivek Joshi,vivek.joshi253@student.edu,BCA,2,88.2,74.3,70.7,84.0,77.1,43.3,84.3,6.0,10,0,78.86,1
+IT2024254,Sanjay Sinha,sanjay.sinha254@student.edu,Information Technology,3,59.6,76.6,65.4,55.3,63.7,26.8,62.6,3.7,5,0,64.12,1
+MCA2024255,Geeta Mehta,geeta.mehta255@student.edu,MCA,6,59.7,76.7,56.5,60.3,69.3,44.3,89.9,4.9,7,1,64.5,1
+MCA2024256,Dinesh Joshi,dinesh.joshi256@student.edu,MCA,1,48.7,57.4,47.7,57.3,52.5,24.2,68.2,2.7,6,0,52.72,1
+MCA2024257,Vivek Chatterjee,vivek.chatterjee257@student.edu,MCA,1,60.8,68.5,78.6,65.3,66.7,35.0,86.1,4.3,9,0,67.98,1
+BCA2024258,Pallavi Singh,pallavi.singh258@student.edu,BCA,1,63.5,63.5,60.8,77.9,84.3,36.4,75.2,4.3,10,0,70.0,1
+BCA2024259,Pratibha Chakraborty,pratibha.chakraborty259@student.edu,BCA,1,81.2,77.3,82.6,82.0,68.7,39.3,79.5,4.5,7,0,78.36,1
+MCA2024260,Preeti Ghosh,preeti.ghosh260@student.edu,MCA,6,54.3,62.8,54.6,52.1,48.9,24.7,61.0,2.7,2,1,54.54,1
+BCA2024261,Jyoti Tripathi,jyoti.tripathi261@student.edu,BCA,5,65.2,53.1,60.5,71.0,61.3,25.4,64.4,4.8,8,0,62.22,1
+IT2024262,Varsha Singh,varsha.singh262@student.edu,Information Technology,2,21.7,18.5,29.2,29.3,38.1,7.1,50.0,1.9,4,4,27.36,0
+BCA2024263,Ritu Chatterjee,ritu.chatterjee263@student.edu,BCA,4,49.8,46.8,56.1,60.7,48.0,24.2,62.5,3.5,6,0,52.28,1
+BCA2024264,Nisha Banerjee,nisha.banerjee264@student.edu,BCA,4,75.7,84.7,88.6,84.8,96.6,48.4,89.2,9.1,10,0,86.08,1
+MCA2024265,Mamta Pandey,mamta.pandey265@student.edu,MCA,4,55.4,65.2,61.9,54.2,56.1,34.8,78.3,2.7,8,1,58.56,1
+CS2024266,Aakash Chaudhary,aakash.chaudhary266@student.edu,Computer Science,5,67.3,71.9,78.2,78.2,70.3,37.0,91.2,6.4,8,1,73.18,1
+CS2024267,Bhavna Mehta,bhavna.mehta267@student.edu,Computer Science,3,59.2,56.8,59.1,60.6,65.5,33.1,62.4,3.8,5,1,60.24,1
+CS2024268,Aakash Shah,aakash.shah268@student.edu,Computer Science,3,54.4,56.5,61.4,51.1,51.2,30.1,71.7,3.6,5,0,54.92,1
+IT2024269,Seema Yadav,seema.yadav269@student.edu,Information Technology,2,50.0,39.3,52.1,52.6,51.9,35.5,62.3,3.5,6,0,49.18,1
+CS2024270,Reena Yadav,reena.yadav270@student.edu,Computer Science,6,66.2,52.9,48.0,45.4,55.9,33.3,74.6,3.7,8,2,53.68,1
+IT2024271,Divya Chauhan,divya.chauhan271@student.edu,Information Technology,2,37.8,60.0,61.2,52.5,55.7,33.3,77.9,2.9,8,0,53.44,1
+MCA2024272,Ashish Kumar,ashish.kumar272@student.edu,MCA,4,78.4,68.0,76.1,78.5,73.5,40.8,76.9,5.7,8,0,74.9,1
+MCA2024273,Kunal Dubey,kunal.dubey273@student.edu,MCA,5,54.7,47.5,55.4,52.7,74.3,32.3,72.0,3.1,7,0,56.92,1
+IT2024274,Monika Mehta,monika.mehta274@student.edu,Information Technology,3,66.6,59.3,60.2,61.0,66.5,24.7,66.7,4.6,8,0,62.72,1
+MCA2024275,Lakshmi Srivastava,lakshmi.srivastava275@student.edu,MCA,3,25.0,28.6,31.9,29.2,26.0,13.9,54.0,1.8,2,5,28.14,0
+MCA2024276,Dinesh Chakraborty,dinesh.chakraborty276@student.edu,MCA,1,81.3,67.0,69.4,69.5,64.9,27.0,67.2,4.3,8,0,70.42,1
+CS2024277,Anil Pandey,anil.pandey277@student.edu,Computer Science,1,69.1,83.3,76.5,69.4,84.6,44.4,95.1,9.2,9,0,76.58,1
+MCA2024278,Mohit Malhotra,mohit.malhotra278@student.edu,MCA,1,56.1,56.2,65.2,64.1,59.7,33.2,78.9,4.1,6,0,60.26,1
+IT2024279,Vikram Shukla,vikram.shukla279@student.edu,Information Technology,3,56.6,58.2,55.4,45.4,59.6,33.8,65.6,3.9,6,1,55.04,1
+MCA2024280,Gaurav Singh,gaurav.singh280@student.edu,MCA,1,59.9,61.7,67.6,66.1,67.5,25.3,64.3,2.8,5,0,64.56,1
+MCA2024281,Kavya Malhotra,kavya.malhotra281@student.edu,MCA,4,100.0,100.0,93.8,97.8,100.0,44.9,96.3,9.8,10,0,98.32,1
+CS2024282,Sumit Pandey,sumit.pandey282@student.edu,Computer Science,1,58.0,66.7,58.0,53.4,60.3,30.3,64.1,3.8,6,0,59.28,1
+MCA2024283,Rohit Tiwari,rohit.tiwari283@student.edu,MCA,3,52.5,55.8,50.7,43.9,48.1,14.8,54.1,1.4,6,1,50.2,0
+MCA2024284,Mamta Chaudhary,mamta.chaudhary284@student.edu,MCA,5,46.4,50.0,49.9,51.5,62.5,20.3,48.4,1.7,5,1,52.06,0
+MCA2024285,Nisha Gupta,nisha.gupta285@student.edu,MCA,2,40.0,63.8,41.4,46.3,36.7,14.5,48.3,1.0,5,1,45.64,0
+MCA2024286,Monika Banerjee,monika.banerjee286@student.edu,MCA,2,57.8,55.1,46.5,52.5,48.8,23.6,55.4,2.4,3,1,52.14,0
+MCA2024287,Vishal Srivastava,vishal.srivastava287@student.edu,MCA,3,77.9,73.6,67.9,75.3,66.0,40.5,84.4,4.1,7,1,72.14,1
+BCA2024288,Pratibha Bhatt,pratibha.bhatt288@student.edu,BCA,3,71.3,90.2,87.1,83.3,83.6,40.6,78.0,4.5,10,0,83.1,1
+CS2024289,Aakash Chakraborty,aakash.chakraborty289@student.edu,Computer Science,3,93.2,83.4,84.4,77.4,85.9,35.1,91.5,5.4,10,0,84.86,1
+IT2024290,Rahul Gupta,rahul.gupta290@student.edu,Information Technology,6,77.9,86.4,85.3,82.1,78.8,44.9,92.3,7.9,10,0,82.1,1
+BCA2024291,Pankaj Chaudhary,pankaj.chaudhary291@student.edu,BCA,3,88.7,79.3,84.6,75.6,79.1,33.6,80.5,5.8,10,1,81.46,1
+BCA2024292,Karan Joshi,karan.joshi292@student.edu,BCA,5,54.0,50.7,41.3,48.5,40.7,15.3,59.2,2.8,2,2,47.04,0
+CS2024293,Reena Bhatt,reena.bhatt293@student.edu,Computer Science,5,74.3,59.4,72.1,66.2,72.9,36.6,75.8,4.1,8,0,68.98,1
+MCA2024294,Kunal Bose,kunal.bose294@student.edu,MCA,4,94.7,76.2,78.3,76.5,81.2,41.1,88.1,6.2,9,0,81.38,1
+MCA2024295,Swati Sen,swati.sen295@student.edu,MCA,3,51.6,66.8,61.4,52.0,59.1,24.7,77.8,2.9,7,1,58.18,1
+EC2024296,Ankita Singh,ankita.singh296@student.edu,Electronics,4,55.3,38.8,47.7,43.2,55.7,15.3,66.3,2.6,6,2,48.14,0
+MCA2024297,Vikas Srivastava,vikas.srivastava297@student.edu,MCA,2,60.6,73.2,64.3,78.1,73.0,34.0,79.8,4.1,6,0,69.84,1
+MCA2024298,Swati Iyer,swati.iyer298@student.edu,MCA,2,75.0,74.3,65.6,69.6,77.9,44.2,82.6,5.5,8,0,72.48,1
+BCA2024299,Vikas Shukla,vikas.shukla299@student.edu,BCA,2,69.0,77.9,80.2,72.5,79.8,34.9,75.9,5.0,7,0,75.88,1
+MCA2024300,Preeti Banerjee,preeti.banerjee300@student.edu,MCA,2,74.3,67.7,62.0,72.9,62.8,27.8,76.4,2.8,8,0,67.94,1
+BCA2024301,Varsha Reddy,varsha.reddy301@student.edu,BCA,1,53.8,60.1,56.8,61.2,58.9,24.2,76.6,3.4,6,0,58.16,0
+MCA2024302,Geeta Chaudhary,geeta.chaudhary302@student.edu,MCA,5,22.8,23.6,27.2,23.1,15.5,9.5,49.0,1.5,0,6,22.44,0
+IT2024303,Sumit Mehta,sumit.mehta303@student.edu,Information Technology,2,47.8,55.3,63.1,67.3,59.4,28.2,70.6,3.8,8,2,58.58,1
+CS2024304,Sumit Mehta,sumit.mehta304@student.edu,Computer Science,2,68.3,67.7,71.4,67.3,69.2,30.3,72.2,3.0,6,0,68.78,1
+MCA2024305,Yogesh Saxena,yogesh.saxena305@student.edu,MCA,5,71.1,93.5,80.6,70.5,76.9,35.1,82.0,4.9,8,0,78.52,1
+MCA2024306,Rohan Chauhan,rohan.chauhan306@student.edu,MCA,5,61.1,59.4,68.3,59.2,47.6,43.3,75.6,5.3,7,0,59.12,1
+BCA2024307,Yogesh Patel,yogesh.patel307@student.edu,BCA,6,92.2,97.8,95.4,91.1,100.0,45.1,94.0,8.0,9,0,95.3,1
+BCA2024308,Siddharth Mukherjee,siddharth.mukherjee308@student.edu,BCA,1,53.5,46.0,65.2,55.4,57.9,25.9,63.3,3.6,7,0,55.6,1
+MCA2024309,Lakshmi Kumar,lakshmi.kumar309@student.edu,MCA,4,83.5,73.1,72.1,88.4,79.3,36.1,83.3,4.1,10,1,79.28,1
+MCA2024310,Ankita Mishra,ankita.mishra310@student.edu,MCA,3,51.2,45.1,48.9,51.8,53.9,20.1,56.2,2.5,3,1,50.18,0
+BCA2024311,Mamta Patel,mamta.patel311@student.edu,BCA,3,59.5,67.6,66.8,60.9,70.9,27.6,66.9,4.2,6,0,65.14,1
+CS2024312,Karan Tripathi,karan.tripathi312@student.edu,Computer Science,2,34.3,38.0,43.3,34.5,30.1,24.3,48.2,1.3,5,0,36.04,0
+MCA2024313,Ravi Sen,ravi.sen313@student.edu,MCA,5,79.3,78.0,79.0,79.0,79.2,38.0,88.7,4.4,10,1,78.9,1
+CS2024314,Sanjay Malhotra,sanjay.malhotra314@student.edu,Computer Science,1,80.5,66.1,70.8,74.9,63.8,35.2,82.5,5.9,10,0,71.22,1
+BCA2024315,Bhavna Verma,bhavna.verma315@student.edu,BCA,1,63.3,46.2,60.0,66.0,60.6,31.7,68.1,4.6,5,0,59.22,1
+MCA2024316,Smita Nair,smita.nair316@student.edu,MCA,3,41.5,42.9,50.9,62.7,54.3,24.3,58.0,1.7,4,0,50.46,0
+BCA2024317,Sachin Tripathi,sachin.tripathi317@student.edu,BCA,2,26.6,29.7,26.4,32.3,23.7,10.3,50.4,1.5,0,6,27.74,0
+CS2024318,Sonia Saxena,sonia.saxena318@student.edu,Computer Science,2,33.5,58.9,46.7,51.1,39.3,14.2,63.8,1.6,4,1,45.9,0
+EC2024319,Vikas Joshi,vikas.joshi319@student.edu,Electronics,3,35.2,40.4,42.0,37.2,42.5,22.4,63.7,2.6,5,0,39.46,0
+CS2024320,Vikas Mukherjee,vikas.mukherjee320@student.edu,Computer Science,1,80.1,78.5,70.3,74.9,72.8,36.8,79.1,4.7,8,0,75.32,1
+CS2024321,Shalini Iyer,shalini.iyer321@student.edu,Computer Science,3,58.2,57.2,48.9,54.7,48.8,26.4,76.6,4.8,5,0,53.56,1
+MCA2024322,Pratibha Patel,pratibha.patel322@student.edu,MCA,5,60.6,60.2,50.5,53.9,58.7,28.6,72.7,3.1,5,0,56.78,1
+BCA2024323,Seema Saxena,seema.saxena323@student.edu,BCA,5,59.0,58.9,63.5,67.7,71.6,32.2,69.3,3.1,7,0,64.14,1
+IT2024324,Deepak Singh,deepak.singh324@student.edu,Information Technology,5,59.6,62.1,58.0,65.7,64.8,30.3,73.0,3.6,8,0,62.04,1
+IT2024325,Sanjay Chatterjee,sanjay.chatterjee325@student.edu,Information Technology,1,41.8,57.0,57.4,52.2,59.2,15.4,52.8,1.4,2,1,53.52,0
+CS2024326,Kunal Sinha,kunal.sinha326@student.edu,Computer Science,1,34.8,42.7,37.4,38.9,36.0,12.8,59.0,2.4,4,1,37.96,0
+BCA2024327,Nisha Tiwari,nisha.tiwari327@student.edu,BCA,2,68.3,56.4,43.1,59.5,50.5,25.1,68.2,3.6,8,2,55.56,1
+MCA2024328,Shalini Dubey,shalini.dubey328@student.edu,MCA,6,64.6,57.2,71.6,49.2,63.0,27.8,69.5,4.8,6,0,61.12,1
+IT2024329,Preeti Rao,preeti.rao329@student.edu,Information Technology,5,58.2,57.5,52.9,60.9,46.5,24.3,62.4,4.0,7,0,55.2,1
+MCA2024330,Sumit Banerjee,sumit.banerjee330@student.edu,MCA,6,63.5,61.2,67.9,66.7,55.8,26.3,63.0,3.8,8,1,63.02,0
+EC2024331,Nisha Iyer,nisha.iyer331@student.edu,Electronics,2,63.8,66.3,62.2,74.7,64.7,32.5,83.1,6.6,10,0,66.34,1
+IT2024332,Ananya Pandey,ananya.pandey332@student.edu,Information Technology,6,72.8,75.4,67.6,74.0,59.1,28.6,67.0,4.1,6,0,69.78,1
+EC2024333,Swati Chatterjee,swati.chatterjee333@student.edu,Electronics,6,67.2,67.0,73.3,79.4,75.8,33.6,86.0,6.2,9,0,72.54,1
+MCA2024334,Mohit Sinha,mohit.sinha334@student.edu,MCA,1,65.4,54.7,59.3,58.8,62.7,31.4,73.8,3.5,5,0,60.18,0
+CS2024335,Nikhil Chakraborty,nikhil.chakraborty335@student.edu,Computer Science,1,68.0,72.7,63.5,61.7,63.8,29.6,79.5,3.6,6,1,65.94,1
+IT2024336,Ashish Nair,ashish.nair336@student.edu,Information Technology,1,91.0,80.1,88.1,91.2,86.6,49.1,90.9,9.9,9,0,87.4,1
+CS2024337,Rahul Saxena,rahul.saxena337@student.edu,Computer Science,1,94.0,86.4,87.1,92.3,87.5,41.9,93.3,6.6,9,0,89.46,1
+MCA2024338,Ravi Bhatt,ravi.bhatt338@student.edu,MCA,1,52.8,59.3,60.8,58.2,70.2,25.7,64.5,3.2,7,0,60.26,1
+MCA2024339,Geeta Chaudhary,geeta.chaudhary339@student.edu,MCA,2,52.8,46.5,52.8,48.9,32.8,14.7,65.5,2.5,3,1,46.76,0
+IT2024340,Sanjay Pandey,sanjay.pandey340@student.edu,Information Technology,6,69.4,77.3,73.1,63.9,65.2,27.3,77.8,4.6,6,1,69.78,1
+EC2024341,Kavya Dubey,kavya.dubey341@student.edu,Electronics,2,73.3,80.6,71.6,66.7,64.7,36.3,88.3,5.7,10,0,71.38,1
+MCA2024342,Vikas Rao,vikas.rao342@student.edu,MCA,1,80.2,55.8,63.6,66.0,62.3,30.9,75.1,3.3,5,0,65.58,1
+BCA2024343,Aakash Saxena,aakash.saxena343@student.edu,BCA,1,41.8,44.7,40.3,37.5,36.0,12.6,54.6,1.2,5,2,40.06,0
+CS2024344,Rajesh Mehta,rajesh.mehta344@student.edu,Computer Science,2,75.4,67.9,67.5,79.3,77.5,42.8,88.2,6.1,10,0,73.52,1
+CS2024345,Sachin Patel,sachin.patel345@student.edu,Computer Science,4,59.3,44.6,50.8,66.3,50.3,34.7,78.4,4.4,7,1,54.26,1
+MCA2024346,Asha Srivastava,asha.srivastava346@student.edu,MCA,6,54.9,73.5,60.4,56.0,48.8,16.4,56.6,3.0,2,2,58.72,0
+MCA2024347,Deepak Sharma,deepak.sharma347@student.edu,MCA,5,84.4,81.9,82.1,73.0,78.3,33.1,88.3,4.6,8,0,79.94,1
+BCA2024348,Mohit Mishra,mohit.mishra348@student.edu,BCA,3,72.3,68.7,68.9,83.4,62.4,34.6,86.7,4.1,8,0,71.14,1
+IT2024349,Manoj Banerjee,manoj.banerjee349@student.edu,Information Technology,2,43.7,56.2,42.2,50.4,37.2,25.4,51.8,2.8,3,0,45.94,0
+CS2024350,Radha Kumar,radha.kumar350@student.edu,Computer Science,6,51.7,61.7,57.8,47.7,47.4,21.2,60.0,1.9,6,1,53.26,0
+MCA2024351,Preeti Sinha,preeti.sinha351@student.edu,MCA,5,44.7,49.9,59.5,61.9,44.9,19.5,67.2,1.7,3,1,52.18,0
+MCA2024352,Rajesh Dubey,rajesh.dubey352@student.edu,MCA,4,68.2,73.1,67.4,67.5,67.0,41.6,86.7,4.3,9,0,68.64,1
+MCA2024353,Shweta Bose,shweta.bose353@student.edu,MCA,6,77.5,78.6,83.9,67.0,78.3,45.0,77.2,4.6,7,0,77.06,1
+MCA2024354,Aakash Agarwal,aakash.agarwal354@student.edu,MCA,3,56.3,66.9,60.8,58.1,55.9,34.0,73.9,3.1,8,0,59.6,1
+MCA2024355,Smita Bhatt,smita.bhatt355@student.edu,MCA,4,38.2,44.5,51.4,49.1,34.7,13.4,51.4,2.0,6,1,43.58,0
+MCA2024356,Anil Ghosh,anil.ghosh356@student.edu,MCA,3,57.6,62.0,44.4,62.1,53.1,34.8,69.7,4.2,5,0,55.84,1
+CS2024357,Gaurav Chatterjee,gaurav.chatterjee357@student.edu,Computer Science,2,54.2,63.0,65.6,47.5,61.1,30.4,62.0,4.9,7,0,58.28,1
+MCA2024358,Mohit Mishra,mohit.mishra358@student.edu,MCA,2,78.8,84.3,92.0,69.2,80.1,40.7,89.9,4.9,8,0,80.88,1
+CS2024359,Nisha Chauhan,nisha.chauhan359@student.edu,Computer Science,1,82.3,89.6,78.3,73.0,82.4,36.2,77.5,4.1,9,1,81.12,1
+MCA2024360,Monika Banerjee,monika.banerjee360@student.edu,MCA,4,72.8,74.4,72.4,68.0,62.6,30.6,72.2,3.2,6,0,70.04,1
+BCA2024361,Shalini Das,shalini.das361@student.edu,BCA,3,62.2,54.3,55.3,64.4,66.0,29.8,63.2,4.7,6,0,60.44,1
+CS2024362,Usha Bose,usha.bose362@student.edu,Computer Science,4,69.5,72.3,59.7,72.6,70.5,37.8,89.2,5.8,8,0,68.92,1
+MCA2024363,Divya Mehta,divya.mehta363@student.edu,MCA,2,47.9,50.5,46.2,54.6,56.1,25.7,69.6,2.7,8,1,51.06,1
+CS2024364,Pooja Gupta,pooja.gupta364@student.edu,Computer Science,2,56.5,45.7,55.7,55.5,46.8,28.2,69.8,3.0,6,1,52.04,1
+CS2024365,Vikas Dubey,vikas.dubey365@student.edu,Computer Science,3,90.5,91.7,82.6,84.1,76.3,42.6,89.6,6.8,10,0,85.04,1
+BCA2024366,Madhuri Bose,madhuri.bose366@student.edu,BCA,6,78.6,70.5,80.9,75.6,79.9,36.8,87.8,5.1,9,1,77.1,1
+IT2024367,Ajay Dey,ajay.dey367@student.edu,Information Technology,3,92.3,81.7,85.0,92.7,97.7,41.2,98.3,9.0,9,0,89.88,1
+BCA2024368,Neha Joshi,neha.joshi368@student.edu,BCA,3,48.9,46.7,57.9,54.1,54.7,19.7,49.2,2.5,5,2,52.46,0
+MCA2024369,Varsha Bose,varsha.bose369@student.edu,MCA,5,86.8,83.6,84.0,83.2,80.1,46.5,98.7,9.2,10,0,83.54,1
+MCA2024370,Anil Dey,anil.dey370@student.edu,MCA,6,64.0,64.7,66.2,68.9,59.2,31.0,78.5,3.5,8,1,64.6,1
+EC2024371,Sunil Sen,sunil.sen371@student.edu,Electronics,1,70.1,77.3,87.6,82.6,53.9,38.4,87.8,4.3,8,0,74.3,1
+CS2024372,Tarun Chakraborty,tarun.chakraborty372@student.edu,Computer Science,2,68.2,69.5,63.6,54.9,70.2,25.1,77.8,3.1,6,0,65.28,1
+BCA2024373,Nitin Sinha,nitin.sinha373@student.edu,BCA,5,76.5,78.7,68.1,77.8,79.8,42.7,89.9,6.4,10,0,76.18,1
+CS2024374,Ritu Shukla,ritu.shukla374@student.edu,Computer Science,2,65.2,58.8,64.4,62.3,60.3,32.2,75.7,3.9,8,0,62.2,1
+CS2024375,Anil Rao,anil.rao375@student.edu,Computer Science,3,30.6,50.2,49.2,44.6,35.6,23.8,52.0,1.9,3,2,42.04,0
+CS2024376,Ritu Yadav,ritu.yadav376@student.edu,Computer Science,4,70.0,78.5,75.3,71.8,65.7,43.4,86.1,5.6,9,0,72.26,1
+BCA2024377,Reena Sen,reena.sen377@student.edu,BCA,6,24.3,21.6,30.6,27.2,25.3,5.3,32.5,1.6,3,5,25.8,0
+CS2024378,Ananya Kumar,ananya.kumar378@student.edu,Computer Science,1,64.9,72.9,64.9,62.7,53.5,32.0,74.1,3.3,6,1,63.78,1
+BCA2024379,Ankita Nair,ankita.nair379@student.edu,BCA,4,70.2,74.8,78.5,81.6,81.2,44.5,79.8,4.9,7,0,77.26,1
+CS2024380,Harish Chatterjee,harish.chatterjee380@student.edu,Computer Science,3,32.0,47.1,33.5,36.3,32.6,19.4,63.5,1.3,6,2,36.3,0
+CS2024381,Seema Srivastava,seema.srivastava381@student.edu,Computer Science,4,75.5,64.1,66.0,58.4,60.6,35.4,91.3,4.3,9,0,64.92,1
+CS2024382,Pallavi Malhotra,pallavi.malhotra382@student.edu,Computer Science,2,60.1,47.4,55.7,67.0,54.6,22.6,76.7,4.5,5,1,56.96,1
+CS2024383,Arjun Ghosh,arjun.ghosh383@student.edu,Computer Science,5,55.8,73.2,64.7,65.3,67.2,22.8,64.7,4.5,8,0,65.24,1
+BCA2024384,Nikhil Sinha,nikhil.sinha384@student.edu,BCA,4,40.2,54.6,57.3,66.7,49.2,24.2,74.0,3.3,5,0,53.6,1
+CS2024385,Ankita Sinha,ankita.sinha385@student.edu,Computer Science,2,81.1,86.1,88.0,89.6,92.5,47.6,99.9,9.9,10,0,87.46,1
+CS2024386,Pratibha Roy,pratibha.roy386@student.edu,Computer Science,2,78.1,81.8,85.2,91.5,86.7,41.1,99.4,7.9,9,0,84.66,1
+IT2024387,Vikram Kumar,vikram.kumar387@student.edu,Information Technology,5,60.3,55.1,64.5,53.4,67.1,31.2,72.2,2.9,7,0,60.08,1
+MCA2024388,Pallavi Banerjee,pallavi.banerjee388@student.edu,MCA,1,81.2,81.1,86.2,90.8,83.7,43.6,87.6,6.8,9,1,84.6,1
+MCA2024389,Varsha Ghosh,varsha.ghosh389@student.edu,MCA,2,62.5,55.1,55.2,52.8,50.5,26.0,62.4,5.0,6,2,55.22,1
+MCA2024390,Varsha Reddy,varsha.reddy390@student.edu,MCA,2,62.1,57.7,61.8,60.5,59.0,22.4,71.8,4.6,6,0,60.22,1
+MCA2024391,Ajay Tripathi,ajay.tripathi391@student.edu,MCA,3,85.9,83.4,85.6,78.2,80.9,43.9,83.3,4.7,7,0,82.8,1
+MCA2024392,Sneha Sinha,sneha.sinha392@student.edu,MCA,5,49.0,73.0,54.7,70.7,60.3,42.4,84.7,4.2,8,0,61.54,1
+CS2024393,Neha Patel,neha.patel393@student.edu,Computer Science,6,57.6,73.8,63.8,57.9,75.9,34.6,84.1,5.9,8,0,65.8,1
+CS2024394,Suresh Rao,suresh.rao394@student.edu,Computer Science,1,69.9,78.1,70.2,67.9,66.8,37.0,91.2,5.2,8,0,70.58,1
+MCA2024395,Ajay Kumar,ajay.kumar395@student.edu,MCA,2,66.2,62.1,52.4,70.6,66.6,41.4,84.1,4.3,7,0,63.58,1
+MCA2024396,Pratibha Shah,pratibha.shah396@student.edu,MCA,1,96.7,95.2,73.6,94.8,85.5,47.7,95.3,8.6,9,0,89.16,1
+BCA2024397,Vikas Tripathi,vikas.tripathi397@student.edu,BCA,1,57.2,49.9,50.3,40.6,50.0,26.8,62.1,4.8,5,0,49.6,1
+BCA2024398,Ravi Chaudhary,ravi.chaudhary398@student.edu,BCA,2,60.8,56.7,54.7,56.7,61.8,27.2,79.8,4.3,8,0,58.14,1
+CS2024399,Meera Reddy,meera.reddy399@student.edu,Computer Science,2,61.3,57.8,59.8,55.0,74.2,22.6,77.1,2.8,8,0,61.62,1
+CS2024400,Rajesh Singh,rajesh.singh400@student.edu,Computer Science,1,79.5,81.5,88.4,80.7,82.4,43.0,81.7,4.9,8,0,82.5,1
+BCA2024401,Divya Tiwari,divya.tiwari401@student.edu,BCA,3,88.6,67.6,71.4,63.1,78.5,36.1,77.5,5.5,9,0,73.84,1
+MCA2024402,Deepak Malhotra,deepak.malhotra402@student.edu,MCA,3,63.7,69.6,72.9,72.7,61.7,22.5,72.2,4.1,6,0,68.12,1
+IT2024403,Ritu Kapoor,ritu.kapoor403@student.edu,Information Technology,2,52.8,55.5,55.9,58.0,52.9,28.8,78.4,4.8,8,0,55.02,1
+MCA2024404,Sunita Bose,sunita.bose404@student.edu,MCA,5,78.9,78.8,71.8,85.2,83.5,45.9,93.5,6.9,10,0,79.64,1
+MCA2024405,Madhuri Nair,madhuri.nair405@student.edu,MCA,2,94.3,100.0,100.0,97.2,100.0,43.3,94.7,8.0,9,0,98.3,1
+IT2024406,Tarun Kumar,tarun.kumar406@student.edu,Information Technology,4,79.5,77.2,83.1,94.9,96.9,34.1,78.5,5.5,10,0,86.32,1
+IT2024407,Mamta Ghosh,mamta.ghosh407@student.edu,Information Technology,6,62.8,78.4,91.3,86.8,67.8,39.8,83.6,5.6,8,0,77.42,1
+CS2024408,Reena Banerjee,reena.banerjee408@student.edu,Computer Science,3,74.0,78.8,62.1,71.4,79.8,41.7,91.3,5.5,10,0,73.22,1
+IT2024409,Ashish Ghosh,ashish.ghosh409@student.edu,Information Technology,3,75.0,76.9,82.8,81.1,73.3,42.0,91.2,6.2,9,0,77.82,1
+MCA2024410,Swati Shah,swati.shah410@student.edu,MCA,4,48.9,48.8,59.9,58.5,53.8,24.9,77.6,3.4,6,0,53.98,1
+IT2024411,Mohit Chakraborty,mohit.chakraborty411@student.edu,Information Technology,2,62.3,63.9,69.5,60.1,63.4,34.3,77.7,4.1,6,0,63.84,1
+MCA2024412,Divya Verma,divya.verma412@student.edu,MCA,4,57.7,50.7,48.0,58.2,60.2,14.3,51.1,2.4,3,2,54.96,0
+CS2024413,Seema Shukla,seema.shukla413@student.edu,Computer Science,2,99.2,86.7,93.7,87.0,87.8,41.6,93.2,9.8,10,0,90.88,1
+CS2024414,Karan Agarwal,karan.agarwal414@student.edu,Computer Science,1,80.8,84.3,69.9,85.3,100.0,41.4,92.7,7.9,10,0,84.06,1
+MCA2024415,Nitin Banerjee,nitin.banerjee415@student.edu,MCA,5,52.2,67.3,54.2,60.3,54.8,24.1,78.4,4.6,8,0,57.76,1
+MCA2024416,Sumit Mukherjee,sumit.mukherjee416@student.edu,MCA,4,68.9,55.1,58.0,53.0,65.4,25.1,75.0,3.8,6,1,60.08,1
+BCA2024417,Smita Chaudhary,smita.chaudhary417@student.edu,BCA,4,43.1,31.0,28.2,25.8,37.2,8.2,32.9,0.1,4,3,33.06,0
+MCA2024418,Deepak Saxena,deepak.saxena418@student.edu,MCA,4,99.3,100.0,98.8,96.3,87.1,48.5,91.1,8.7,10,0,96.3,1
+IT2024419,Pratibha Sharma,pratibha.sharma419@student.edu,Information Technology,2,74.7,69.7,66.1,71.4,67.6,30.2,75.9,2.6,8,0,69.9,1
+CS2024420,Geeta Chakraborty,geeta.chakraborty420@student.edu,Computer Science,4,77.5,82.2,69.5,71.3,67.9,34.9,91.5,5.3,8,0,73.68,1
+CS2024421,Nisha Mehta,nisha.mehta421@student.edu,Computer Science,1,42.8,57.5,55.4,53.1,51.1,34.5,64.2,4.0,5,1,51.98,1
+CS2024422,Divya Nair,divya.nair422@student.edu,Computer Science,2,31.4,42.1,39.7,51.3,38.3,17.3,64.8,1.2,4,0,40.56,0
+IT2024423,Hemant Sharma,hemant.sharma423@student.edu,Information Technology,3,60.0,54.7,57.6,72.1,61.9,29.5,71.0,4.0,8,1,61.26,1
+IT2024424,Reena Chakraborty,reena.chakraborty424@student.edu,Information Technology,4,37.5,54.8,53.3,62.5,59.3,35.5,70.6,3.1,8,0,53.48,1
+MCA2024425,Karan Bhatt,karan.bhatt425@student.edu,MCA,2,72.3,73.4,71.6,75.4,70.5,34.1,81.7,4.1,10,0,72.64,1
+MCA2024426,Usha Sharma,usha.sharma426@student.edu,MCA,3,100.0,99.6,95.8,99.7,97.6,48.5,89.5,7.6,10,0,98.54,1
+IT2024427,Vikram Tripathi,vikram.tripathi427@student.edu,Information Technology,4,58.1,54.9,69.6,62.8,58.3,30.1,74.6,4.2,7,1,60.74,1
+IT2024428,Yogesh Malhotra,yogesh.malhotra428@student.edu,Information Technology,2,73.6,75.5,87.9,81.5,74.2,43.9,76.7,4.2,7,0,78.54,1
+CS2024429,Neha Mishra,neha.mishra429@student.edu,Computer Science,6,48.7,46.2,56.9,51.0,52.2,15.6,54.6,3.2,3,2,51.0,1
+BCA2024430,Priya Sen,priya.sen430@student.edu,BCA,3,55.2,51.9,41.2,44.0,45.9,28.4,69.8,4.7,6,0,47.64,0
+IT2024431,Preeti Bhatt,preeti.bhatt431@student.edu,Information Technology,3,66.6,44.9,57.3,57.2,65.9,25.9,63.1,4.7,8,0,58.38,1
+MCA2024432,Anil Ghosh,anil.ghosh432@student.edu,MCA,3,59.7,50.7,53.1,53.2,63.5,24.2,71.6,4.0,8,0,56.04,0
+CS2024433,Geeta Verma,geeta.verma433@student.edu,Computer Science,3,71.6,72.5,62.1,75.3,69.9,32.4,82.1,4.4,8,0,70.28,1
+MCA2024434,Ravi Chauhan,ravi.chauhan434@student.edu,MCA,6,83.9,88.0,90.3,94.3,80.2,46.0,97.5,7.3,10,0,87.34,1
+BCA2024435,Vivek Saxena,vivek.saxena435@student.edu,BCA,4,81.0,85.1,87.2,95.2,89.6,40.8,97.3,9.6,9,0,87.62,1
+CS2024436,Sneha Chauhan,sneha.chauhan436@student.edu,Computer Science,2,68.0,71.0,58.6,65.8,66.3,26.9,70.6,4.5,8,0,65.94,1
+BCA2024437,Ritu Gupta,ritu.gupta437@student.edu,BCA,4,69.1,71.8,66.1,81.2,75.0,37.9,85.5,4.2,9,0,72.64,1
+CS2024438,Bhavna Das,bhavna.das438@student.edu,Computer Science,5,76.6,75.0,74.2,77.3,80.6,38.4,77.7,5.2,9,0,76.74,1
+MCA2024439,Aakash Kapoor,aakash.kapoor439@student.edu,MCA,2,72.0,64.3,62.1,60.6,69.7,33.6,83.5,4.6,10,0,65.74,1
+MCA2024440,Rohit Srivastava,rohit.srivastava440@student.edu,MCA,5,63.3,62.4,69.8,64.2,59.4,35.6,70.9,4.0,7,0,63.82,1
+EC2024441,Geeta Das,geeta.das441@student.edu,Electronics,4,80.5,67.9,68.7,74.6,75.4,44.4,76.4,4.7,7,0,73.42,1
+MCA2024442,Pankaj Shukla,pankaj.shukla442@student.edu,MCA,2,80.9,77.4,82.2,81.1,82.0,43.2,98.9,6.3,9,0,80.72,1
+CS2024443,Sanjay Chatterjee,sanjay.chatterjee443@student.edu,Computer Science,3,76.7,67.1,70.6,64.8,63.6,33.4,83.5,4.1,10,0,68.56,1
+MCA2024444,Sumit Chauhan,sumit.chauhan444@student.edu,MCA,4,48.5,69.1,61.2,73.4,52.1,24.2,67.8,2.7,6,0,60.86,1
+CS2024445,Reena Srivastava,reena.srivastava445@student.edu,Computer Science,2,75.2,61.7,75.2,69.5,68.3,32.5,75.4,4.5,8,0,69.98,1
+CS2024446,Vikas Dubey,vikas.dubey446@student.edu,Computer Science,5,57.5,52.9,70.6,69.5,65.5,34.8,68.0,2.9,7,0,63.2,1
+CS2024447,Ashish Chakraborty,ashish.chakraborty447@student.edu,Computer Science,6,51.5,49.8,44.4,57.9,46.7,30.4,66.9,4.3,8,0,50.06,1
+EC2024448,Pratibha Yadav,pratibha.yadav448@student.edu,Electronics,1,60.5,55.6,60.6,68.8,62.1,27.1,70.6,3.2,7,0,61.52,1
+BCA2024449,Sonia Patel,sonia.patel449@student.edu,BCA,1,60.6,65.0,65.4,58.6,67.9,29.9,75.9,3.4,7,2,63.5,1
+MCA2024450,Tarun Chaudhary,tarun.chaudhary450@student.edu,MCA,5,77.3,78.4,73.9,76.8,71.6,32.8,85.2,4.2,10,0,75.6,1
+BCA2024451,Seema Saxena,seema.saxena451@student.edu,BCA,5,58.0,67.3,64.9,66.9,61.7,28.4,78.2,4.0,5,1,63.76,1
+CS2024452,Kunal Chatterjee,kunal.chatterjee452@student.edu,Computer Science,2,9.3,35.3,35.0,39.0,27.5,17.8,30.7,0.1,0,4,29.22,0
+MCA2024453,Divya Kumar,divya.kumar453@student.edu,MCA,2,65.7,70.4,64.0,68.4,58.8,43.5,77.8,5.9,7,0,65.46,1
+MCA2024454,Tarun Sharma,tarun.sharma454@student.edu,MCA,3,85.3,74.4,83.2,89.4,82.3,33.6,78.8,5.1,8,0,82.92,1
+MCA2024455,Geeta Malhotra,geeta.malhotra455@student.edu,MCA,1,76.1,81.8,74.0,75.0,72.4,40.6,87.2,6.8,8,0,75.86,1
+EC2024456,Ashish Bose,ashish.bose456@student.edu,Electronics,5,54.7,47.3,55.0,63.7,41.1,22.4,52.2,2.6,2,2,52.36,0
+CS2024457,Rekha Tiwari,rekha.tiwari457@student.edu,Computer Science,2,48.6,55.3,52.2,57.9,48.3,30.0,66.2,2.5,8,0,52.46,1
+EC2024458,Ankita Shah,ankita.shah458@student.edu,Electronics,4,48.5,57.3,62.8,61.4,67.8,31.7,76.5,4.7,5,0,59.56,1
+EC2024459,Sachin Sinha,sachin.sinha459@student.edu,Electronics,2,70.8,62.7,65.9,52.9,77.4,27.9,67.5,3.6,6,0,65.94,1
+CS2024460,Shalini Roy,shalini.roy460@student.edu,Computer Science,5,100.0,88.3,93.6,100.0,84.1,47.6,96.7,7.4,9,0,93.2,1
+CS2024461,Shweta Singh,shweta.singh461@student.edu,Computer Science,5,28.3,19.9,16.6,20.7,25.9,15.4,34.1,1.2,1,4,22.28,0
+BCA2024462,Arjun Reddy,arjun.reddy462@student.edu,BCA,4,52.9,55.9,52.6,61.4,47.5,34.9,62.1,2.8,7,2,54.06,0
+MCA2024463,Gaurav Chatterjee,gaurav.chatterjee463@student.edu,MCA,2,73.3,78.7,78.9,85.5,74.6,42.3,84.0,4.8,9,0,78.2,1
+EC2024464,Hemant Srivastava,hemant.srivastava464@student.edu,Electronics,4,58.4,58.1,53.6,64.2,56.0,29.2,62.7,2.9,5,1,58.06,1
+MCA2024465,Sachin Dubey,sachin.dubey465@student.edu,MCA,1,74.9,72.1,79.5,72.1,80.8,32.3,83.9,4.4,9,0,75.88,1
+CS2024466,Bhavna Das,bhavna.das466@student.edu,Computer Science,5,87.0,80.2,83.1,64.5,77.0,35.8,83.2,6.5,8,0,78.36,1
+CS2024467,Sneha Bose,sneha.bose467@student.edu,Computer Science,3,74.4,73.3,66.3,72.3,72.3,34.7,73.0,3.8,7,0,71.72,1
+MCA2024468,Jyoti Chaudhary,jyoti.chaudhary468@student.edu,MCA,2,75.7,60.4,68.0,67.2,70.5,22.3,68.4,4.7,7,2,68.36,1
+CS2024469,Smita Dubey,smita.dubey469@student.edu,Computer Science,1,73.6,74.7,68.8,58.7,67.0,39.5,90.9,6.7,8,0,68.56,1
+CS2024470,Deepak Malhotra,deepak.malhotra470@student.edu,Computer Science,1,45.5,43.1,43.2,44.6,48.0,18.7,57.1,2.6,6,2,44.88,0
+MCA2024471,Madhuri Kumar,madhuri.kumar471@student.edu,MCA,3,50.8,61.7,55.0,53.6,65.9,26.6,65.1,4.7,5,0,57.4,1
+BCA2024472,Ashish Shah,ashish.shah472@student.edu,BCA,2,55.7,55.1,46.7,53.7,55.6,27.4,77.9,3.4,8,1,53.36,1
+IT2024473,Harish Iyer,harish.iyer473@student.edu,Information Technology,1,72.8,85.0,84.1,78.4,75.1,32.5,80.8,5.4,9,0,79.08,1
+MCA2024474,Varsha Chauhan,varsha.chauhan474@student.edu,MCA,4,60.0,62.0,62.2,59.0,71.5,23.3,78.1,4.6,5,0,62.94,1
+IT2024475,Nikhil Bhatt,nikhil.bhatt475@student.edu,Information Technology,3,63.4,61.7,74.3,71.2,62.4,36.9,91.3,5.3,8,0,66.6,1
+MCA2024476,Ankita Chauhan,ankita.chauhan476@student.edu,MCA,2,83.4,78.6,87.8,83.5,87.4,49.0,96.9,9.4,9,0,84.14,1
+MCA2024477,Asha Kumar,asha.kumar477@student.edu,MCA,6,64.1,68.8,71.8,62.0,72.8,30.3,65.8,4.4,6,0,67.9,1
+MCA2024478,Geeta Tiwari,geeta.tiwari478@student.edu,MCA,2,62.0,59.2,62.1,59.2,64.4,30.4,65.4,5.0,5,0,61.38,1
+MCA2024479,Mamta Nair,mamta.nair479@student.edu,MCA,2,85.9,80.1,87.0,94.5,86.2,32.6,90.0,6.5,10,0,86.74,1
+EC2024480,Pratibha Das,pratibha.das480@student.edu,Electronics,3,60.5,63.5,73.6,66.4,56.8,30.0,64.0,4.1,7,0,64.16,1
+CS2024481,Pankaj Mehta,pankaj.mehta481@student.edu,Computer Science,1,40.7,40.6,42.4,42.5,43.1,15.8,57.2,2.0,4,1,41.86,0
+MCA2024482,Ananya Agarwal,ananya.agarwal482@student.edu,MCA,1,63.8,60.3,75.2,65.5,66.5,33.4,91.1,7.0,10,0,66.26,1
+CS2024483,Bhavna Patel,bhavna.patel483@student.edu,Computer Science,1,69.0,64.7,57.9,54.4,67.5,30.2,75.2,4.9,7,1,62.7,1
+CS2024484,Vikas Nair,vikas.nair484@student.edu,Computer Science,2,74.9,73.7,85.1,79.9,81.4,41.7,92.2,7.8,10,0,79.0,1
+MCA2024485,Preeti Banerjee,preeti.banerjee485@student.edu,MCA,2,87.2,79.8,86.9,83.8,77.9,41.3,99.5,8.0,9,0,83.12,1
+BCA2024486,Harish Chatterjee,harish.chatterjee486@student.edu,BCA,1,88.2,84.0,84.3,83.8,71.8,43.0,98.6,8.7,9,0,82.42,1
+IT2024487,Arjun Sen,arjun.sen487@student.edu,Information Technology,2,80.3,72.8,78.0,75.0,65.4,43.8,80.0,6.7,10,0,74.3,1
+IT2024488,Sanjay Tiwari,sanjay.tiwari488@student.edu,Information Technology,1,92.1,82.0,86.7,87.7,95.9,41.6,91.1,9.4,10,0,88.88,1
+BCA2024489,Ajay Sharma,ajay.sharma489@student.edu,BCA,6,56.8,40.7,43.3,49.9,46.7,17.7,60.3,3.2,5,2,47.48,0
+CS2024490,Gaurav Pandey,gaurav.pandey490@student.edu,Computer Science,1,81.9,89.2,78.6,91.0,91.6,37.4,88.1,6.2,10,0,86.46,1
+CS2024491,Shalini Shukla,shalini.shukla491@student.edu,Computer Science,1,72.7,79.9,74.6,80.8,80.1,42.9,75.9,6.8,9,0,77.62,1
+IT2024492,Geeta Chauhan,geeta.chauhan492@student.edu,Information Technology,3,65.3,67.7,64.7,71.9,60.8,41.0,90.6,5.0,8,0,66.08,1
+MCA2024493,Gaurav Reddy,gaurav.reddy493@student.edu,MCA,2,54.7,44.7,52.0,36.6,47.4,25.9,63.5,1.4,4,1,47.08,0
+BCA2024494,Pankaj Mukherjee,pankaj.mukherjee494@student.edu,BCA,6,75.7,82.5,76.1,72.6,77.2,35.4,81.8,5.4,9,0,76.82,1
+MCA2024495,Arjun Mishra,arjun.mishra495@student.edu,MCA,5,59.1,52.4,58.7,59.0,58.8,27.7,68.7,3.4,5,0,57.6,1
+MCA2024496,Rohan Iyer,rohan.iyer496@student.edu,MCA,3,47.0,65.1,65.4,65.7,59.7,28.5,69.7,3.8,7,0,60.58,1
+MCA2024497,Tarun Das,tarun.das497@student.edu,MCA,3,69.1,52.3,42.6,49.2,44.5,17.6,56.8,1.5,4,0,51.54,0
+BCA2024498,Vikas Saxena,vikas.saxena498@student.edu,BCA,2,85.6,82.3,85.5,86.0,82.4,33.2,81.7,6.2,9,0,84.36,1
+BCA2024499,Shalini Chaudhary,shalini.chaudhary499@student.edu,BCA,4,82.8,88.8,84.6,65.6,85.1,37.5,89.6,4.8,7,1,81.38,1
+MCA2024500,Shweta Verma,shweta.verma500@student.edu,MCA,2,54.1,39.4,56.8,47.3,54.4,31.7,75.1,3.4,8,2,50.4,1
+IT2024501,Ankita Mukherjee,ankita.mukherjee501@student.edu,Information Technology,2,62.9,70.8,66.8,56.4,70.4,35.5,67.3,3.8,8,0,65.46,1
+BCA2024502,Vikas Rao,vikas.rao502@student.edu,BCA,4,51.7,45.6,50.8,62.8,59.9,24.7,77.8,3.4,5,0,54.16,1
+IT2024503,Gaurav Tiwari,gaurav.tiwari503@student.edu,Information Technology,1,75.0,82.9,65.7,74.5,73.9,39.2,86.9,4.8,10,0,74.4,1
+EC2024504,Rekha Chaudhary,rekha.chaudhary504@student.edu,Electronics,2,40.7,45.3,24.7,46.2,37.1,21.6,64.1,1.5,3,3,38.8,0
+MCA2024505,Lakshmi Patel,lakshmi.patel505@student.edu,MCA,5,61.7,71.8,62.7,61.2,63.1,35.7,85.2,4.3,7,0,64.1,1
+CS2024506,Reena Patel,reena.patel506@student.edu,Computer Science,1,74.1,80.6,78.1,79.4,77.3,33.7,87.6,5.8,8,0,77.9,1
+MCA2024507,Madhuri Kapoor,madhuri.kapoor507@student.edu,MCA,1,49.7,45.6,56.9,57.4,58.2,25.8,73.7,4.4,5,2,53.56,1
+CS2024508,Smita Sen,smita.sen508@student.edu,Computer Science,4,78.8,61.2,64.8,62.8,64.8,31.2,63.9,2.9,5,0,66.48,1
+CS2024509,Swati Roy,swati.roy509@student.edu,Computer Science,6,80.7,65.0,75.4,87.1,76.1,33.8,89.1,5.5,7,1,76.86,1
+BCA2024510,Smita Kumar,smita.kumar510@student.edu,BCA,4,78.7,81.1,84.6,77.7,84.7,34.4,84.8,6.5,10,0,81.36,1
+CS2024511,Pooja Tiwari,pooja.tiwari511@student.edu,Computer Science,2,70.7,57.4,69.5,71.4,67.9,40.9,78.7,5.9,10,0,67.38,1
+CS2024512,Ashish Kumar,ashish.kumar512@student.edu,Computer Science,4,39.5,27.5,37.6,35.8,43.5,15.6,64.8,2.7,6,1,36.78,0
+IT2024513,Amit Shukla,amit.shukla513@student.edu,Information Technology,3,35.6,35.3,30.1,49.6,35.4,12.2,48.9,2.6,3,1,37.2,0
+IT2024514,Ashish Bhatt,ashish.bhatt514@student.edu,Information Technology,6,30.0,44.0,30.1,38.7,41.2,13.7,35.0,1.9,1,6,36.8,0
+MCA2024515,Sumit Nair,sumit.nair515@student.edu,MCA,6,72.2,64.2,51.5,71.8,61.7,29.6,67.0,2.6,8,1,64.28,1
+MCA2024516,Rekha Dey,rekha.dey516@student.edu,MCA,2,56.1,46.6,61.6,61.9,50.9,15.7,54.6,2.6,3,0,55.42,0
+CS2024517,Tarun Reddy,tarun.reddy517@student.edu,Computer Science,4,81.8,82.3,79.8,78.7,67.3,38.4,80.4,4.0,9,0,77.98,1
+MCA2024518,Pallavi Chatterjee,pallavi.chatterjee518@student.edu,MCA,4,37.2,24.4,24.7,24.8,28.8,16.8,47.3,0.8,4,5,27.98,0
+CS2024519,Karan Joshi,karan.joshi519@student.edu,Computer Science,2,69.4,62.7,68.2,60.2,69.7,23.8,78.9,2.9,5,0,66.04,1
+MCA2024520,Amit Rao,amit.rao520@student.edu,MCA,2,39.8,36.9,37.5,36.2,49.7,12.5,35.3,1.2,2,2,40.02,0
+MCA2024521,Seema Bose,seema.bose521@student.edu,MCA,2,24.3,12.4,14.1,5.7,24.5,17.1,51.5,0.2,4,3,16.2,0
+IT2024522,Siddharth Saxena,siddharth.saxena522@student.edu,Information Technology,4,62.6,50.9,45.9,53.8,46.3,23.8,66.7,4.9,6,1,51.9,1
+CS2024523,Sunil Joshi,sunil.joshi523@student.edu,Computer Science,1,29.2,30.7,31.7,26.6,30.3,13.4,40.5,1.4,1,3,29.7,0
+CS2024524,Vikas Yadav,vikas.yadav524@student.edu,Computer Science,2,70.1,72.1,67.8,60.2,69.3,39.6,79.8,5.0,7,0,67.9,1
+IT2024525,Nikhil Chatterjee,nikhil.chatterjee525@student.edu,Information Technology,4,32.5,47.0,37.9,40.2,35.8,12.2,35.4,0.5,1,3,38.68,0
+BCA2024526,Ankita Patel,ankita.patel526@student.edu,BCA,6,56.7,64.0,62.7,61.4,61.4,30.8,71.7,2.7,5,1,61.24,1
+BCA2024527,Sachin Rao,sachin.rao527@student.edu,BCA,6,75.8,74.8,75.3,80.7,80.6,33.5,85.6,6.4,7,1,77.44,1
+EC2024528,Ananya Mehta,ananya.mehta528@student.edu,Electronics,2,48.6,50.9,62.9,59.5,62.9,30.9,68.7,3.5,5,0,56.96,1
+IT2024529,Sanjay Chauhan,sanjay.chauhan529@student.edu,Information Technology,3,67.0,69.4,68.1,69.5,67.5,25.8,67.6,4.5,6,2,68.3,1
+IT2024530,Jyoti Kumar,jyoti.kumar530@student.edu,Information Technology,4,34.1,39.4,19.8,31.3,43.8,17.2,66.5,2.3,3,2,33.68,0
+MCA2024531,Vishal Reddy,vishal.reddy531@student.edu,MCA,2,95.4,84.7,81.4,94.8,90.4,46.9,89.7,8.9,10,0,89.34,1
+CS2024532,Sumit Sen,sumit.sen532@student.edu,Computer Science,6,36.7,18.7,23.5,32.4,27.6,7.0,48.3,0.7,4,3,27.78,0
+MCA2024533,Pooja Mukherjee,pooja.mukherjee533@student.edu,MCA,3,65.2,82.0,62.0,58.5,50.1,34.8,71.1,2.8,7,0,63.56,1
+MCA2024534,Ajay Pandey,ajay.pandey534@student.edu,MCA,1,68.7,83.4,85.2,64.5,74.1,41.8,81.7,4.7,9,0,75.18,1
+MCA2024535,Kavya Sharma,kavya.sharma535@student.edu,MCA,2,81.5,72.7,71.2,84.1,66.8,32.5,90.6,6.6,9,0,75.26,1
+IT2024536,Rekha Tripathi,rekha.tripathi536@student.edu,Information Technology,3,71.5,81.9,80.5,86.9,81.2,40.9,76.4,5.8,9,0,80.4,1
+BCA2024537,Sneha Reddy,sneha.reddy537@student.edu,BCA,5,58.1,69.1,64.6,56.4,61.4,34.4,64.5,2.6,5,2,61.92,0
+MCA2024538,Hemant Reddy,hemant.reddy538@student.edu,MCA,1,44.5,37.9,36.5,42.2,40.6,13.7,55.5,2.4,6,3,40.34,0
+CS2024539,Ashish Saxena,ashish.saxena539@student.edu,Computer Science,3,69.2,70.0,66.0,59.4,77.3,23.5,69.4,3.6,7,0,68.38,1
+CS2024540,Vikas Sen,vikas.sen540@student.edu,Computer Science,3,56.3,57.8,64.3,66.2,53.8,32.6,63.1,3.9,7,0,59.68,1
+IT2024541,Nisha Mishra,nisha.mishra541@student.edu,Information Technology,1,61.6,59.9,70.1,61.0,61.0,26.1,74.3,4.2,5,1,62.72,1
+IT2024542,Ritu Das,ritu.das542@student.edu,Information Technology,4,22.8,27.5,29.6,26.3,28.3,17.5,43.8,1.6,1,3,26.9,0
+BCA2024543,Sanjay Iyer,sanjay.iyer543@student.edu,BCA,5,24.4,21.0,24.8,16.6,31.3,16.2,49.1,0.6,0,3,23.62,0
+MCA2024544,Vikas Agarwal,vikas.agarwal544@student.edu,MCA,1,39.5,28.5,39.4,37.6,38.6,13.5,46.4,1.1,4,6,36.72,0
+BCA2024545,Deepak Malhotra,deepak.malhotra545@student.edu,BCA,3,41.5,37.4,41.4,47.6,45.8,18.3,48.5,1.7,3,2,42.74,0
+IT2024546,Sneha Yadav,sneha.yadav546@student.edu,Information Technology,6,97.2,93.2,100.0,91.9,95.5,49.3,96.5,6.8,10,0,95.56,1
+MCA2024547,Lakshmi Yadav,lakshmi.yadav547@student.edu,MCA,1,41.4,29.8,42.0,35.2,38.3,15.4,60.0,2.7,3,1,37.34,0
+CS2024548,Archana Dubey,archana.dubey548@student.edu,Computer Science,6,80.2,75.1,64.9,80.1,72.6,44.6,76.8,5.9,8,0,74.58,1
+MCA2024549,Siddharth Mukherjee,siddharth.mukherjee549@student.edu,MCA,1,41.8,34.2,25.5,43.8,41.6,8.3,35.8,0.2,1,2,37.38,0
+CS2024550,Siddharth Mukherjee,siddharth.mukherjee550@student.edu,Computer Science,4,60.2,67.2,54.6,57.6,47.8,33.1,73.7,4.5,7,1,57.48,1
+MCA2024551,Smita Shah,smita.shah551@student.edu,MCA,3,79.8,84.7,77.1,85.7,80.1,44.3,82.7,6.1,7,0,81.48,1
+MCA2024552,Nikhil Desai,nikhil.desai552@student.edu,MCA,4,84.4,71.0,74.4,77.7,76.8,33.8,75.0,6.5,9,0,76.86,1
+MCA2024553,Seema Iyer,seema.iyer553@student.edu,MCA,5,56.1,67.6,60.1,69.9,60.6,26.2,69.7,3.5,8,0,62.86,1
+CS2024554,Vikas Rao,vikas.rao554@student.edu,Computer Science,4,77.4,76.6,86.0,80.3,87.7,46.9,95.6,8.3,9,0,81.6,1
+MCA2024555,Pankaj Gupta,pankaj.gupta555@student.edu,MCA,2,53.6,50.4,43.7,44.5,39.0,20.9,65.3,2.3,3,0,46.24,0
+EC2024556,Kavya Verma,kavya.verma556@student.edu,Electronics,1,73.0,75.7,76.0,79.8,75.8,38.0,81.4,6.1,8,0,76.06,1
+MCA2024557,Reena Patel,reena.patel557@student.edu,MCA,3,60.8,55.3,59.4,50.5,57.0,23.1,66.9,3.2,8,2,56.6,1
+EC2024558,Anil Das,anil.das558@student.edu,Electronics,1,80.8,69.8,80.8,91.8,71.9,41.0,88.2,6.0,8,0,79.02,1
+MCA2024559,Arjun Bhatt,arjun.bhatt559@student.edu,MCA,1,46.8,57.4,47.9,49.2,42.6,18.9,54.5,1.0,5,2,48.78,0
+MCA2024560,Dinesh Mehta,dinesh.mehta560@student.edu,MCA,3,52.9,50.8,43.8,52.3,50.7,32.1,62.7,2.6,5,0,50.1,0
+BCA2024561,Nisha Chaudhary,nisha.chaudhary561@student.edu,BCA,1,39.4,44.8,42.2,54.2,42.9,25.9,62.6,2.9,5,3,44.7,0
+CS2024562,Rahul Das,rahul.das562@student.edu,Computer Science,2,58.7,68.9,64.0,58.5,61.8,31.2,76.1,4.1,6,0,62.38,1
+BCA2024563,Deepak Ghosh,deepak.ghosh563@student.edu,BCA,4,63.9,71.4,73.9,59.6,63.7,24.3,76.9,2.8,8,0,66.5,1
+BCA2024564,Priya Mishra,priya.mishra564@student.edu,BCA,5,31.5,25.5,27.0,24.9,34.0,13.8,32.0,0.2,1,6,28.58,0
+CS2024565,Usha Malhotra,usha.malhotra565@student.edu,Computer Science,1,17.9,24.4,32.4,28.6,20.8,9.3,48.2,0.5,1,4,24.82,0
+BCA2024566,Reena Roy,reena.roy566@student.edu,BCA,4,74.1,71.5,75.6,78.1,69.8,34.8,78.0,4.8,9,0,73.82,1
+EC2024567,Smita Patel,smita.patel567@student.edu,Electronics,4,39.6,37.0,38.2,17.8,39.3,16.7,37.8,1.7,2,5,34.38,0
+EC2024568,Sunita Gupta,sunita.gupta568@student.edu,Electronics,1,29.7,22.4,30.3,16.8,27.6,10.1,43.9,0.2,3,4,25.36,0
+MCA2024569,Smita Sharma,smita.sharma569@student.edu,MCA,4,45.0,46.2,50.3,44.2,45.3,17.5,64.2,2.5,5,3,46.2,0
+MCA2024570,Arjun Bose,arjun.bose570@student.edu,MCA,2,70.5,74.5,73.9,76.4,76.4,38.1,89.5,5.8,10,0,74.34,1
+MCA2024571,Rohit Shah,rohit.shah571@student.edu,MCA,2,47.6,31.7,46.8,40.7,50.1,20.9,51.4,2.2,2,3,43.38,0
+CS2024572,Rohit Mishra,rohit.mishra572@student.edu,Computer Science,4,67.2,71.1,71.9,70.2,77.7,36.2,77.0,4.7,10,0,71.62,1
+BCA2024573,Usha Tripathi,usha.tripathi573@student.edu,BCA,5,53.4,58.1,51.8,51.5,46.6,28.0,68.6,3.8,6,0,52.28,1
+MCA2024574,Pratibha Verma,pratibha.verma574@student.edu,MCA,2,73.1,61.7,57.5,65.1,63.6,26.9,75.5,4.9,7,0,64.2,1
+MCA2024575,Radha Bhatt,radha.bhatt575@student.edu,MCA,3,27.5,31.7,19.4,26.1,25.4,14.0,32.9,0.1,1,5,26.02,0
+EC2024576,Geeta Pandey,geeta.pandey576@student.edu,Electronics,3,78.4,90.3,74.3,83.6,75.6,35.2,86.1,4.0,8,0,80.44,1
+IT2024577,Ajay Sen,ajay.sen577@student.edu,Information Technology,3,43.6,39.8,42.8,40.1,48.6,12.4,64.5,1.1,2,0,42.98,0
+CS2024578,Divya Dey,divya.dey578@student.edu,Computer Science,4,85.5,68.3,82.6,87.1,94.4,34.3,75.5,5.2,10,1,83.58,1
+CS2024579,Mamta Verma,mamta.verma579@student.edu,Computer Science,5,77.5,72.7,79.4,79.7,73.6,39.1,75.5,4.0,10,0,76.58,1
+IT2024580,Aakash Joshi,aakash.joshi580@student.edu,Information Technology,4,82.4,89.8,76.5,78.7,71.7,43.8,88.9,4.9,10,1,79.82,1
+MCA2024581,Shalini Sharma,shalini.sharma581@student.edu,MCA,6,86.9,72.7,82.0,75.8,91.3,36.7,82.9,4.9,9,0,81.74,1
+MCA2024582,Yogesh Mukherjee,yogesh.mukherjee582@student.edu,MCA,3,35.6,34.5,26.9,13.3,30.2,15.2,32.2,1.2,0,6,28.1,0
+IT2024583,Archana Kapoor,archana.kapoor583@student.edu,Information Technology,3,48.1,41.7,36.6,32.0,51.2,16.9,60.1,1.9,3,2,41.92,0
+CS2024584,Arjun Chauhan,arjun.chauhan584@student.edu,Computer Science,1,68.1,75.9,66.2,71.5,69.5,32.3,81.1,4.4,10,0,70.24,1
+MCA2024585,Gaurav Chauhan,gaurav.chauhan585@student.edu,MCA,2,75.9,81.3,69.6,81.3,80.5,36.1,82.8,5.2,7,1,77.72,1
+IT2024586,Smita Mukherjee,smita.mukherjee586@student.edu,Information Technology,2,28.4,33.3,15.3,24.3,16.1,16.0,42.4,0.9,2,3,23.48,0
+MCA2024587,Ritu Bose,ritu.bose587@student.edu,MCA,5,28.8,30.5,27.0,18.1,29.3,14.5,45.3,0.6,1,2,26.74,0
+MCA2024588,Meera Dey,meera.dey588@student.edu,MCA,3,14.7,32.7,32.7,17.5,9.4,8.1,46.9,0.1,1,4,21.4,0
+BCA2024589,Sanjay Shah,sanjay.shah589@student.edu,BCA,6,44.0,57.3,55.2,42.1,39.7,31.5,66.1,3.5,5,1,47.66,1
+CS2024590,Karan Chakraborty,karan.chakraborty590@student.edu,Computer Science,1,81.3,85.2,76.3,85.0,75.1,42.1,92.0,5.5,7,0,80.58,1
+CS2024591,Pankaj Chauhan,pankaj.chauhan591@student.edu,Computer Science,4,49.4,50.4,55.9,44.3,34.7,18.8,57.3,1.7,6,0,46.94,0
+BCA2024592,Smita Chaudhary,smita.chaudhary592@student.edu,BCA,2,85.6,100.0,95.8,95.8,88.5,42.5,95.5,7.7,10,0,93.14,1
+EC2024593,Rekha Dubey,rekha.dubey593@student.edu,Electronics,6,42.2,47.1,37.0,35.8,38.7,12.7,67.6,1.8,2,2,40.16,0
+CS2024594,Jyoti Desai,jyoti.desai594@student.edu,Computer Science,6,81.2,87.9,89.6,85.8,99.9,47.9,92.3,8.7,10,0,88.88,1
+BCA2024595,Sumit Chaudhary,sumit.chaudhary595@student.edu,BCA,4,36.8,40.4,38.7,45.0,60.4,14.9,54.9,2.8,6,2,44.26,0
+IT2024596,Suresh Patel,suresh.patel596@student.edu,Information Technology,1,58.7,63.2,64.7,67.1,62.0,22.9,77.4,4.8,7,1,63.14,1
+MCA2024597,Ashish Joshi,ashish.joshi597@student.edu,MCA,6,36.4,37.3,33.4,36.7,36.9,16.3,41.9,0.4,0,2,36.14,0
+MCA2024598,Pallavi Sen,pallavi.sen598@student.edu,MCA,2,86.6,87.4,89.6,97.9,100.0,47.9,95.8,6.4,9,0,92.3,1
+MCA2024599,Suresh Rao,suresh.rao599@student.edu,MCA,4,71.2,78.7,79.3,68.0,77.3,43.5,79.3,5.7,10,1,74.9,1
+BCA2024600,Rahul Saxena,rahul.saxena600@student.edu,BCA,3,50.8,46.3,53.6,39.4,47.3,22.7,62.9,4.0,7,1,47.48,1
+MCA2024601,Dinesh Shukla,dinesh.shukla601@student.edu,MCA,1,98.9,88.9,94.0,92.7,94.4,44.0,90.4,8.5,9,0,93.78,1
+CS2024602,Pratibha Bose,pratibha.bose602@student.edu,Computer Science,2,33.5,34.5,33.5,31.9,26.5,10.8,45.1,0.1,3,3,31.98,0
+CS2024603,Ankita Desai,ankita.desai603@student.edu,Computer Science,6,90.8,100.0,95.4,87.3,90.3,50.0,99.6,8.3,10,0,92.76,1
+BCA2024604,Rahul Das,rahul.das604@student.edu,BCA,3,49.2,57.4,41.3,48.6,57.6,23.8,52.8,1.0,6,1,50.82,1
+CS2024605,Sunil Roy,sunil.roy605@student.edu,Computer Science,4,49.3,58.7,52.2,70.3,73.5,23.8,70.4,4.3,6,0,60.8,1
+CS2024606,Rohit Verma,rohit.verma606@student.edu,Computer Science,3,18.4,20.8,17.1,26.3,28.3,12.9,30.9,1.1,2,3,22.18,0
+CS2024607,Pankaj Shukla,pankaj.shukla607@student.edu,Computer Science,3,41.5,38.8,41.2,39.2,43.6,19.9,53.6,2.9,3,0,40.86,0
+MCA2024608,Divya Iyer,divya.iyer608@student.edu,MCA,2,20.5,28.7,13.7,29.7,24.9,6.8,50.0,1.3,2,4,23.5,0
+MCA2024609,Ankita Dubey,ankita.dubey609@student.edu,MCA,6,68.6,73.9,59.4,64.7,72.5,33.3,85.6,5.7,9,0,67.82,1
+CS2024610,Geeta Saxena,geeta.saxena610@student.edu,Computer Science,6,83.8,79.9,87.6,83.1,91.6,40.4,85.9,6.2,8,0,85.2,1
+MCA2024611,Vikas Desai,vikas.desai611@student.edu,MCA,1,81.7,75.7,86.5,81.9,77.8,46.4,99.7,6.8,9,0,80.72,1
+MCA2024612,Preeti Agarwal,preeti.agarwal612@student.edu,MCA,4,49.3,57.3,54.6,51.2,55.3,34.4,76.5,2.9,7,2,53.54,1
+MCA2024613,Seema Verma,seema.verma613@student.edu,MCA,3,48.2,55.5,37.3,56.4,40.4,35.5,76.7,3.2,6,1,47.56,0
+EC2024614,Ritu Gupta,ritu.gupta614@student.edu,Electronics,6,61.4,57.7,65.7,48.9,60.9,31.8,72.8,3.2,5,1,58.92,1
+MCA2024615,Neha Tripathi,neha.tripathi615@student.edu,MCA,2,58.8,56.8,70.0,62.9,58.1,30.8,74.1,4.2,5,0,61.32,1
+CS2024616,Rekha Mukherjee,rekha.mukherjee616@student.edu,Computer Science,3,47.1,38.6,41.4,55.6,59.1,23.7,72.0,2.9,5,1,48.36,0
+MCA2024617,Shalini Mishra,shalini.mishra617@student.edu,MCA,3,39.2,43.0,41.0,39.4,38.4,18.9,62.5,1.2,2,1,40.2,0
+BCA2024618,Neha Saxena,neha.saxena618@student.edu,BCA,1,25.0,30.9,45.5,24.4,25.8,17.3,43.2,2.0,3,3,30.32,0
+CS2024619,Mamta Rao,mamta.rao619@student.edu,Computer Science,1,62.8,71.5,65.5,59.9,81.2,27.1,75.4,4.5,5,0,68.18,1
+MCA2024620,Sneha Desai,sneha.desai620@student.edu,MCA,3,51.7,40.2,59.3,42.7,47.2,24.5,53.9,2.8,5,0,48.22,0
+IT2024621,Geeta Mukherjee,geeta.mukherjee621@student.edu,Information Technology,5,76.1,84.4,79.8,77.9,69.9,44.1,89.6,6.5,7,0,77.62,1
+EC2024622,Seema Yadav,seema.yadav622@student.edu,Electronics,6,50.7,64.9,59.9,60.3,56.4,19.5,53.6,3.4,5,3,58.44,0
+MCA2024623,Tarun Ghosh,tarun.ghosh623@student.edu,MCA,6,59.4,63.3,57.9,71.7,61.6,34.0,75.1,6.6,9,0,62.78,1
+BCA2024624,Nisha Reddy,nisha.reddy624@student.edu,BCA,1,66.0,67.1,63.8,69.5,60.6,36.0,77.0,6.9,8,0,65.4,1
+IT2024625,Bhavna Mehta,bhavna.mehta625@student.edu,Information Technology,5,99.9,95.2,82.4,76.7,84.2,40.1,91.2,6.3,10,0,87.68,1
+MCA2024626,Manoj Malhotra,manoj.malhotra626@student.edu,MCA,4,35.7,24.2,23.2,9.0,29.8,6.0,39.4,2.0,1,2,24.38,0
+CS2024627,Vishal Mukherjee,vishal.mukherjee627@student.edu,Computer Science,4,52.0,42.7,52.3,41.6,44.7,25.4,61.3,3.2,4,0,46.66,0
+MCA2024628,Ananya Srivastava,ananya.srivastava628@student.edu,MCA,6,93.3,89.5,89.9,99.2,99.4,45.3,91.5,7.8,9,0,94.26,1
+BCA2024629,Preeti Saxena,preeti.saxena629@student.edu,BCA,5,81.3,79.6,66.4,82.9,81.0,41.8,95.9,8.8,9,0,78.24,1
+MCA2024630,Suresh Shukla,suresh.shukla630@student.edu,MCA,6,66.0,64.6,73.2,71.5,71.3,39.9,75.6,4.1,8,0,69.32,1
+CS2024631,Radha Saxena,radha.saxena631@student.edu,Computer Science,2,49.1,51.9,44.8,44.6,51.7,17.3,49.1,2.1,3,1,48.42,0
+IT2024632,Anil Sharma,anil.sharma632@student.edu,Information Technology,5,46.3,51.4,50.1,52.4,51.6,24.7,57.0,2.0,3,0,50.36,1
+MCA2024633,Suresh Reddy,suresh.reddy633@student.edu,MCA,3,56.2,51.0,55.6,54.6,57.1,14.9,59.9,1.5,6,1,54.9,0
+BCA2024634,Pratibha Reddy,pratibha.reddy634@student.edu,BCA,1,81.7,84.9,81.7,77.0,78.6,45.2,95.9,8.5,10,0,80.78,1
+MCA2024635,Ritu Shukla,ritu.shukla635@student.edu,MCA,5,75.8,89.2,75.2,86.8,93.2,34.6,75.7,6.5,8,0,84.04,1
+CS2024636,Seema Tripathi,seema.tripathi636@student.edu,Computer Science,2,89.8,82.1,83.1,80.7,79.2,43.9,87.7,6.3,7,0,82.98,1
+CS2024637,Nisha Sen,nisha.sen637@student.edu,Computer Science,4,36.2,42.1,43.9,31.3,47.7,21.9,52.0,2.8,6,1,40.24,0
+MCA2024638,Vikas Patel,vikas.patel638@student.edu,MCA,2,79.8,82.5,80.0,90.7,72.8,34.7,82.0,4.3,10,1,81.16,1
+CS2024639,Varsha Saxena,varsha.saxena639@student.edu,Computer Science,3,93.8,94.4,91.0,88.0,90.2,42.9,94.0,6.8,9,0,91.48,1
+CS2024640,Meera Chaudhary,meera.chaudhary640@student.edu,Computer Science,2,95.1,100.0,89.8,82.4,99.6,45.5,90.9,8.5,10,0,93.38,1
+MCA2024641,Kunal Chatterjee,kunal.chatterjee641@student.edu,MCA,3,65.3,91.1,71.2,71.2,80.0,32.1,82.7,4.4,7,0,75.76,1
+MCA2024642,Usha Ghosh,usha.ghosh642@student.edu,MCA,4,95.4,91.2,100.0,97.1,96.6,41.3,98.1,6.4,10,0,96.06,1
+IT2024643,Neha Yadav,neha.yadav643@student.edu,Information Technology,2,63.5,69.1,55.6,73.3,59.5,37.8,80.9,5.1,8,0,64.2,1
+MCA2024644,Gaurav Das,gaurav.das644@student.edu,MCA,2,72.2,71.6,74.5,69.0,84.2,41.4,91.6,4.5,7,0,74.3,1
+MCA2024645,Ankita Banerjee,ankita.banerjee645@student.edu,MCA,4,74.2,70.8,74.2,63.2,70.6,44.0,80.3,7.0,9,0,70.6,1
+EC2024646,Ashish Sharma,ashish.sharma646@student.edu,Electronics,6,38.4,37.3,48.2,50.8,50.1,19.0,58.5,2.3,2,0,44.96,0
+MCA2024647,Sunita Joshi,sunita.joshi647@student.edu,MCA,4,66.0,58.2,64.5,64.7,71.9,35.6,65.1,2.5,8,1,65.06,1
+EC2024648,Rajesh Agarwal,rajesh.agarwal648@student.edu,Electronics,2,87.9,79.1,92.7,85.3,93.9,48.0,98.9,7.2,9,0,87.78,1
+MCA2024649,Vishal Bose,vishal.bose649@student.edu,MCA,1,35.9,28.5,34.4,34.0,21.8,11.5,50.2,1.4,4,2,30.92,0
+EC2024650,Vivek Shah,vivek.shah650@student.edu,Electronics,1,88.6,81.6,89.5,73.7,78.2,40.5,88.1,6.8,7,1,82.32,1
+MCA2024651,Shweta Shah,shweta.shah651@student.edu,MCA,5,96.5,81.6,83.4,87.9,89.5,43.1,99.3,8.2,9,0,87.78,1
+EC2024652,Monika Pandey,monika.pandey652@student.edu,Electronics,1,89.0,84.8,82.0,73.9,82.2,39.2,76.8,5.5,7,1,82.38,1
+MCA2024653,Monika Reddy,monika.reddy653@student.edu,MCA,3,32.1,46.2,46.5,47.1,29.5,24.6,49.1,2.0,5,1,40.28,0
+CS2024654,Madhuri Singh,madhuri.singh654@student.edu,Computer Science,1,60.3,58.9,58.6,57.2,62.2,34.7,71.7,2.8,6,2,59.44,1
+MCA2024655,Varsha Rao,varsha.rao655@student.edu,MCA,4,100.0,90.5,92.2,99.4,98.0,46.1,91.2,8.6,10,0,96.02,1
+MCA2024656,Deepak Reddy,deepak.reddy656@student.edu,MCA,6,89.4,91.9,85.0,84.0,88.6,49.2,93.7,6.0,9,0,87.78,1
+BCA2024657,Swati Iyer,swati.iyer657@student.edu,BCA,4,60.1,54.0,52.5,67.6,54.4,27.8,65.7,3.1,5,0,57.72,1
+CS2024658,Mamta Shah,mamta.shah658@student.edu,Computer Science,5,67.4,59.5,73.0,62.9,63.8,32.3,74.7,4.3,5,1,65.32,1
+CS2024659,Ajay Dubey,ajay.dubey659@student.edu,Computer Science,2,29.1,28.4,43.2,43.7,37.4,15.3,55.2,2.0,6,0,36.36,0
+CS2024660,Vishal Pandey,vishal.pandey660@student.edu,Computer Science,6,41.3,38.0,48.8,38.1,39.6,17.8,61.8,1.8,6,2,41.16,0
+BCA2024661,Bhavna Dubey,bhavna.dubey661@student.edu,BCA,3,75.0,81.4,88.3,90.0,83.8,36.6,78.8,6.1,7,0,83.7,1
+IT2024662,Vivek Tripathi,vivek.tripathi662@student.edu,Information Technology,3,23.9,30.0,24.1,19.0,16.5,11.5,34.6,1.8,3,5,22.7,0
+CS2024663,Sunil Tiwari,sunil.tiwari663@student.edu,Computer Science,3,63.8,70.7,83.9,74.2,70.6,34.2,66.4,3.9,6,0,72.64,1
+CS2024664,Rohit Mishra,rohit.mishra664@student.edu,Computer Science,6,77.7,67.8,63.6,56.4,75.3,27.8,68.2,3.8,6,2,68.16,1
+MCA2024665,Rahul Bose,rahul.bose665@student.edu,MCA,2,61.0,39.4,37.3,36.6,41.5,25.0,64.9,2.4,5,0,43.16,0
+EC2024666,Sanjay Tripathi,sanjay.tripathi666@student.edu,Electronics,2,41.6,40.7,41.6,50.8,43.0,15.7,59.3,1.9,2,2,43.54,0
+CS2024667,Ananya Mehta,ananya.mehta667@student.edu,Computer Science,4,49.9,53.2,54.1,49.0,45.3,23.1,51.9,2.7,4,0,50.3,0
+CS2024668,Mamta Gupta,mamta.gupta668@student.edu,Computer Science,5,56.3,52.4,55.7,51.5,53.9,30.6,71.4,2.5,5,1,53.96,1
+MCA2024669,Vivek Sharma,vivek.sharma669@student.edu,MCA,4,30.8,36.9,26.1,27.2,31.2,10.2,44.2,1.3,2,2,30.44,0
+MCA2024670,Rekha Chaudhary,rekha.chaudhary670@student.edu,MCA,5,62.6,60.3,58.3,69.4,50.3,23.8,66.8,3.8,5,0,60.18,1
+MCA2024671,Divya Chauhan,divya.chauhan671@student.edu,MCA,1,48.1,54.8,55.2,53.0,71.5,28.0,73.1,3.7,6,1,56.52,1
+MCA2024672,Seema Bhatt,seema.bhatt672@student.edu,MCA,6,49.6,40.1,28.9,54.0,38.6,20.7,54.1,2.0,6,3,42.24,0
+IT2024673,Suresh Joshi,suresh.joshi673@student.edu,Information Technology,5,61.4,75.2,73.4,84.3,72.5,40.1,88.3,5.6,8,0,73.36,1
+MCA2024674,Harish Mehta,harish.mehta674@student.edu,MCA,3,74.6,75.8,71.3,64.8,70.9,37.2,84.7,6.3,8,1,71.48,1
+CS2024675,Reena Mishra,reena.mishra675@student.edu,Computer Science,4,69.5,81.7,73.4,75.6,88.8,35.3,77.2,4.2,8,0,77.8,1
+CS2024676,Ankita Kumar,ankita.kumar676@student.edu,Computer Science,5,57.5,68.6,64.4,69.2,68.7,41.8,77.9,5.8,9,0,65.68,1
+BCA2024677,Siddharth Nair,siddharth.nair677@student.edu,BCA,6,64.8,72.5,64.2,61.0,62.7,41.7,86.1,5.8,8,1,65.04,1
+BCA2024678,Nitin Kumar,nitin.kumar678@student.edu,BCA,4,92.2,84.6,87.3,89.7,83.9,43.5,96.6,6.6,9,0,87.54,1
+CS2024679,Seema Banerjee,seema.banerjee679@student.edu,Computer Science,2,38.3,49.6,45.8,42.8,45.2,15.0,55.9,2.4,4,3,44.34,0
+IT2024680,Sunita Reddy,sunita.reddy680@student.edu,Information Technology,2,73.2,72.7,59.1,74.0,64.0,24.4,65.5,4.1,8,0,68.6,1
+IT2024681,Sumit Dey,sumit.dey681@student.edu,Information Technology,4,35.2,48.5,40.5,53.0,35.0,19.1,53.2,1.2,3,1,42.44,0
+MCA2024682,Ashish Kapoor,ashish.kapoor682@student.edu,MCA,5,54.8,57.2,44.9,58.0,64.7,28.6,76.4,3.6,7,0,55.92,1
+IT2024683,Neha Saxena,neha.saxena683@student.edu,Information Technology,6,41.5,34.6,30.9,35.4,52.2,17.3,51.9,3.2,2,1,38.92,0
+CS2024684,Ananya Chatterjee,ananya.chatterjee684@student.edu,Computer Science,3,50.7,44.9,55.2,55.7,59.5,24.3,63.1,4.6,8,1,53.2,1
+BCA2024685,Aakash Agarwal,aakash.agarwal685@student.edu,BCA,2,60.3,65.0,58.0,64.2,64.4,29.0,76.2,4.9,7,0,62.38,1
+MCA2024686,Karan Singh,karan.singh686@student.edu,MCA,2,54.9,63.2,51.2,76.0,68.8,31.8,70.2,3.7,5,0,62.82,1
+MCA2024687,Dinesh Dey,dinesh.dey687@student.edu,MCA,1,47.0,36.8,29.9,36.8,36.0,22.5,63.1,3.4,2,1,37.3,0
+BCA2024688,Karan Ghosh,karan.ghosh688@student.edu,BCA,5,49.2,43.4,40.3,48.9,50.3,13.0,67.7,3.2,5,1,46.42,0
+CS2024689,Kunal Shukla,kunal.shukla689@student.edu,Computer Science,3,75.4,84.6,81.2,94.0,80.3,40.4,78.1,5.7,9,0,83.1,1
+BCA2024690,Karan Chatterjee,karan.chatterjee690@student.edu,BCA,5,88.2,82.2,100.0,86.9,96.0,40.3,90.1,7.1,9,0,90.66,1
+BCA2024691,Swati Chakraborty,swati.chakraborty691@student.edu,BCA,1,70.0,62.7,68.6,73.2,66.7,32.1,66.6,3.7,6,0,68.24,1
+BCA2024692,Sunil Singh,sunil.singh692@student.edu,BCA,5,54.3,59.7,60.8,58.1,49.9,24.5,67.6,3.2,7,1,56.56,1
+CS2024693,Vivek Bose,vivek.bose693@student.edu,Computer Science,2,49.9,41.3,50.5,51.7,44.4,23.1,53.9,1.6,4,2,47.56,0
+BCA2024694,Lakshmi Roy,lakshmi.roy694@student.edu,BCA,4,67.9,54.0,58.3,56.9,55.2,35.9,73.2,3.1,8,0,58.46,1
+BCA2024695,Pratibha Dubey,pratibha.dubey695@student.edu,BCA,6,79.5,77.8,80.9,74.2,70.6,33.3,78.1,4.9,8,1,76.6,1
+BCA2024696,Mohit Shah,mohit.shah696@student.edu,BCA,4,78.0,89.5,72.0,83.1,85.4,41.4,76.7,4.2,10,0,81.6,1
+CS2024697,Arjun Iyer,arjun.iyer697@student.edu,Computer Science,4,58.9,71.4,70.1,66.3,57.2,31.6,69.8,4.4,6,0,64.78,1
+CS2024698,Ankita Iyer,ankita.iyer698@student.edu,Computer Science,2,38.4,41.9,42.9,45.8,32.5,23.2,66.1,2.8,5,0,40.3,0
+CS2024699,Kavya Chatterjee,kavya.chatterjee699@student.edu,Computer Science,4,57.9,62.9,63.9,52.4,54.3,29.6,69.0,4.4,8,0,58.28,1
+IT2024700,Neha Malhotra,neha.malhotra700@student.edu,Information Technology,2,24.1,37.6,34.1,22.5,29.9,15.1,35.8,1.0,0,3,29.64,0
+MCA2024701,Madhuri Dey,madhuri.dey701@student.edu,MCA,2,84.1,90.7,84.3,78.6,82.8,41.9,82.9,6.1,10,0,84.1,1
+MCA2024702,Smita Roy,smita.roy702@student.edu,MCA,4,97.6,96.4,96.0,86.9,100.0,46.0,99.1,8.8,9,0,95.38,1
+MCA2024703,Suresh Mukherjee,suresh.mukherjee703@student.edu,MCA,3,62.8,52.5,64.9,67.0,70.1,34.9,68.6,3.2,7,0,63.46,1
+MCA2024704,Harish Verma,harish.verma704@student.edu,MCA,5,54.8,50.3,53.9,65.0,53.9,28.6,78.5,4.1,6,2,55.58,1
+BCA2024705,Siddharth Shukla,siddharth.shukla705@student.edu,BCA,6,86.1,86.9,76.9,67.3,76.1,38.4,90.7,6.9,7,0,78.66,1
+BCA2024706,Vikram Rao,vikram.rao706@student.edu,BCA,6,52.5,60.3,62.8,65.0,60.6,27.6,71.9,4.7,5,2,60.24,1
+MCA2024707,Reena Yadav,reena.yadav707@student.edu,MCA,1,93.2,90.0,73.4,80.1,70.4,43.6,78.8,4.4,8,0,81.42,1
+CS2024708,Dinesh Mukherjee,dinesh.mukherjee708@student.edu,Computer Science,3,42.1,55.0,49.0,39.8,50.7,22.4,48.8,3.2,3,3,47.32,0
+CS2024709,Neha Dey,neha.dey709@student.edu,Computer Science,2,34.7,28.5,33.5,36.9,35.4,10.6,42.9,0.8,1,4,33.8,0
+BCA2024710,Arjun Chaudhary,arjun.chaudhary710@student.edu,BCA,6,69.0,63.0,73.3,78.9,60.5,43.8,91.9,5.6,10,1,68.94,1
+MCA2024711,Sonia Tripathi,sonia.tripathi711@student.edu,MCA,4,45.3,50.4,47.2,46.5,59.5,17.1,57.0,1.9,5,0,49.78,0
+MCA2024712,Geeta Rao,geeta.rao712@student.edu,MCA,3,56.0,51.3,53.7,67.6,67.3,34.6,67.1,3.1,8,0,59.18,1
+EC2024713,Sachin Agarwal,sachin.agarwal713@student.edu,Electronics,2,85.8,95.7,84.3,97.4,85.8,46.9,90.7,9.0,9,0,89.8,1
+CS2024714,Hemant Sinha,hemant.sinha714@student.edu,Computer Science,3,74.3,75.8,77.2,87.5,73.6,32.7,81.4,4.1,10,1,77.68,1
+IT2024715,Rajesh Dubey,rajesh.dubey715@student.edu,Information Technology,1,48.2,44.7,47.9,37.2,46.1,13.5,56.6,1.9,2,1,44.82,0
+CS2024716,Nikhil Das,nikhil.das716@student.edu,Computer Science,4,86.0,94.0,89.3,95.9,100.0,42.2,91.8,7.4,10,0,93.04,1
+IT2024717,Ajay Dubey,ajay.dubey717@student.edu,Information Technology,5,43.2,41.4,34.3,40.5,52.9,12.4,51.4,1.8,2,2,42.46,0
+MCA2024718,Vishal Saxena,vishal.saxena718@student.edu,MCA,2,37.8,44.3,34.2,39.0,43.3,14.6,48.7,3.3,2,2,39.72,0
+MCA2024719,Nitin Ghosh,nitin.ghosh719@student.edu,MCA,6,65.0,73.1,60.4,71.5,70.2,30.1,63.3,4.3,8,2,68.04,1
+CS2024720,Amit Sinha,amit.sinha720@student.edu,Computer Science,5,95.4,89.6,91.6,82.5,78.4,42.2,99.3,8.0,9,0,87.5,1
+MCA2024721,Sachin Roy,sachin.roy721@student.edu,MCA,1,72.9,67.2,66.6,55.3,67.4,33.5,87.5,4.4,10,0,65.88,1
+MCA2024722,Divya Shah,divya.shah722@student.edu,MCA,1,51.1,65.7,58.6,76.6,76.3,42.0,90.1,5.1,10,0,65.66,1
+CS2024723,Preeti Kapoor,preeti.kapoor723@student.edu,Computer Science,4,58.4,51.6,38.8,51.4,55.0,30.3,79.9,2.6,8,1,51.04,1
+IT2024724,Rahul Bhatt,rahul.bhatt724@student.edu,Information Technology,3,85.4,65.6,77.6,78.0,78.0,42.1,79.3,5.6,9,0,76.92,1
+MCA2024725,Neha Rao,neha.rao725@student.edu,MCA,3,43.1,40.8,47.8,48.4,51.8,21.6,53.7,1.2,3,1,46.38,0
+BCA2024726,Neha Mishra,neha.mishra726@student.edu,BCA,1,67.9,84.7,78.3,70.4,81.7,38.5,80.2,4.3,7,0,76.6,1
+IT2024727,Asha Iyer,asha.iyer727@student.edu,Information Technology,2,75.3,76.0,69.7,77.9,81.8,41.6,83.3,6.6,10,1,76.14,1
+MCA2024728,Preeti Mishra,preeti.mishra728@student.edu,MCA,5,85.1,90.8,91.9,94.7,84.9,45.6,92.8,8.3,10,0,89.48,1
+BCA2024729,Vikas Yadav,vikas.yadav729@student.edu,BCA,2,79.8,73.6,69.3,64.8,65.3,33.6,64.7,3.4,5,0,70.56,1
+MCA2024730,Ravi Mehta,ravi.mehta730@student.edu,MCA,3,47.0,56.0,62.9,50.5,50.0,24.7,73.0,3.0,5,0,53.28,1
+BCA2024731,Yogesh Bhatt,yogesh.bhatt731@student.edu,BCA,1,83.3,79.7,73.4,70.5,74.4,33.4,77.7,5.6,8,0,76.26,1
+IT2024732,Ashish Singh,ashish.singh732@student.edu,Information Technology,4,34.3,40.0,41.5,29.9,35.4,12.9,56.7,1.3,2,3,36.22,0
+BCA2024733,Pooja Shah,pooja.shah733@student.edu,BCA,3,60.1,60.8,67.5,62.1,67.9,36.4,77.4,6.1,9,0,63.68,1
+MCA2024734,Sneha Roy,sneha.roy734@student.edu,MCA,6,41.9,38.2,47.1,38.0,43.7,17.8,51.3,1.4,5,1,41.78,0
+CS2024735,Pratibha Iyer,pratibha.iyer735@student.edu,Computer Science,6,64.6,84.6,59.9,72.4,56.2,23.5,71.2,4.5,6,1,67.54,1
+IT2024736,Dinesh Iyer,dinesh.iyer736@student.edu,Information Technology,1,84.1,88.5,93.3,96.8,100.0,45.4,98.2,8.1,9,0,92.54,1
+MCA2024737,Gaurav Mehta,gaurav.mehta737@student.edu,MCA,2,96.8,76.0,90.6,87.3,100.0,48.4,91.1,8.8,9,0,90.14,1
+MCA2024738,Rahul Joshi,rahul.joshi738@student.edu,MCA,3,57.0,56.1,63.4,64.9,54.5,28.1,67.2,4.7,8,1,59.18,1
+MCA2024739,Usha Sharma,usha.sharma739@student.edu,MCA,1,76.6,77.8,80.2,89.5,74.4,33.6,88.6,6.5,9,0,79.7,1
+MCA2024740,Smita Sinha,smita.sinha740@student.edu,MCA,1,69.4,81.2,80.9,81.2,79.8,40.2,96.3,7.5,10,0,78.5,1
+IT2024741,Harish Yadav,harish.yadav741@student.edu,Information Technology,2,42.7,50.5,45.2,47.7,57.0,30.2,77.5,3.3,8,2,48.62,1
+BCA2024742,Harish Mishra,harish.mishra742@student.edu,BCA,1,36.7,42.3,34.5,40.3,25.1,22.1,66.0,3.0,4,0,35.78,0
+BCA2024743,Geeta Patel,geeta.patel743@student.edu,BCA,1,55.9,53.1,59.2,49.6,48.8,17.1,64.8,1.1,3,2,53.32,0
+CS2024744,Asha Desai,asha.desai744@student.edu,Computer Science,1,51.4,54.9,66.5,60.0,57.2,30.3,65.7,4.9,8,1,58.0,1
+CS2024745,Shalini Chakraborty,shalini.chakraborty745@student.edu,Computer Science,3,60.0,72.3,69.4,69.7,62.8,23.0,79.9,3.3,5,1,66.84,1
+BCA2024746,Rekha Bhatt,rekha.bhatt746@student.edu,BCA,5,46.1,36.7,39.7,33.5,32.5,10.5,35.4,0.2,1,3,37.7,0
+CS2024747,Meera Ghosh,meera.ghosh747@student.edu,Computer Science,1,39.2,32.3,37.4,29.3,38.2,20.9,53.2,3.5,5,0,35.28,0
+IT2024748,Amit Pandey,amit.pandey748@student.edu,Information Technology,1,61.0,71.9,72.2,64.9,60.6,36.5,79.9,4.7,10,0,66.12,1
+CS2024749,Nisha Gupta,nisha.gupta749@student.edu,Computer Science,4,50.6,49.0,46.7,61.1,52.4,31.9,64.5,3.7,7,1,51.96,0
+MCA2024750,Sunita Chakraborty,sunita.chakraborty750@student.edu,MCA,4,66.1,78.8,67.0,77.6,69.2,39.3,89.2,5.3,9,0,71.74,1
+CS2024751,Mamta Malhotra,mamta.malhotra751@student.edu,Computer Science,3,79.2,72.1,70.8,75.5,72.3,37.9,87.3,6.0,10,1,73.98,1
+IT2024752,Sneha Chaudhary,sneha.chaudhary752@student.edu,Information Technology,3,61.3,68.1,73.8,82.6,76.4,43.0,82.7,6.6,8,1,72.44,1
+MCA2024753,Preeti Saxena,preeti.saxena753@student.edu,MCA,2,79.4,88.8,81.7,89.4,85.0,37.1,87.4,5.6,8,1,84.86,1
+BCA2024754,Gaurav Saxena,gaurav.saxena754@student.edu,BCA,4,46.7,39.1,47.7,63.6,45.9,34.2,63.7,3.4,5,1,48.6,0
+MCA2024755,Suresh Singh,suresh.singh755@student.edu,MCA,1,88.3,78.9,77.5,81.5,80.7,48.6,96.3,8.8,9,0,81.38,1
+CS2024756,Geeta Tripathi,geeta.tripathi756@student.edu,Computer Science,3,27.5,26.5,42.4,31.3,19.3,7.0,40.3,1.8,3,3,29.4,0
+CS2024757,Jyoti Chaudhary,jyoti.chaudhary757@student.edu,Computer Science,6,68.0,75.9,77.1,70.6,70.3,33.9,84.9,5.3,10,0,72.38,1
+BCA2024758,Nikhil Sharma,nikhil.sharma758@student.edu,BCA,2,51.0,58.9,56.4,62.4,51.4,27.1,62.5,2.5,6,0,56.02,1
+CS2024759,Ritu Chatterjee,ritu.chatterjee759@student.edu,Computer Science,2,45.3,45.3,46.3,41.0,35.8,21.4,62.3,2.6,6,0,42.74,0
+CS2024760,Harish Dubey,harish.dubey760@student.edu,Computer Science,4,72.4,74.4,69.5,71.4,70.8,33.8,73.0,3.8,6,0,71.7,1
+MCA2024761,Ritu Joshi,ritu.joshi761@student.edu,MCA,1,57.8,72.6,63.0,65.9,62.1,26.0,67.9,4.5,6,1,64.28,1
+MCA2024762,Ankita Singh,ankita.singh762@student.edu,MCA,5,68.2,71.2,62.5,83.8,66.8,34.0,73.4,2.5,6,2,70.5,1
+MCA2024763,Sanjay Ghosh,sanjay.ghosh763@student.edu,MCA,1,61.9,67.6,80.7,97.3,79.5,39.1,90.2,4.7,8,0,77.4,1
+CS2024764,Nitin Ghosh,nitin.ghosh764@student.edu,Computer Science,1,65.7,59.0,61.7,62.1,57.3,38.6,85.4,6.1,8,0,61.16,1
+CS2024765,Smita Agarwal,smita.agarwal765@student.edu,Computer Science,6,74.7,70.4,73.4,73.4,72.4,38.3,91.6,4.3,7,0,72.86,1
+BCA2024766,Asha Roy,asha.roy766@student.edu,BCA,3,61.9,71.6,77.5,75.6,69.8,37.3,87.2,5.9,7,1,71.28,1
+CS2024767,Asha Shah,asha.shah767@student.edu,Computer Science,4,20.3,26.7,21.4,32.0,26.4,7.5,48.5,1.4,4,5,25.36,0
+MCA2024768,Rajesh Gupta,rajesh.gupta768@student.edu,MCA,4,43.5,45.5,60.3,39.8,45.3,22.1,65.9,3.5,4,1,46.88,0
+BCA2024769,Reena Sharma,reena.sharma769@student.edu,BCA,3,66.8,67.4,68.0,62.0,72.7,31.2,70.0,2.7,6,1,67.38,1
+MCA2024770,Suresh Mehta,suresh.mehta770@student.edu,MCA,2,96.4,100.0,96.8,99.7,100.0,43.3,91.6,8.1,10,0,98.58,1
+BCA2024771,Meera Agarwal,meera.agarwal771@student.edu,BCA,2,35.9,40.4,41.4,48.7,43.1,16.2,52.7,2.1,2,0,41.9,0
+BCA2024772,Sunita Banerjee,sunita.banerjee772@student.edu,BCA,1,28.9,33.8,32.4,30.3,36.4,19.3,56.1,3.0,6,1,32.36,0
+CS2024773,Sunita Das,sunita.das773@student.edu,Computer Science,3,25.5,27.6,31.4,22.5,30.5,18.0,52.3,0.1,2,2,27.5,0
+CS2024774,Mamta Srivastava,mamta.srivastava774@student.edu,Computer Science,4,45.4,45.6,39.1,49.9,44.0,20.8,54.9,2.3,2,0,44.8,0
+CS2024775,Mamta Sen,mamta.sen775@student.edu,Computer Science,1,57.3,48.7,52.9,52.1,59.8,17.4,49.1,1.3,2,1,54.16,0
+CS2024776,Siddharth Dubey,siddharth.dubey776@student.edu,Computer Science,2,46.7,44.1,40.0,44.7,32.4,21.8,58.2,1.3,6,2,41.58,0
+CS2024777,Vivek Kumar,vivek.kumar777@student.edu,Computer Science,1,64.0,68.5,65.7,59.4,61.9,33.6,84.5,7.0,9,1,63.9,1
+CS2024778,Manoj Sinha,manoj.sinha778@student.edu,Computer Science,1,93.0,100.0,92.2,90.7,85.1,42.9,94.0,7.0,10,0,92.2,1
+MCA2024779,Vikas Chakraborty,vikas.chakraborty779@student.edu,MCA,3,64.0,67.1,64.9,48.8,66.2,26.3,73.0,4.1,5,0,62.2,1
+BCA2024780,Aakash Mukherjee,aakash.mukherjee780@student.edu,BCA,4,92.6,81.3,94.9,91.9,83.6,42.0,92.7,8.9,9,0,88.86,1
+BCA2024781,Jyoti Saxena,jyoti.saxena781@student.edu,BCA,1,81.7,81.7,82.2,70.9,83.4,42.7,89.8,5.6,9,0,79.98,1
+BCA2024782,Arjun Sharma,arjun.sharma782@student.edu,BCA,5,85.7,87.9,81.1,85.1,66.6,38.8,75.6,6.7,7,1,81.28,1
+CS2024783,Reena Reddy,reena.reddy783@student.edu,Computer Science,1,51.8,64.0,49.3,48.7,58.1,30.6,63.5,3.7,8,0,54.38,1
+IT2024784,Ajay Gupta,ajay.gupta784@student.edu,Information Technology,2,73.0,70.5,74.5,69.1,60.3,40.1,88.8,6.8,8,0,69.48,1
+MCA2024785,Seema Sharma,seema.sharma785@student.edu,MCA,2,68.0,68.3,62.5,69.5,69.5,43.1,77.5,4.8,9,0,67.56,1
+MCA2024786,Amit Srivastava,amit.srivastava786@student.edu,MCA,1,32.9,30.2,25.6,33.3,41.3,13.0,61.5,3.2,3,1,32.66,0
+CS2024787,Sunil Sen,sunil.sen787@student.edu,Computer Science,1,68.8,60.4,68.5,67.7,64.1,44.0,83.7,6.6,9,0,65.9,1
+CS2024788,Siddharth Sharma,siddharth.sharma788@student.edu,Computer Science,4,70.5,77.3,79.2,79.1,75.4,38.8,89.0,6.6,10,0,76.3,1
+MCA2024789,Geeta Mehta,geeta.mehta789@student.edu,MCA,6,55.6,59.2,42.5,50.7,47.7,28.4,67.6,4.4,7,0,51.14,1
+IT2024790,Sunil Dubey,sunil.dubey790@student.edu,Information Technology,1,69.5,67.0,72.8,62.2,59.4,40.6,87.5,5.3,7,1,66.18,1
+MCA2024791,Rohit Sinha,rohit.sinha791@student.edu,MCA,3,55.6,52.5,37.9,47.0,53.0,20.8,54.8,2.7,2,0,49.2,0
+IT2024792,Radha Chauhan,radha.chauhan792@student.edu,Information Technology,3,55.4,74.5,50.2,54.4,62.9,26.9,67.8,4.6,6,1,59.48,1
+BCA2024793,Sunita Kumar,sunita.kumar793@student.edu,BCA,5,60.2,60.5,51.9,57.9,57.2,30.2,63.9,3.4,8,0,57.54,1
+MCA2024794,Shweta Kumar,shweta.kumar794@student.edu,MCA,3,90.9,71.4,89.7,94.9,88.2,44.5,96.7,8.5,9,0,87.02,1
+IT2024795,Ankita Das,ankita.das795@student.edu,Information Technology,2,57.9,41.0,32.1,41.6,47.8,25.1,57.2,2.5,3,1,44.08,0
+EC2024796,Kavya Das,kavya.das796@student.edu,Electronics,6,36.5,37.9,43.7,36.9,31.7,14.7,58.8,1.6,5,2,37.34,0
+MCA2024797,Rajesh Bhatt,rajesh.bhatt797@student.edu,MCA,5,65.4,65.3,57.6,66.5,65.7,30.2,67.8,3.9,7,0,64.1,1
+BCA2024798,Usha Saxena,usha.saxena798@student.edu,BCA,2,68.6,62.2,56.6,64.8,71.2,40.5,85.1,6.0,7,0,64.68,1
+CS2024799,Shalini Bose,shalini.bose799@student.edu,Computer Science,5,52.7,51.4,55.2,50.9,53.1,20.9,60.6,3.4,4,0,52.66,0
+CS2024800,Sumit Ghosh,sumit.ghosh800@student.edu,Computer Science,6,35.2,28.6,15.4,30.0,26.5,17.7,36.5,1.7,0,2,27.14,0
+CS2024801,Sunil Kumar,sunil.kumar801@student.edu,Computer Science,3,75.4,71.1,71.5,68.0,70.9,37.8,77.8,6.0,8,1,71.38,1
+BCA2024802,Seema Verma,seema.verma802@student.edu,BCA,5,82.7,77.9,73.9,89.1,86.7,43.0,81.0,4.4,7,0,82.06,1
+MCA2024803,Madhuri Tripathi,madhuri.tripathi803@student.edu,MCA,1,66.3,58.8,68.6,77.2,62.5,34.0,73.8,3.9,8,0,66.68,1
+IT2024804,Geeta Joshi,geeta.joshi804@student.edu,Information Technology,2,92.4,83.2,83.6,79.6,79.0,46.4,93.9,9.3,9,0,83.56,1
+MCA2024805,Bhavna Kumar,bhavna.kumar805@student.edu,MCA,6,57.3,51.7,47.3,50.2,38.6,22.1,74.7,3.8,6,1,49.02,1
+MCA2024806,Ankita Malhotra,ankita.malhotra806@student.edu,MCA,2,65.9,61.9,61.6,64.2,57.5,24.1,78.9,3.1,6,1,62.22,1
+BCA2024807,Sachin Reddy,sachin.reddy807@student.edu,BCA,2,30.7,27.9,20.6,25.4,22.5,12.2,43.6,1.7,1,3,25.42,0
+BCA2024808,Suresh Sen,suresh.sen808@student.edu,BCA,3,72.1,83.7,78.2,76.2,85.6,33.1,83.6,6.8,7,0,79.16,1
+BCA2024809,Monika Mehta,monika.mehta809@student.edu,BCA,1,67.4,44.4,59.3,52.7,42.9,30.8,79.8,3.7,5,2,53.34,1
+MCA2024810,Tarun Dubey,tarun.dubey810@student.edu,MCA,1,65.4,67.2,65.8,78.2,62.4,28.6,73.5,3.3,6,0,67.8,1
+CS2024811,Shalini Chauhan,shalini.chauhan811@student.edu,Computer Science,6,58.0,63.1,62.7,61.9,57.2,24.2,69.1,4.3,8,2,60.58,1
+MCA2024812,Asha Saxena,asha.saxena812@student.edu,MCA,1,58.6,57.3,55.0,54.3,56.5,25.9,76.3,3.9,7,0,56.34,1
+BCA2024813,Siddharth Yadav,siddharth.yadav813@student.edu,BCA,2,85.2,80.7,82.6,77.1,71.4,33.3,80.7,6.2,10,0,79.4,1
+MCA2024814,Pooja Singh,pooja.singh814@student.edu,MCA,2,69.0,69.3,53.3,71.8,68.8,28.0,64.4,3.3,7,0,66.44,1
+CS2024815,Mamta Rao,mamta.rao815@student.edu,Computer Science,6,89.7,88.4,89.2,82.7,82.8,37.8,80.5,5.7,7,0,86.56,1
+CS2024816,Priya Shah,priya.shah816@student.edu,Computer Science,2,71.2,62.2,65.2,56.3,61.5,44.7,86.1,4.7,7,0,63.28,1
+MCA2024817,Nisha Tiwari,nisha.tiwari817@student.edu,MCA,4,76.4,77.7,72.4,75.4,83.6,41.0,90.9,4.9,9,1,77.1,1
+BCA2024818,Kavya Malhotra,kavya.malhotra818@student.edu,BCA,5,70.7,68.7,64.1,69.2,69.1,35.0,80.9,4.8,9,0,68.36,1
+MCA2024819,Karan Dubey,karan.dubey819@student.edu,MCA,2,83.9,76.4,81.9,77.1,77.1,48.7,99.7,6.4,10,0,79.28,1
+CS2024820,Sumit Reddy,sumit.reddy820@student.edu,Computer Science,6,76.3,78.7,79.0,82.8,95.8,34.2,80.8,6.1,10,1,82.52,1
+MCA2024821,Smita Chatterjee,smita.chatterjee821@student.edu,MCA,6,75.9,72.5,68.4,80.9,80.6,35.9,77.5,6.8,7,0,75.66,1
+MCA2024822,Usha Bose,usha.bose822@student.edu,MCA,1,74.0,79.7,70.6,81.7,78.9,41.0,77.3,5.7,8,0,76.98,1
+MCA2024823,Mamta Iyer,mamta.iyer823@student.edu,MCA,4,61.1,57.4,57.9,50.1,59.9,32.9,72.8,3.3,6,1,57.28,1
+IT2024824,Pallavi Srivastava,pallavi.srivastava824@student.edu,Information Technology,1,63.6,73.0,65.9,57.5,54.1,24.1,78.8,4.1,7,0,62.82,1
+CS2024825,Bhavna Dey,bhavna.dey825@student.edu,Computer Science,1,68.4,67.7,70.7,71.9,75.5,38.9,81.3,6.9,10,0,70.84,1
+CS2024826,Nisha Sen,nisha.sen826@student.edu,Computer Science,1,77.8,80.5,75.2,57.6,85.4,33.7,75.8,4.5,7,0,75.3,1
+MCA2024827,Usha Verma,usha.verma827@student.edu,MCA,1,56.3,59.2,61.1,54.6,56.0,35.6,76.3,2.6,7,1,57.44,1
+IT2024828,Sunita Malhotra,sunita.malhotra828@student.edu,Information Technology,2,79.8,78.8,70.1,75.8,79.7,34.0,90.0,4.8,9,0,76.84,1
+CS2024829,Sanjay Bhatt,sanjay.bhatt829@student.edu,Computer Science,1,69.0,60.9,64.3,54.4,61.3,34.9,63.9,4.2,6,1,61.98,1
+MCA2024830,Harish Bose,harish.bose830@student.edu,MCA,1,72.1,53.2,65.1,66.6,59.8,26.9,66.9,4.0,8,1,63.36,1
+CS2024831,Yogesh Nair,yogesh.nair831@student.edu,Computer Science,2,94.5,88.7,98.9,85.0,90.3,41.5,91.4,7.2,10,0,91.48,1
+MCA2024832,Nikhil Pandey,nikhil.pandey832@student.edu,MCA,2,17.6,25.6,33.2,16.6,34.7,12.8,45.9,0.1,4,2,25.54,0
+MCA2024833,Vishal Chauhan,vishal.chauhan833@student.edu,MCA,5,76.6,80.7,79.0,74.3,79.3,38.2,82.6,5.8,7,0,77.98,1
+BCA2024834,Nikhil Mehta,nikhil.mehta834@student.edu,BCA,6,79.3,71.3,68.6,79.6,68.6,33.9,81.9,6.9,7,1,73.48,1
+BCA2024835,Vikram Rao,vikram.rao835@student.edu,BCA,1,80.4,78.1,87.7,71.5,74.7,38.5,89.4,4.1,10,0,78.48,1
+IT2024836,Deepak Malhotra,deepak.malhotra836@student.edu,Information Technology,1,49.4,54.5,53.7,48.3,46.7,24.7,70.5,3.6,7,0,50.52,0
+CS2024837,Geeta Mukherjee,geeta.mukherjee837@student.edu,Computer Science,5,53.5,68.3,70.9,59.5,74.1,27.6,72.4,4.0,5,1,65.26,1
+BCA2024838,Kavya Kapoor,kavya.kapoor838@student.edu,BCA,2,79.9,71.6,76.1,93.2,87.0,33.4,82.5,5.8,9,0,81.56,1
+MCA2024839,Ravi Desai,ravi.desai839@student.edu,MCA,1,99.0,83.2,100.0,88.2,100.0,49.9,99.2,8.5,10,0,94.08,1
+CS2024840,Harish Pandey,harish.pandey840@student.edu,Computer Science,6,80.6,71.8,79.2,86.9,81.4,43.8,98.0,6.6,10,0,79.98,1
+IT2024841,Preeti Sharma,preeti.sharma841@student.edu,Information Technology,4,23.9,29.0,29.7,40.0,28.7,13.1,30.1,1.6,3,2,30.26,0
+CS2024842,Shweta Shukla,shweta.shukla842@student.edu,Computer Science,4,35.4,34.1,29.2,43.7,26.6,11.3,40.7,0.6,2,4,33.8,0
+BCA2024843,Sumit Bhatt,sumit.bhatt843@student.edu,BCA,5,77.7,73.2,67.0,66.4,93.9,32.5,76.0,4.5,9,0,75.64,1
+IT2024844,Suresh Malhotra,suresh.malhotra844@student.edu,Information Technology,1,50.1,56.4,48.5,52.4,54.4,33.7,62.9,2.7,6,0,52.36,1
+IT2024845,Karan Nair,karan.nair845@student.edu,Information Technology,6,66.4,75.8,87.3,80.7,66.2,42.4,85.8,5.7,10,0,75.28,1
+IT2024846,Shweta Malhotra,shweta.malhotra846@student.edu,Information Technology,4,76.3,86.2,84.4,73.6,89.3,40.3,97.0,7.6,9,0,81.96,1
+CS2024847,Arjun Joshi,arjun.joshi847@student.edu,Computer Science,6,47.6,40.6,39.5,43.0,38.7,14.9,56.8,3.2,5,0,41.88,0
+MCA2024848,Monika Singh,monika.singh848@student.edu,MCA,6,93.4,91.3,83.6,75.1,76.3,38.5,83.0,4.4,8,0,83.94,1
+CS2024849,Lakshmi Gupta,lakshmi.gupta849@student.edu,Computer Science,2,62.6,75.4,78.4,67.6,65.3,34.4,76.3,6.3,10,1,69.86,1
+BCA2024850,Hemant Sen,hemant.sen850@student.edu,BCA,2,63.0,47.8,67.9,59.2,62.1,34.7,69.1,4.7,5,0,60.0,1
+CS2024851,Rohan Chaudhary,rohan.chaudhary851@student.edu,Computer Science,4,60.1,56.1,57.1,42.9,55.0,27.0,74.0,4.1,5,0,54.24,1
+CS2024852,Sneha Mishra,sneha.mishra852@student.edu,Computer Science,4,60.0,55.2,66.3,70.6,70.8,33.7,86.4,4.7,9,0,64.58,1
+IT2024853,Mamta Chauhan,mamta.chauhan853@student.edu,Information Technology,1,38.1,32.6,32.7,30.6,38.5,18.5,56.1,1.6,6,0,34.5,0
+MCA2024854,Priya Pandey,priya.pandey854@student.edu,MCA,3,60.0,54.1,63.8,61.9,61.2,30.7,69.7,4.5,6,0,60.2,1
+CS2024855,Ritu Sen,ritu.sen855@student.edu,Computer Science,2,92.5,91.4,99.2,95.9,100.0,49.0,90.9,9.9,10,0,95.8,1
+BCA2024856,Mohit Yadav,mohit.yadav856@student.edu,BCA,2,70.0,66.9,69.7,59.5,61.9,34.5,73.8,4.7,6,2,65.6,1
+CS2024857,Rekha Nair,rekha.nair857@student.edu,Computer Science,1,33.1,39.7,40.3,30.5,41.3,12.6,53.9,1.8,6,2,36.98,0
+MCA2024858,Vishal Mehta,vishal.mehta858@student.edu,MCA,1,54.6,48.2,49.3,62.1,52.8,28.8,70.1,3.6,8,0,53.4,0
+MCA2024859,Asha Reddy,asha.reddy859@student.edu,MCA,5,61.5,58.4,45.9,46.6,45.7,22.3,60.3,2.8,3,2,51.62,0
+MCA2024860,Swati Sen,swati.sen860@student.edu,MCA,1,80.6,85.8,85.7,83.1,86.6,35.9,81.4,4.7,7,0,84.36,1
+IT2024861,Shweta Chaudhary,shweta.chaudhary861@student.edu,Information Technology,2,67.6,62.2,73.5,62.3,74.2,22.3,77.6,3.1,6,0,67.96,1
+IT2024862,Archana Kumar,archana.kumar862@student.edu,Information Technology,5,92.6,72.1,71.3,76.4,86.1,43.9,99.0,6.6,10,0,79.7,1
+CS2024863,Lakshmi Nair,lakshmi.nair863@student.edu,Computer Science,1,80.8,82.1,68.3,79.8,81.2,35.9,79.0,6.2,10,0,78.44,1
+BCA2024864,Tarun Pandey,tarun.pandey864@student.edu,BCA,3,87.8,92.2,90.6,71.9,79.3,44.5,83.2,4.5,10,1,84.36,1
+MCA2024865,Anil Iyer,anil.iyer865@student.edu,MCA,1,37.0,37.4,40.8,41.3,37.6,25.3,56.0,3.1,2,0,38.82,0
+MCA2024866,Seema Gupta,seema.gupta866@student.edu,MCA,3,86.8,79.2,75.3,87.4,74.3,38.5,84.9,5.4,9,0,80.6,1
+MCA2024867,Archana Mukherjee,archana.mukherjee867@student.edu,MCA,4,51.5,58.5,46.8,54.5,49.7,31.1,64.3,3.6,6,0,52.2,1
+IT2024868,Varsha Srivastava,varsha.srivastava868@student.edu,Information Technology,2,70.5,87.3,69.4,76.1,77.6,42.7,91.9,4.6,8,0,76.18,1
+IT2024869,Neha Gupta,neha.gupta869@student.edu,Information Technology,2,60.1,47.0,61.7,54.6,54.4,25.8,64.3,4.2,5,1,55.56,0
+MCA2024870,Divya Das,divya.das870@student.edu,MCA,1,60.7,67.7,69.0,73.5,51.7,25.1,73.0,4.6,8,0,64.52,1
+MCA2024871,Shalini Gupta,shalini.gupta871@student.edu,MCA,2,37.4,55.3,50.9,44.4,54.3,24.6,57.2,2.9,2,0,48.46,0
+MCA2024872,Aakash Mehta,aakash.mehta872@student.edu,MCA,2,63.4,69.9,59.1,77.5,59.7,44.1,88.4,4.2,10,1,65.92,1
+CS2024873,Sunita Patel,sunita.patel873@student.edu,Computer Science,2,58.0,60.7,67.6,66.9,58.5,26.6,69.6,2.9,6,1,62.34,1
+IT2024874,Seema Dubey,seema.dubey874@student.edu,Information Technology,2,62.1,73.8,72.2,71.1,72.1,44.6,86.2,5.9,10,0,70.26,1
+MCA2024875,Usha Banerjee,usha.banerjee875@student.edu,MCA,5,53.2,47.9,49.6,59.1,55.9,22.7,76.8,3.4,7,1,53.14,1
+MCA2024876,Harish Chakraborty,harish.chakraborty876@student.edu,MCA,6,73.6,61.3,58.6,50.6,67.5,23.1,74.5,4.7,6,0,62.32,1
+MCA2024877,Pooja Agarwal,pooja.agarwal877@student.edu,MCA,4,59.7,56.0,49.1,55.7,57.2,35.2,78.1,3.6,8,1,55.54,1
+MCA2024878,Sumit Rao,sumit.rao878@student.edu,MCA,4,41.7,57.0,49.0,51.0,46.7,32.7,66.1,4.5,5,1,49.08,1
+MCA2024879,Gaurav Chauhan,gaurav.chauhan879@student.edu,MCA,6,60.9,64.5,53.2,54.6,62.2,27.8,64.2,4.0,5,2,59.08,1
+IT2024880,Kunal Kumar,kunal.kumar880@student.edu,Information Technology,2,74.6,68.8,77.1,74.5,89.3,39.0,91.9,5.5,10,0,76.86,1
+BCA2024881,Divya Iyer,divya.iyer881@student.edu,BCA,2,76.8,74.6,78.7,59.8,76.1,34.5,75.1,6.1,7,0,73.2,1
+MCA2024882,Karan Dubey,karan.dubey882@student.edu,MCA,3,89.5,86.1,75.5,79.5,83.6,34.1,76.0,5.4,8,1,82.84,1
+MCA2024883,Mohit Pandey,mohit.pandey883@student.edu,MCA,4,78.8,79.6,92.0,88.1,87.9,48.5,90.8,8.7,10,0,85.28,1
+BCA2024884,Rohan Mukherjee,rohan.mukherjee884@student.edu,BCA,4,46.5,44.8,51.6,65.7,48.2,20.9,58.2,1.9,4,3,51.36,0
+BCA2024885,Ravi Sen,ravi.sen885@student.edu,BCA,1,65.1,58.9,67.8,64.9,52.0,34.1,71.4,4.7,8,0,61.74,1
+MCA2024886,Dinesh Ghosh,dinesh.ghosh886@student.edu,MCA,4,64.5,65.8,64.8,63.4,76.2,35.3,68.8,3.3,6,0,66.94,1
+MCA2024887,Vishal Shah,vishal.shah887@student.edu,MCA,4,94.2,86.1,84.5,88.9,81.3,39.3,87.3,4.0,8,0,87.0,1
+MCA2024888,Manoj Pandey,manoj.pandey888@student.edu,MCA,4,85.0,82.5,82.1,83.5,85.9,43.2,90.1,8.4,10,0,83.8,1
+CS2024889,Pankaj Shukla,pankaj.shukla889@student.edu,Computer Science,6,92.5,95.9,93.8,90.6,80.5,49.7,96.3,8.7,10,0,90.66,1
+IT2024890,Rohit Kapoor,rohit.kapoor890@student.edu,Information Technology,1,52.6,54.9,49.4,61.2,53.4,25.2,73.9,3.5,6,0,54.3,1
+BCA2024891,Mohit Sinha,mohit.sinha891@student.edu,BCA,3,89.8,98.6,90.6,100.0,88.0,41.2,96.6,8.4,10,0,93.4,1
+BCA2024892,Preeti Banerjee,preeti.banerjee892@student.edu,BCA,1,74.3,72.8,64.1,65.7,74.4,28.3,67.7,3.8,6,1,70.26,1
+BCA2024893,Suresh Sharma,suresh.sharma893@student.edu,BCA,3,66.0,58.4,47.1,65.1,50.3,22.9,58.5,1.7,4,0,57.38,0
+EC2024894,Ritu Rao,ritu.rao894@student.edu,Electronics,6,54.9,53.3,54.0,64.1,54.1,28.7,78.5,4.7,7,1,56.08,1
+CS2024895,Shweta Chauhan,shweta.chauhan895@student.edu,Computer Science,4,44.4,52.5,39.6,42.2,47.5,27.1,78.9,3.5,7,0,45.24,1
+EC2024896,Varsha Bhatt,varsha.bhatt896@student.edu,Electronics,4,61.2,66.0,68.6,54.0,65.2,27.6,79.9,4.2,6,0,63.0,1
+CS2024897,Radha Ghosh,radha.ghosh897@student.edu,Computer Science,3,39.2,34.9,46.4,33.7,38.5,21.9,61.9,3.2,5,1,38.54,0
+IT2024898,Sunil Ghosh,sunil.ghosh898@student.edu,Information Technology,5,51.5,53.4,47.2,58.5,51.7,17.5,67.5,2.6,4,0,52.46,0
+EC2024899,Ajay Dey,ajay.dey899@student.edu,Electronics,3,52.3,49.8,53.5,61.2,45.5,28.0,76.4,4.5,5,0,52.46,1
+MCA2024900,Asha Mishra,asha.mishra900@student.edu,MCA,5,67.3,62.0,69.5,76.2,80.7,33.7,68.8,2.6,7,2,71.14,1
+MCA2024901,Monika Pandey,monika.pandey901@student.edu,MCA,3,87.1,83.5,71.3,70.1,74.9,32.5,84.8,6.1,8,0,77.38,1
+CS2024902,Pankaj Chaudhary,pankaj.chaudhary902@student.edu,Computer Science,6,38.8,43.0,40.6,33.2,42.7,23.5,55.6,1.7,4,1,39.66,0
+CS2024903,Vikas Chakraborty,vikas.chakraborty903@student.edu,Computer Science,2,67.4,50.4,56.8,61.2,60.9,26.3,70.6,4.0,7,2,59.34,0
+MCA2024904,Shalini Nair,shalini.nair904@student.edu,MCA,6,25.4,29.9,36.2,27.2,28.5,17.4,31.2,0.6,4,5,29.44,0
+MCA2024905,Madhuri Joshi,madhuri.joshi905@student.edu,MCA,2,35.1,37.2,49.0,53.1,38.9,21.0,56.7,2.5,3,2,42.66,0
+MCA2024906,Kavya Bhatt,kavya.bhatt906@student.edu,MCA,2,69.8,63.3,61.0,69.9,69.1,27.3,71.0,2.8,6,0,66.62,1
+CS2024907,Harish Iyer,harish.iyer907@student.edu,Computer Science,6,59.6,55.3,53.9,53.6,57.6,29.4,68.9,4.5,5,2,56.0,1
+MCA2024908,Neha Shah,neha.shah908@student.edu,MCA,2,65.2,80.7,70.9,64.6,67.8,27.6,69.9,3.7,8,0,69.84,1
+BCA2024909,Shalini Desai,shalini.desai909@student.edu,BCA,3,72.1,78.2,74.8,84.9,87.4,34.1,68.0,4.0,6,0,79.48,1
+MCA2024910,Ajay Banerjee,ajay.banerjee910@student.edu,MCA,5,58.6,50.6,51.8,57.0,52.3,33.7,73.6,4.5,8,0,54.06,1
+MCA2024911,Siddharth Mishra,siddharth.mishra911@student.edu,MCA,3,62.3,56.3,44.7,55.7,44.1,20.7,65.0,2.8,6,1,52.62,0
+CS2024912,Nitin Pandey,nitin.pandey912@student.edu,Computer Science,5,74.1,86.5,78.4,64.8,69.5,39.1,84.5,4.7,9,0,74.66,1
+IT2024913,Vikram Verma,vikram.verma913@student.edu,Information Technology,1,72.1,76.1,74.4,76.7,65.7,41.4,87.5,6.5,8,0,73.0,1
+BCA2024914,Usha Pandey,usha.pandey914@student.edu,BCA,6,54.5,39.7,51.2,47.2,46.9,25.5,65.6,1.3,4,2,47.9,0
+MCA2024915,Sanjay Roy,sanjay.roy915@student.edu,MCA,5,62.9,56.1,65.9,71.3,66.8,35.4,62.2,3.6,7,1,64.6,0
+MCA2024916,Sanjay Sinha,sanjay.sinha916@student.edu,MCA,5,68.0,64.0,70.8,76.8,76.4,40.3,82.6,6.8,10,0,71.2,1
+CS2024917,Mamta Dey,mamta.dey917@student.edu,Computer Science,3,91.3,94.0,88.4,100.0,82.5,40.2,96.9,6.9,10,0,91.24,1
+CS2024918,Rohan Reddy,rohan.reddy918@student.edu,Computer Science,2,92.1,95.5,94.3,88.7,91.6,48.4,95.4,9.3,10,0,92.44,1
+CS2024919,Suresh Reddy,suresh.reddy919@student.edu,Computer Science,4,79.9,80.1,82.4,70.8,71.0,41.1,82.3,5.4,7,0,76.84,1
+BCA2024920,Seema Desai,seema.desai920@student.edu,BCA,4,46.3,39.3,47.4,43.6,42.1,13.3,65.7,1.3,6,1,43.74,0
+MCA2024921,Nitin Sen,nitin.sen921@student.edu,MCA,6,53.2,42.1,51.4,67.0,59.6,35.4,62.6,2.9,5,0,54.66,1
+IT2024922,Anil Tiwari,anil.tiwari922@student.edu,Information Technology,2,54.2,76.9,55.2,61.3,56.5,24.7,67.7,2.9,7,2,60.82,0
+IT2024923,Sunita Saxena,sunita.saxena923@student.edu,Information Technology,2,62.6,60.9,68.4,75.4,63.1,27.4,67.4,3.6,5,0,66.08,1
+MCA2024924,Suresh Banerjee,suresh.banerjee924@student.edu,MCA,6,39.3,43.7,42.9,37.3,35.1,14.2,67.3,1.3,4,1,39.66,0
+IT2024925,Pooja Agarwal,pooja.agarwal925@student.edu,Information Technology,6,61.5,54.8,47.9,50.6,60.1,26.0,78.7,2.8,5,0,54.98,0
+MCA2024926,Radha Singh,radha.singh926@student.edu,MCA,4,60.2,56.6,53.9,46.2,60.4,27.9,68.0,2.6,5,1,55.46,1
+CS2024927,Varsha Chakraborty,varsha.chakraborty927@student.edu,Computer Science,1,83.2,90.7,77.6,83.1,90.1,40.2,87.6,6.8,7,0,84.94,1
+CS2024928,Rohit Shukla,rohit.shukla928@student.edu,Computer Science,5,52.6,49.8,45.6,48.7,64.4,27.7,65.8,4.8,5,0,52.22,0
+IT2024929,Rajesh Tripathi,rajesh.tripathi929@student.edu,Information Technology,5,81.0,91.3,94.0,96.7,83.6,47.1,89.8,8.8,10,0,89.32,1
+CS2024930,Sumit Sinha,sumit.sinha930@student.edu,Computer Science,4,74.4,68.3,63.9,62.8,74.7,32.5,78.4,2.7,7,0,68.82,1
+CS2024931,Kavya Desai,kavya.desai931@student.edu,Computer Science,2,50.1,47.1,51.0,46.1,44.3,16.6,50.6,1.5,5,3,47.72,0
+MCA2024932,Ashish Chatterjee,ashish.chatterjee932@student.edu,MCA,3,52.9,44.8,44.6,53.1,50.8,21.5,65.1,1.7,6,1,49.24,0
+IT2024933,Shalini Dubey,shalini.dubey933@student.edu,Information Technology,2,58.4,68.5,81.7,68.7,69.3,35.0,66.4,3.7,5,0,69.32,1
+IT2024934,Pankaj Roy,pankaj.roy934@student.edu,Information Technology,6,30.2,40.3,26.6,41.5,35.7,13.0,45.8,1.1,3,4,34.86,0
+EC2024935,Rohan Roy,rohan.roy935@student.edu,Electronics,4,39.7,33.6,47.2,42.6,33.9,12.6,35.4,0.3,0,2,39.4,0
+CS2024936,Gaurav Sinha,gaurav.sinha936@student.edu,Computer Science,6,71.2,70.5,62.9,63.5,65.9,22.5,63.2,3.9,8,0,66.8,1
+CS2024937,Pratibha Joshi,pratibha.joshi937@student.edu,Computer Science,1,28.7,36.5,36.0,37.2,39.4,23.0,54.1,2.3,5,3,35.56,0
+MCA2024938,Manoj Pandey,manoj.pandey938@student.edu,MCA,2,72.1,72.5,69.7,79.4,72.2,33.3,78.8,5.9,10,0,73.18,1
+CS2024939,Sumit Banerjee,sumit.banerjee939@student.edu,Computer Science,2,61.7,52.8,61.6,60.6,48.3,23.9,78.7,5.0,7,2,57.0,1
+CS2024940,Rekha Kapoor,rekha.kapoor940@student.edu,Computer Science,6,51.3,59.6,50.0,53.6,58.5,25.7,52.6,2.3,6,2,54.6,0
+CS2024941,Mohit Ghosh,mohit.ghosh941@student.edu,Computer Science,3,78.0,78.9,68.6,72.4,87.7,34.4,83.9,6.9,8,1,77.12,1
+IT2024942,Rekha Ghosh,rekha.ghosh942@student.edu,Information Technology,1,57.1,67.2,72.0,65.6,60.0,31.0,72.0,3.3,8,1,64.38,1
+IT2024943,Ananya Singh,ananya.singh943@student.edu,Information Technology,4,57.5,61.9,52.2,50.9,44.7,35.9,69.9,4.0,8,0,53.44,1
+MCA2024944,Jyoti Srivastava,jyoti.srivastava944@student.edu,MCA,3,99.1,100.0,91.9,99.8,100.0,44.6,89.4,6.9,10,0,98.16,1
+MCA2024945,Sunita Pandey,sunita.pandey945@student.edu,MCA,4,47.1,52.5,57.4,51.9,59.5,15.2,66.7,2.8,4,3,53.68,0
+CS2024946,Geeta Chauhan,geeta.chauhan946@student.edu,Computer Science,4,78.4,81.2,86.5,78.7,75.2,40.5,82.9,5.6,7,1,80.0,1
+CS2024947,Sneha Mehta,sneha.mehta947@student.edu,Computer Science,1,66.6,71.6,67.9,61.7,59.2,32.4,65.3,4.1,7,0,65.4,1
+CS2024948,Sumit Rao,sumit.rao948@student.edu,Computer Science,3,95.9,90.3,92.6,98.8,84.7,42.2,93.9,9.0,9,0,92.46,1
+CS2024949,Preeti Rao,preeti.rao949@student.edu,Computer Science,4,59.9,66.3,59.7,66.5,74.3,28.5,71.8,4.8,8,0,65.34,1
+IT2024950,Mamta Shah,mamta.shah950@student.edu,Information Technology,2,48.0,42.9,40.7,36.4,29.6,19.8,56.5,1.9,6,1,39.52,0
+CS2024951,Sonia Desai,sonia.desai951@student.edu,Computer Science,3,77.5,68.8,73.1,77.2,76.3,32.1,76.5,6.3,8,1,74.58,1
+IT2024952,Sneha Shukla,sneha.shukla952@student.edu,Information Technology,3,66.1,55.3,59.9,71.9,52.8,27.8,76.0,4.7,8,1,61.2,1
+MCA2024953,Dinesh Nair,dinesh.nair953@student.edu,MCA,1,64.2,75.5,64.1,58.4,56.4,35.0,71.3,2.5,8,0,63.72,1
+BCA2024954,Radha Yadav,radha.yadav954@student.edu,BCA,2,91.5,100.0,93.9,99.1,89.3,44.8,92.6,9.6,10,0,94.76,1
+IT2024955,Pankaj Chakraborty,pankaj.chakraborty955@student.edu,Information Technology,2,47.9,37.4,47.8,46.2,39.7,12.9,59.9,1.8,6,0,43.8,0
+MCA2024956,Suresh Pandey,suresh.pandey956@student.edu,MCA,1,79.4,59.3,57.3,66.5,55.1,30.6,74.3,3.2,6,1,63.52,1
+MCA2024957,Ajay Singh,ajay.singh957@student.edu,MCA,1,80.1,78.4,68.2,66.6,72.9,44.2,75.1,5.6,7,0,73.24,1
+CS2024958,Sunita Ghosh,sunita.ghosh958@student.edu,Computer Science,1,42.1,46.2,44.7,50.6,44.0,19.9,50.1,3.0,2,2,45.52,0
+BCA2024959,Vishal Sharma,vishal.sharma959@student.edu,BCA,5,84.9,73.5,86.8,83.2,82.9,44.0,88.5,8.4,10,0,82.26,1
+CS2024960,Priya Mishra,priya.mishra960@student.edu,Computer Science,2,52.6,57.8,54.8,51.5,60.1,32.9,69.3,2.6,6,0,55.36,1
+MCA2024961,Ajay Mehta,ajay.mehta961@student.edu,MCA,4,76.9,68.1,62.6,65.2,63.7,33.6,70.2,3.5,6,0,67.3,1
+CS2024962,Siddharth Chaudhary,siddharth.chaudhary962@student.edu,Computer Science,6,65.3,58.6,54.3,45.4,54.9,28.8,76.3,3.6,5,0,55.7,1
+BCA2024963,Neha Verma,neha.verma963@student.edu,BCA,1,84.0,88.6,84.5,79.4,80.9,44.7,79.8,4.7,8,0,83.48,1
+CS2024964,Rohit Ghosh,rohit.ghosh964@student.edu,Computer Science,3,33.1,35.0,31.5,41.1,37.4,24.5,63.0,1.9,5,1,35.62,0
+IT2024965,Suresh Sinha,suresh.sinha965@student.edu,Information Technology,2,61.2,71.9,70.9,75.5,77.5,32.8,78.4,2.9,7,0,71.4,1
+BCA2024966,Vivek Patel,vivek.patel966@student.edu,BCA,1,79.2,83.0,79.5,82.9,83.4,36.0,82.3,5.3,10,0,81.6,1
+MCA2024967,Mamta Mukherjee,mamta.mukherjee967@student.edu,MCA,5,52.1,57.4,51.1,44.7,44.2,18.5,61.4,3.0,4,0,49.9,0
+MCA2024968,Harish Tripathi,harish.tripathi968@student.edu,MCA,5,93.6,88.5,89.9,88.5,89.0,48.2,97.6,7.6,10,0,89.9,1
+EC2024969,Tarun Tripathi,tarun.tripathi969@student.edu,Electronics,5,45.7,51.6,50.1,37.8,48.6,23.5,59.3,3.1,5,2,46.76,0
+CS2024970,Gaurav Chauhan,gaurav.chauhan970@student.edu,Computer Science,5,36.0,25.5,44.1,36.1,29.4,14.4,57.1,1.1,4,2,34.22,0
+MCA2024971,Suresh Banerjee,suresh.banerjee971@student.edu,MCA,5,81.0,90.4,83.8,83.9,96.0,36.2,77.5,6.3,7,0,87.02,1
+IT2024972,Shalini Chakraborty,shalini.chakraborty972@student.edu,Information Technology,2,50.8,68.6,61.1,71.5,51.7,31.1,75.4,2.6,7,0,60.74,1
+IT2024973,Geeta Roy,geeta.roy973@student.edu,Information Technology,1,53.1,58.3,42.4,48.7,55.6,30.0,78.6,3.6,6,0,51.62,1
+BCA2024974,Jyoti Kapoor,jyoti.kapoor974@student.edu,BCA,5,87.9,91.9,100.0,95.8,100.0,45.6,94.0,8.2,9,0,95.12,1
+MCA2024975,Kunal Das,kunal.das975@student.edu,MCA,6,35.8,24.8,29.1,33.7,25.9,7.8,53.7,0.1,1,5,29.86,0
+MCA2024976,Vishal Chatterjee,vishal.chatterjee976@student.edu,MCA,4,80.0,78.0,72.7,74.8,68.0,33.4,78.3,4.6,7,0,74.7,1
+MCA2024977,Smita Shah,smita.shah977@student.edu,MCA,1,61.3,51.1,45.6,46.6,52.6,35.7,70.3,4.5,7,1,51.44,1
+MCA2024978,Nisha Pandey,nisha.pandey978@student.edu,MCA,2,58.0,74.6,73.4,62.6,62.7,30.3,78.9,2.7,6,0,66.26,1
+CS2024979,Shweta Tiwari,shweta.tiwari979@student.edu,Computer Science,4,77.4,77.3,82.3,78.8,81.6,42.1,86.5,4.8,8,0,79.48,1
+MCA2024980,Ravi Shah,ravi.shah980@student.edu,MCA,2,52.3,49.3,57.2,57.6,63.3,25.6,75.9,4.1,7,1,55.94,1
+CS2024981,Nitin Bhatt,nitin.bhatt981@student.edu,Computer Science,5,100.0,91.7,96.9,95.0,100.0,42.9,98.7,9.9,9,0,96.72,1
+MCA2024982,Vivek Bose,vivek.bose982@student.edu,MCA,1,69.7,62.3,79.8,73.0,64.8,34.2,91.0,5.5,9,0,69.92,1
+MCA2024983,Tarun Kumar,tarun.kumar983@student.edu,MCA,4,73.4,68.9,62.9,73.4,73.7,33.3,65.3,4.5,7,2,70.46,1
+CS2024984,Monika Mishra,monika.mishra984@student.edu,Computer Science,3,63.6,61.2,41.4,49.9,54.8,24.6,75.1,3.8,5,2,54.18,1
+MCA2024985,Archana Sen,archana.sen985@student.edu,MCA,4,72.1,75.5,77.8,82.8,75.2,36.7,85.9,4.9,8,1,76.68,1
+CS2024986,Priya Mishra,priya.mishra986@student.edu,Computer Science,2,100.0,95.7,100.0,89.8,96.4,41.0,91.8,7.1,10,0,96.38,1
+MCA2024987,Kunal Mehta,kunal.mehta987@student.edu,MCA,4,81.6,73.1,79.2,86.0,74.8,34.2,84.7,4.6,7,0,78.94,1
+CS2024988,Sonia Chatterjee,sonia.chatterjee988@student.edu,Computer Science,6,48.2,60.2,63.0,47.8,51.2,31.4,69.2,2.5,5,0,54.08,1
+IT2024989,Pratibha Sharma,pratibha.sharma989@student.edu,Information Technology,3,76.7,75.5,73.6,73.4,72.6,41.6,89.9,4.2,10,0,74.36,1
+MCA2024990,Nitin Dey,nitin.dey990@student.edu,MCA,4,75.4,72.3,77.9,70.6,61.1,35.3,85.5,4.4,10,0,71.46,1
+MCA2024991,Hemant Bhatt,hemant.bhatt991@student.edu,MCA,2,56.3,64.6,75.5,61.2,72.5,34.2,86.7,5.7,10,0,66.02,1
+MCA2024992,Priya Das,priya.das992@student.edu,MCA,3,42.8,42.6,40.8,41.2,36.5,19.6,48.2,2.7,3,0,40.78,0
+CS2024993,Nikhil Banerjee,nikhil.banerjee993@student.edu,Computer Science,4,58.7,55.8,58.0,57.4,49.4,25.4,52.4,2.0,4,1,55.86,0
+BCA2024994,Ashish Tripathi,ashish.tripathi994@student.edu,BCA,3,49.5,31.1,36.8,35.0,27.1,13.6,54.7,2.7,3,2,35.9,0
+CS2024995,Sneha Malhotra,sneha.malhotra995@student.edu,Computer Science,5,90.5,87.5,96.0,91.4,94.3,41.3,88.7,9.5,9,0,91.94,1
+MCA2024996,Deepak Chatterjee,deepak.chatterjee996@student.edu,MCA,5,85.3,90.6,89.6,92.7,70.2,45.9,89.2,6.9,10,0,85.68,1
+CS2024997,Rohit Sen,rohit.sen997@student.edu,Computer Science,1,47.2,51.7,35.8,39.2,38.0,16.9,54.0,2.7,2,1,42.38,0
+IT2024998,Sunil Joshi,sunil.joshi998@student.edu,Information Technology,4,95.2,84.9,81.4,80.0,79.3,50.0,89.0,8.4,10,0,84.16,1
+CS2024999,Smita Saxena,smita.saxena999@student.edu,Computer Science,3,81.4,81.3,72.7,83.1,79.2,35.7,86.4,5.3,7,0,79.54,1
+MCA20241000,Monika Malhotra,monika.malhotra1000@student.edu,MCA,4,16.9,31.4,39.2,17.7,21.7,15.4,42.7,0.5,2,4,25.38,0

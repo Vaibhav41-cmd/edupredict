@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% block title %}Edit {{ student.name }}{% endblock %}
+{% block page_title %}<i class="bi bi-pencil-fill me-2 text-warning"></i>Edit Student{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-xl-9">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span>Editing: <strong>{{ student.name }}</strong> <code class="ms-2" style="font-size:.8rem">{{ student.student_id }}</code></span>
+        <a href="{{ url_for('students.view_student', student_id=student.id) }}" class="btn btn-sm btn-outline-secondary">
+          <i class="bi bi-arrow-left me-1"></i>Back
+        </a>
+      </div>
+      <div class="card-body p-4">
+        <form method="POST" action="{{ url_for('students.edit_student', student_id=student.id) }}" novalidate>
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+          <!-- Reuse student_id as readonly -->
+          <input type="hidden" name="student_id" value="{{ student.student_id }}"/>
+
+          <div class="mb-4">
+            <h6 class="fw-600 text-muted mb-3" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em">Personal Information</h6>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label">Full Name</label>
+                <input type="text" name="name" class="form-control" value="{{ form_data.get('name', student.name) }}" required/>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" value="{{ form_data.get('email', student.email) }}" required/>
+              </div>
+              <div class="col-md-2">
+                <label class="form-label">Department</label>
+                <select name="department" class="form-select" required>
+                  {% for dept in ['Computer Science','Information Technology','Electronics','Mechanical','Civil','MBA','MCA','BCA'] %}
+                  <option value="{{ dept }}" {% if form_data.get('department', student.department)==dept %}selected{% endif %}>{{ dept }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label class="form-label">Semester</label>
+                <select name="semester" class="form-select" required>
+                  {% for s in range(1,9) %}
+                  <option value="{{ s }}" {% if form_data.get('semester', student.semester)|int==s %}selected{% endif %}>{{ s }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4"/>
+
+          <div class="mb-4">
+            <h6 class="fw-600 text-muted mb-3" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em">Subject Marks (0–100)</h6>
+            <div class="row g-3">
+              {% for i in range(1,6) %}
+              <div class="col-6 col-md">
+                <label class="form-label">Subject {{ i }}</label>
+                <input type="number" name="subject{{ i }}_marks" class="form-control subject-marks"
+                  value="{{ form_data.get('subject%d_marks'%i, student['subject%d_marks'%i]) }}"
+                  min="0" max="100" step="0.5" required/>
+              </div>
+              {% endfor %}
+              <div class="col-6 col-md">
+                <label class="form-label">Average</label>
+                <input type="text" id="avgDisplay" class="form-control" readonly style="background:#f8fafc;font-weight:600;color:#64748b"/>
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4"/>
+
+          <div class="mb-4">
+            <h6 class="fw-600 text-muted mb-3" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em">Academic Factors</h6>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label">Internal Marks (0–50)</label>
+                <input type="number" name="internal_marks" class="form-control"
+                  value="{{ form_data.get('internal_marks', student.internal_marks) }}" min="0" max="50" step="0.5" required/>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Attendance %</label>
+                <input type="number" name="attendance_pct" class="form-control"
+                  value="{{ form_data.get('attendance_pct', student.attendance_pct) }}" min="0" max="100" step="0.1" required/>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Study Hours/Day</label>
+                <input type="number" name="study_hours_per_day" class="form-control"
+                  value="{{ form_data.get('study_hours_per_day', student.study_hours_per_day) }}" min="0" max="18" step="0.5" required/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Assignments Submitted: <strong id="assignVal2">{{ form_data.get('assignments_submitted', student.assignments_submitted) }}</strong></label>
+                <input type="range" name="assignments_submitted" class="form-range"
+                  value="{{ form_data.get('assignments_submitted', student.assignments_submitted) }}"
+                  min="0" max="10" oninput="document.getElementById('assignVal2').textContent=this.value"/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Previous Backlogs: <strong id="backlogVal2" class="text-danger">{{ form_data.get('previous_backlogs', student.previous_backlogs) }}</strong></label>
+                <input type="range" name="previous_backlogs" class="form-range"
+                  value="{{ form_data.get('previous_backlogs', student.previous_backlogs) }}"
+                  min="0" max="10" oninput="document.getElementById('backlogVal2').textContent=this.value"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert alert-info py-2">
+            <i class="bi bi-robot me-2"></i>Saving will <strong>re-run ML prediction</strong> with the updated data.
+          </div>
+
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-warning px-4"><i class="bi bi-save-fill me-2"></i>Update & Re-predict</button>
+            <a href="{{ url_for('students.view_student', student_id=student.id) }}" class="btn btn-outline-secondary px-4">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const marks = document.querySelectorAll('.subject-marks');
+const avg = document.getElementById('avgDisplay');
+function calcAvg(){
+  const vals = Array.from(marks).map(i=>parseFloat(i.value)).filter(v=>!isNaN(v));
+  avg.value = vals.length===5 ? (vals.reduce((a,b)=>a+b,0)/5).toFixed(2) : '';
+}
+marks.forEach(i=>i.addEventListener('input',calcAvg));
+calcAvg();
+</script>
+{% endblock %}

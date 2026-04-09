@@ -1,0 +1,197 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Student Prediction System — Global Stylesheet
+   All base styles are in base.html for template portability.
+   This file contains component-level and page-specific styles.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── Page Load Fade-in ─────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.content-body > * {
+  animation: fadeInUp 0.25s ease both;
+}
+
+.content-body > *:nth-child(2) { animation-delay: .05s; }
+.content-body > *:nth-child(3) { animation-delay: .10s; }
+.content-body > *:nth-child(4) { animation-delay: .15s; }
+
+/* ── Stat Card Hover ───────────────────────────────────────────── */
+.stat-card {
+  transition: transform .2s ease, box-shadow .2s ease;
+  cursor: default;
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.15);
+}
+
+/* ── Table Row Hover ───────────────────────────────────────────── */
+.table tbody tr {
+  transition: background .1s ease;
+}
+.table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ── Button Loading State ──────────────────────────────────────── */
+.btn-loading {
+  position: relative;
+  pointer-events: none;
+  opacity: .75;
+}
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  right: 12px; top: 50%;
+  transform: translateY(-50%);
+  width: 14px; height: 14px;
+  border: 2px solid rgba(255,255,255,.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin .6s linear infinite;
+}
+@keyframes spin { to { transform: translateY(-50%) rotate(360deg); } }
+
+/* ── Form Section Headers ──────────────────────────────────────── */
+.form-section-title {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+
+/* ── Prediction Result Banner ──────────────────────────────────── */
+.result-banner {
+  border-radius: 14px;
+  padding: 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.result-banner.pass {
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border: 2px solid #10b981;
+}
+.result-banner.fail {
+  background: linear-gradient(135deg, #fff1f2, #fee2e2);
+  border: 2px solid #ef4444;
+}
+.result-banner::before {
+  content: '';
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.4);
+}
+
+/* ── Code Snippets in Tables ───────────────────────────────────── */
+.table code {
+  background: #f1f5f9;
+  color: #4f46e5;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-size: .8rem;
+}
+
+/* ── Pagination Active ─────────────────────────────────────────── */
+.page-item.active .page-link {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+.page-link {
+  color: var(--primary);
+  border-radius: 6px !important;
+  margin: 0 2px;
+}
+.page-link:hover { color: var(--primary-dark); }
+
+/* ── Input Range ───────────────────────────────────────────────── */
+.form-range::-webkit-slider-thumb {
+  background: var(--primary);
+}
+.form-range::-moz-range-thumb {
+  background: var(--primary);
+  border: none;
+}
+
+/* ── Tooltip ───────────────────────────────────────────────────── */
+[data-tooltip] {
+  position: relative;
+  cursor: help;
+}
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e293b;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: .73rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .15s ease;
+  z-index: 100;
+}
+[data-tooltip]:hover::after { opacity: 1; }
+
+/* ── Responsive Table Fix ──────────────────────────────────────── */
+@media (max-width: 576px) {
+  .table th:nth-child(n+5),
+  .table td:nth-child(n+5) {
+    display: none;
+  }
+}
+
+/* ── Empty State ───────────────────────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--muted);
+}
+.empty-state i {
+  font-size: 3rem;
+  opacity: .3;
+  display: block;
+  margin-bottom: 16px;
+}
+.empty-state h6 { font-weight: 600; margin-bottom: 6px; }
+.empty-state p  { font-size: .875rem; }
+
+/* ── Scrollable Card Body ──────────────────────────────────────── */
+.card-body-scroll {
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+/* ── Model Metric Progress Bars ────────────────────────────────── */
+.metric-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.metric-label { width: 90px; font-size: .82rem; font-weight: 500; }
+.metric-bar   { flex: 1; }
+.metric-val   { width: 48px; text-align: right; font-size: .82rem; font-weight: 700; }
+
+/* ── Footer ────────────────────────────────────────────────────── */
+.app-footer {
+  margin-left: var(--sidebar-w);
+  padding: 14px 28px;
+  border-top: 1px solid var(--border);
+  font-size: .76rem;
+  color: var(--muted);
+  background: var(--surface);
+}

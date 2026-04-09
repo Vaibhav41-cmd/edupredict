@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+{% block title %}{{ student.name }} — Student Profile{% endblock %}
+{% block page_title %}<i class="bi bi-person-badge me-2 text-primary"></i>Student Profile{% endblock %}
+
+{% block content %}
+<div class="row g-4">
+
+  <!-- Left: Profile & Prediction -->
+  <div class="col-lg-4">
+
+    <!-- Prediction Result Card -->
+    {% set pred = student.latest_prediction %}
+    {% if pred %}
+    <div class="card mb-3" style="border:2px solid {% if pred.result=='PASS' %}#10b981{% else %}#ef4444{% endif %}">
+      <div class="card-body text-center py-4">
+        <div style="font-size:3rem">{% if pred.result=='PASS' %}✅{% else %}❌{% endif %}</div>
+        <div class="display-6 fw-700 {% if pred.result=='PASS' %}text-success{% else %}text-danger{% endif %} mt-2">
+          {{ pred.result }}
+        </div>
+        <div class="text-muted" style="font-size:.85rem">Latest ML Prediction</div>
+        <hr/>
+        <div class="row text-center g-0">
+          <div class="col-6">
+            <div class="fw-700 text-success" style="font-size:1.4rem">{{ "%.1f"|format(pred.pass_probability*100) }}%</div>
+            <div style="font-size:.75rem;color:#64748b">Pass Probability</div>
+          </div>
+          <div class="col-6">
+            <div class="fw-700 text-danger" style="font-size:1.4rem">{{ "%.1f"|format(pred.fail_probability*100) }}%</div>
+            <div style="font-size:.75rem;color:#64748b">Fail Probability</div>
+          </div>
+        </div>
+        <div class="prob-bar mt-3">
+          <div class="prob-bar-fill bg-success" style="width:{{ "%.1f"|format(pred.pass_probability*100) }}%"></div>
+        </div>
+        <div class="mt-2" style="font-size:.75rem;color:#94a3b8">
+          Model: {{ pred.model_name }} &nbsp;|&nbsp; {{ pred.predicted_at.strftime('%d %b %Y') }}
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Profile Info -->
+    <div class="card">
+      <div class="card-header"><i class="bi bi-person-circle me-2"></i>Profile</div>
+      <div class="card-body">
+        <dl class="mb-0" style="font-size:.875rem">
+          <dt class="text-muted mb-1">Student ID</dt>
+          <dd class="fw-600 mb-3"><code>{{ student.student_id }}</code></dd>
+          <dt class="text-muted mb-1">Full Name</dt>
+          <dd class="fw-600 mb-3">{{ student.name }}</dd>
+          <dt class="text-muted mb-1">Email</dt>
+          <dd class="mb-3">{{ student.email }}</dd>
+          <dt class="text-muted mb-1">Department</dt>
+          <dd class="mb-3">{{ student.department }}</dd>
+          <dt class="text-muted mb-1">Semester</dt>
+          <dd class="mb-3">Sem {{ student.semester }}</dd>
+          <dt class="text-muted mb-1">Added On</dt>
+          <dd class="mb-0 text-muted">{{ student.created_at.strftime('%d %b %Y') }}</dd>
+        </dl>
+      </div>
+      <div class="card-footer d-flex gap-2">
+        <a href="{{ url_for('students.edit_student', student_id=student.id) }}" class="btn btn-sm btn-outline-primary flex-fill">
+          <i class="bi bi-pencil-fill me-1"></i>Edit
+        </a>
+        <form method="POST" action="{{ url_for('students.delete_student', student_id=student.id) }}"
+              onsubmit="return confirm('Delete this student permanently?')">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+          <button type="submit" class="btn btn-sm btn-outline-danger">
+            <i class="bi bi-trash-fill"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: Academic Data + History -->
+  <div class="col-lg-8">
+
+    <!-- Subject Marks -->
+    <div class="card mb-3">
+      <div class="card-header"><i class="bi bi-journal-text me-2 text-primary"></i>Academic Performance</div>
+      <div class="card-body">
+        <div class="row g-3 mb-3">
+          {% for i in range(1,6) %}
+          {% set mark = student['subject%d_marks'%i] %}
+          <div class="col">
+            <div class="text-center p-3 rounded" style="background:#f8fafc">
+              <div class="fw-700 {% if mark>=60 %}text-success{% elif mark>=40 %}text-warning{% else %}text-danger{% endif %}" style="font-size:1.3rem">
+                {{ mark|int }}
+              </div>
+              <div style="font-size:.72rem;color:#94a3b8">Subject {{ i }}</div>
+              <div class="prob-bar mt-1">
+                <div class="prob-bar-fill {% if mark>=60 %}bg-success{% elif mark>=40 %}bg-warning{% else %}bg-danger{% endif %}"
+                     style="width:{{ mark }}%"></div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="d-flex justify-content-between align-items-center p-2 rounded" style="background:#f0fdf4">
+              <span style="font-size:.85rem;color:#15803d;font-weight:600"><i class="bi bi-calculator me-1"></i>Average</span>
+              <span class="fw-700 text-success">{{ student.average_marks }}</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-between align-items-center p-2 rounded" style="background:#fefce8">
+              <span style="font-size:.85rem;color:#92400e;font-weight:600"><i class="bi bi-file-earmark-text me-1"></i>Internal</span>
+              <span class="fw-700 text-warning">{{ student.internal_marks }}/50</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-between align-items-center p-2 rounded" style="background:{% if student.attendance_pct>=75 %}#f0fdf4{% else %}#fef2f2{% endif %}">
+              <span style="font-size:.85rem;font-weight:600;color:{% if student.attendance_pct>=75 %}#15803d{% else %}#b91c1c{% endif %}"><i class="bi bi-person-check me-1"></i>Attendance</span>
+              <span class="fw-700 {% if student.attendance_pct>=75 %}text-success{% else %}text-danger{% endif %}">{{ student.attendance_pct }}%</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-between align-items-center p-2 rounded" style="background:#f8fafc">
+              <span style="font-size:.85rem;color:#64748b;font-weight:600"><i class="bi bi-clock me-1"></i>Study hrs/day</span>
+              <span class="fw-700">{{ student.study_hours_per_day }}h</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-between align-items-center p-2 rounded" style="background:#f8fafc">
+              <span style="font-size:.85rem;color:#64748b;font-weight:600"><i class="bi bi-check2-all me-1"></i>Assignments</span>
+              <span class="fw-700">{{ student.assignments_submitted }}/10</span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex justify-content-between align-items-center p-2 rounded" style="background:{% if student.previous_backlogs>0 %}#fef2f2{% else %}#f0fdf4{% endif %}">
+              <span style="font-size:.85rem;font-weight:600;color:{% if student.previous_backlogs>0 %}#b91c1c{% else %}#15803d{% endif %}"><i class="bi bi-exclamation-triangle me-1"></i>Backlogs</span>
+              <span class="fw-700 {% if student.previous_backlogs>0 %}text-danger{% else %}text-success{% endif %}">{{ student.previous_backlogs }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Radar Chart -->
+    <div class="card mb-3">
+      <div class="card-header"><i class="bi bi-radar me-2 text-warning"></i>Performance Radar</div>
+      <div class="card-body" style="height:260px;display:flex;align-items:center;justify-content:center">
+        <canvas id="radarChart" style="max-width:300px;max-height:240px"></canvas>
+      </div>
+    </div>
+
+    <!-- Prediction History -->
+    <div class="card">
+      <div class="card-header"><i class="bi bi-clock-history me-2"></i>Prediction History ({{ predictions|length }})</div>
+      <div class="table-responsive">
+        <table class="table mb-0">
+          <thead>
+            <tr>
+              <th class="px-3">#</th>
+              <th>Result</th>
+              <th>Pass Prob</th>
+              <th>Model</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for p in predictions %}
+            <tr>
+              <td class="px-3 text-muted">{{ loop.index }}</td>
+              <td><span class="badge-{{ p.result.lower() }}">{{ p.result }}</span></td>
+              <td>
+                <div class="d-flex align-items-center gap-2">
+                  <div class="prob-bar" style="width:80px">
+                    <div class="prob-bar-fill bg-success" style="width:{{ "%.1f"|format(p.pass_probability*100) }}%"></div>
+                  </div>
+                  <small>{{ "%.1f"|format(p.pass_probability*100) }}%</small>
+                </div>
+              </td>
+              <td><small class="text-muted">{{ p.model_name }}</small></td>
+              <td><small class="text-muted">{{ p.predicted_at.strftime('%d %b %Y %H:%M') }}</small></td>
+            </tr>
+            {% else %}
+            <tr><td colspan="5" class="text-center text-muted py-3">No predictions yet.</td></tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+new Chart(document.getElementById('radarChart'), {
+  type: 'radar',
+  data: {
+    labels: ['Avg Marks', 'Internal', 'Attendance', 'Study Hrs', 'Assignments', 'No Backlogs'],
+    datasets: [{
+      label: '{{ student.name }}',
+      data: [
+        {{ (student.average_marks/100*100)|round(1) }},
+        {{ (student.internal_marks/50*100)|round(1) }},
+        {{ student.attendance_pct }},
+        {{ (student.study_hours_per_day/18*100)|round(1) }},
+        {{ (student.assignments_submitted/10*100) }},
+        {{ ((10-student.previous_backlogs)/10*100) }}
+      ],
+      backgroundColor: 'rgba(79,70,229,.15)',
+      borderColor: '#4f46e5',
+      pointBackgroundColor: '#4f46e5',
+      borderWidth: 2
+    }]
+  },
+  options: {
+    scales: { r: { min: 0, max: 100, ticks: { display: false }, grid: { color: '#e2e8f0' } } },
+    plugins: { legend: { display: false } }
+  }
+});
+</script>
+{% endblock %}

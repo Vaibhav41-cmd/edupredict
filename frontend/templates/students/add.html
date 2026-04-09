@@ -1,0 +1,222 @@
+{% extends "base.html" %}
+{% block title %}Add Student{% endblock %}
+{% block page_title %}<i class="bi bi-person-plus-fill me-2 text-primary"></i>Add New Student{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-xl-9">
+
+    <div class="card">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span>Student Academic Profile</span>
+        <a href="{{ url_for('students.list_students') }}" class="btn btn-sm btn-outline-secondary">
+          <i class="bi bi-arrow-left me-1"></i>Back
+        </a>
+      </div>
+      <div class="card-body p-4">
+
+        <form method="POST" action="{{ url_for('students.add_student') }}" id="studentForm" novalidate>
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+
+          <!-- Section: Personal Info -->
+          <div class="mb-4">
+            <h6 class="fw-600 text-muted mb-3" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em">
+              <i class="bi bi-person me-1"></i>Personal Information
+            </h6>
+            <div class="row g-3">
+              <div class="col-md-3">
+                <label class="form-label">Student ID <span class="text-danger">*</span></label>
+                <input type="text" name="student_id" class="form-control text-uppercase"
+                  value="{{ form_data.get('student_id','') }}"
+                  placeholder="MCA2024001" required maxlength="20"/>
+                <div class="form-text">Unique alphanumeric ID</div>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Full Name <span class="text-danger">*</span></label>
+                <input type="text" name="name" class="form-control"
+                  value="{{ form_data.get('name','') }}" placeholder="Rahul Sharma" required maxlength="100"/>
+              </div>
+              <div class="col-md-5">
+                <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                <input type="email" name="email" class="form-control"
+                  value="{{ form_data.get('email','') }}" placeholder="rahul@college.edu" required/>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Department <span class="text-danger">*</span></label>
+                <select name="department" class="form-select" required>
+                  <option value="">Select Department</option>
+                  {% for dept in ['Computer Science','Information Technology','Electronics','Mechanical','Civil','MBA','MCA','BCA'] %}
+                  <option value="{{ dept }}" {% if form_data.get('department')==dept %}selected{% endif %}>{{ dept }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Semester <span class="text-danger">*</span></label>
+                <select name="semester" class="form-select" required>
+                  {% for s in range(1,9) %}
+                  <option value="{{ s }}" {% if form_data.get('semester')|string==s|string %}selected{% endif %}>Semester {{ s }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4"/>
+
+          <!-- Section: Subject Marks -->
+          <div class="mb-4">
+            <h6 class="fw-600 text-muted mb-3" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em">
+              <i class="bi bi-journal-text me-1"></i>Subject Marks (0–100)
+            </h6>
+            <div class="row g-3">
+              {% for i in range(1,6) %}
+              <div class="col-6 col-md-4 col-lg">
+                <label class="form-label">Subject {{ i }}</label>
+                <div class="input-group">
+                  <input type="number" name="subject{{ i }}_marks" class="form-control subject-marks"
+                    value="{{ form_data.get('subject'~i~'_marks','') }}"
+                    min="0" max="100" step="0.5" placeholder="0–100" required/>
+                  <span class="input-group-text" style="font-size:.75rem;color:#64748b">/100</span>
+                </div>
+              </div>
+              {% endfor %}
+              <div class="col-6 col-md-4 col-lg">
+                <label class="form-label">Average <small class="text-muted">(auto)</small></label>
+                <input type="text" id="avgMarksDisplay" class="form-control" readonly
+                  style="background:#f8fafc;color:#64748b;font-weight:600" placeholder="—"/>
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4"/>
+
+          <!-- Section: Academic Factors -->
+          <div class="mb-4">
+            <h6 class="fw-600 text-muted mb-3" style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em">
+              <i class="bi bi-clipboard2-data me-1"></i>Academic Factors (ML Inputs)
+            </h6>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <label class="form-label">Internal Marks (0–50) <span class="text-danger">*</span></label>
+                <div class="input-group">
+                  <input type="number" name="internal_marks" class="form-control"
+                    value="{{ form_data.get('internal_marks','') }}"
+                    min="0" max="50" step="0.5" placeholder="0–50" required/>
+                  <span class="input-group-text" style="font-size:.75rem;color:#64748b">/50</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Attendance % <span class="text-danger">*</span></label>
+                <div class="input-group">
+                  <input type="number" name="attendance_pct" class="form-control"
+                    value="{{ form_data.get('attendance_pct','') }}"
+                    min="0" max="100" step="0.1" placeholder="75.5" required/>
+                  <span class="input-group-text">%</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <label class="form-label">Study Hours/Day <span class="text-danger">*</span></label>
+                <div class="input-group">
+                  <input type="number" name="study_hours_per_day" class="form-control"
+                    value="{{ form_data.get('study_hours_per_day','') }}"
+                    min="0" max="18" step="0.5" placeholder="3.5" required/>
+                  <span class="input-group-text">hrs</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Assignments Submitted (0–10) <span class="text-danger">*</span></label>
+                <input type="range" name="assignments_submitted" class="form-range" id="assignmentRange"
+                  value="{{ form_data.get('assignments_submitted',5) }}" min="0" max="10" step="1"
+                  oninput="document.getElementById('assignVal').textContent=this.value"/>
+                <div class="d-flex justify-content-between">
+                  <small class="text-muted">0</small>
+                  <strong id="assignVal">{{ form_data.get('assignments_submitted', 5) }}</strong>
+                  <small class="text-muted">10</small>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Previous Backlogs <span class="text-danger">*</span></label>
+                <input type="range" name="previous_backlogs" class="form-range" id="backlogRange"
+                  value="{{ form_data.get('previous_backlogs',0) }}" min="0" max="10" step="1"
+                  oninput="document.getElementById('backlogVal').textContent=this.value"/>
+                <div class="d-flex justify-content-between">
+                  <small class="text-muted">0</small>
+                  <strong id="backlogVal" class="text-danger">{{ form_data.get('previous_backlogs', 0) }}</strong>
+                  <small class="text-muted">10</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Preview Banner -->
+          <div id="previewBanner" class="p-3 rounded mb-4" style="background:#f0f4ff;border:1px dashed #818cf8;display:none">
+            <div class="d-flex align-items-center gap-3">
+              <i class="bi bi-robot text-primary fs-4"></i>
+              <div>
+                <div class="fw-600" style="font-size:.85rem">ML Prediction Preview</div>
+                <div id="previewText" style="font-size:.8rem;color:#64748b">Fill all fields to see a live estimate</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex gap-2">
+            <button type="submit" class="btn btn-primary px-4">
+              <i class="bi bi-plus-circle-fill me-2"></i>Add Student & Predict
+            </button>
+            <a href="{{ url_for('students.list_students') }}" class="btn btn-outline-secondary px-4">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Auto-calculate average marks
+const markInputs = document.querySelectorAll('.subject-marks');
+const avgDisplay = document.getElementById('avgMarksDisplay');
+
+function calcAvg(){
+  const vals = Array.from(markInputs).map(i => parseFloat(i.value)).filter(v => !isNaN(v));
+  if(vals.length === 5){
+    avgDisplay.value = (vals.reduce((a,b)=>a+b,0)/5).toFixed(2);
+  } else {
+    avgDisplay.value = '';
+  }
+}
+markInputs.forEach(i => i.addEventListener('input', calcAvg));
+calcAvg();
+
+// Client-side live prediction estimate (heuristic, not the real model)
+const form = document.getElementById('studentForm');
+const banner = document.getElementById('previewBanner');
+const previewText = document.getElementById('previewText');
+
+function liveEstimate(){
+  const vals = Array.from(markInputs).map(i => parseFloat(i.value));
+  const internal = parseFloat(document.querySelector('[name=internal_marks]').value);
+  const att = parseFloat(document.querySelector('[name=attendance_pct]').value);
+  const hrs = parseFloat(document.querySelector('[name=study_hours_per_day]').value);
+  const assign = parseInt(document.querySelector('[name=assignments_submitted]').value);
+  const backlogs = parseInt(document.querySelector('[name=previous_backlogs]').value);
+
+  if(vals.some(isNaN) || isNaN(internal) || isNaN(att) || isNaN(hrs)) return;
+
+  const avg = vals.reduce((a,b)=>a+b,0)/5;
+  const score = (
+    0.35*(avg/100) + 0.20*(internal/50) + 0.25*(att/100) +
+    0.10*(hrs/10) + 0.05*(assign/10) - 0.05*(backlogs/10)
+  );
+  const prob = Math.min(Math.max(score, 0), 1);
+  const result = prob > 0.5 ? 'PASS' : 'FAIL';
+  const pct = (prob*100).toFixed(0);
+  banner.style.display = 'block';
+  const color = result==='PASS' ? '#15803d' : '#b91c1c';
+  previewText.innerHTML = `Estimated: <strong style="color:${color}">${result}</strong> (pass probability ~${pct}%) — <em>final prediction runs server-side</em>`;
+}
+
+form.querySelectorAll('input[type=number],input[type=range]').forEach(i => i.addEventListener('input', liveEstimate));
+</script>
+{% endblock %}

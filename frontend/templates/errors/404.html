@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}404 — Page Not Found{% endblock %}
+{% block page_title %}Error{% endblock %}
+{% block content %}
+<div class="empty-state" style="padding:80px 20px">
+  <div style="font-size:5rem;font-weight:800;color:#e2e8f0;line-height:1">404</div>
+  <i class="bi bi-compass" style="font-size:2.5rem;opacity:.2;margin:12px 0"></i>
+  <h5 class="fw-600 mt-3">Page Not Found</h5>
+  <p class="text-muted">The page you're looking for doesn't exist or has been moved.</p>
+  <a href="{{ url_for('dashboard.index') }}" class="btn btn-primary mt-2">
+    <i class="bi bi-house-fill me-2"></i>Back to Dashboard
+  </a>
+</div>
+{% endblock %}

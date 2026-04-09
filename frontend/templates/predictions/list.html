@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block title %}All Predictions{% endblock %}
+{% block page_title %}<i class="bi bi-lightning-charge-fill me-2 text-warning"></i>All Predictions{% endblock %}
+
+{% block content %}
+<!-- Filter -->
+<div class="card mb-3">
+  <div class="card-body py-3">
+    <form method="GET" class="d-flex gap-3 align-items-center flex-wrap">
+      <label class="fw-500" style="font-size:.875rem">Filter by result:</label>
+      <a href="{{ url_for('predictions.list_predictions') }}"
+         class="btn btn-sm {% if not result_filter %}btn-primary{% else %}btn-outline-secondary{% endif %}">All</a>
+      <a href="?result=PASS"
+         class="btn btn-sm {% if result_filter=='PASS' %}btn-success{% else %}btn-outline-success{% endif %}">
+        <i class="bi bi-check-circle me-1"></i>PASS only
+      </a>
+      <a href="?result=FAIL"
+         class="btn btn-sm {% if result_filter=='FAIL' %}btn-danger{% else %}btn-outline-danger{% endif %}">
+        <i class="bi bi-x-circle me-1"></i>FAIL only
+      </a>
+      <span class="ms-auto text-muted" style="font-size:.85rem">{{ pagination.total }} records</span>
+    </form>
+  </div>
+</div>
+
+<div class="card">
+  <div class="table-responsive">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th class="px-3">#</th>
+          <th>Student</th>
+          <th>Dept</th>
+          <th>Result</th>
+          <th>Pass Probability</th>
+          <th>Fail Probability</th>
+          <th>Model</th>
+          <th>Predicted At</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        {% set p = row.prediction %}
+        {% set s = row.student %}
+        <tr>
+          <td class="px-3 text-muted">{{ loop.index + (pagination.page-1)*20 }}</td>
+          <td>
+            <a href="{{ url_for('students.view_student', student_id=s.id) }}" class="text-decoration-none fw-500">
+              {{ s.name }}
+            </a>
+            <div style="font-size:.75rem;color:#94a3b8"><code>{{ s.student_id }}</code></div>
+          </td>
+          <td><small class="text-muted">{{ s.department }}</small></td>
+          <td><span class="badge-{{ p.result.lower() }}">{{ p.result }}</span></td>
+          <td>
+            <div class="d-flex align-items-center gap-2">
+              <div class="prob-bar" style="width:90px">
+                <div class="prob-bar-fill bg-success" style="width:{{ p.pass_probability }}%"></div>
+              </div>
+              <small class="text-success fw-600">{{ p.pass_probability }}%</small>
+            </div>
+          </td>
+          <td>
+            <div class="d-flex align-items-center gap-2">
+              <div class="prob-bar" style="width:90px">
+                <div class="prob-bar-fill bg-danger" style="width:{{ p.fail_probability }}%"></div>
+              </div>
+              <small class="text-danger fw-600">{{ p.fail_probability }}%</small>
+            </div>
+          </td>
+          <td><small class="text-muted">{{ p.model_name }}</small></td>
+          <td><small class="text-muted">{{ p.predicted_at[:16].replace('T',' ') }}</small></td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="8" class="text-center text-muted py-5">
+            <i class="bi bi-lightning fs-2 d-block mb-2"></i>
+            No predictions yet. <a href="{{ url_for('students.add_student') }}">Add a student</a> to generate predictions.
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% if pagination.pages > 1 %}
+  <div class="card-footer d-flex justify-content-between align-items-center">
+    <small class="text-muted">Page {{ pagination.page }} of {{ pagination.pages }}</small>
+    <nav>
+      <ul class="pagination pagination-sm mb-0">
+        <li class="page-item {% if not pagination.has_prev %}disabled{% endif %}">
+          <a class="page-link" href="?page={{ pagination.prev_num }}&result={{ result_filter }}">‹</a>
+        </li>
+        {% for p in pagination.iter_pages() %}
+          {% if p %}
+          <li class="page-item {% if p==pagination.page %}active{% endif %}">
+            <a class="page-link" href="?page={{ p }}&result={{ result_filter }}">{{ p }}</a>
+          </li>
+          {% else %}
+          <li class="page-item disabled"><span class="page-link">…</span></li>
+          {% endif %}
+        {% endfor %}
+        <li class="page-item {% if not pagination.has_next %}disabled{% endif %}">
+          <a class="page-link" href="?page={{ pagination.next_num }}&result={{ result_filter }}">›</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
