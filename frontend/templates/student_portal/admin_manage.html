@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Student Portal Accounts{% endblock %}
+{% block page_title %}Manage Student Portal Accounts{% endblock %}
+
+{% block content %}
+<div class="row g-3 mb-4">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">Create New Account</div>
+      <div class="card-body">
+        <p class="small text-muted">Default password = Student ID</p>
+        <form method="POST" class="d-flex gap-2">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <input type="hidden" name="action" value="create">
+          <select class="form-select" name="student_id_db" required>
+            <option value="">Select student...</option>
+            {% for s in students_without %}
+            <option value="{{ s.id }}">{{ s.student_id }} — {{ s.name }} ({{ s.department }})</option>
+            {% endfor %}
+          </select>
+          <button class="btn btn-success"><i class="bi bi-plus-circle"></i> Create</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">Quick Info</div>
+      <div class="card-body small">
+        <ul class="mb-0">
+          <li>URL: <code>/student/login</code></li>
+          <li>Default username & password: Student ID</li>
+          <li>Students can change password after login</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">{{ accounts|length }} Account(s)</div>
+  <div class="card-body p-0">
+    {% if accounts %}
+    <div class="table-responsive">
+      <table class="table table-hover mb-0">
+        <thead><tr><th>Username</th><th>Student</th><th>Status</th><th>Last Login</th><th>Actions</th></tr></thead>
+        <tbody>
+          {% for a in accounts %}
+          <tr>
+            <td><code>{{ a.username }}</code></td>
+            <td>{{ a.student.name if a.student else 'Deleted' }}</td>
+            <td><span class="badge bg-{{ 'success' if a.is_active else 'secondary' }}">{{ 'Active' if a.is_active else 'Inactive' }}</span></td>
+            <td><small class="text-muted">{{ a.last_login.strftime('%d %b %Y') if a.last_login else 'Never' }}</small></td>
+            <td>
+              <form method="POST" style="display:inline">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="student_id_db" value="{{ a.student_id }}">
+                <button name="action" value="reset" class="btn btn-sm btn-outline-warning" title="Reset password"><i class="bi bi-arrow-counterclockwise"></i></button>
+                <button name="action" value="toggle" class="btn btn-sm btn-outline-{{ 'secondary' if a.is_active else 'success' }}" title="{{ 'Deactivate' if a.is_active else 'Activate' }}">
+                  <i class="bi bi-{{ 'pause-circle' if a.is_active else 'play-circle' }}"></i>
+                </button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <p class="text-muted text-center py-3 mb-0">No accounts created yet.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

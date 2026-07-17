@@ -1,0 +1,262 @@
+{% extends "base.html" %}
+{% block title %}AI Chatbot{% endblock %}
+{% block page_title %}🤖 EduPredict Assistant{% endblock %}
+
+{% block content %}
+<div class="row" style="height:calc(100vh - 200px);">
+  <div class="col-12 d-flex flex-column">
+    <!-- Chat Header -->
+    <div class="card shadow-sm mb-0 flex-shrink-0" style="border-radius:12px 12px 0 0;">
+      <div class="card-header d-flex justify-content-between align-items-center py-2" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
+        <div class="d-flex align-items-center gap-2">
+          <div style="width:36px;height:36px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">
+            <i class="bi bi-robot"></i>
+          </div>
+          <div>
+            <h6 class="mb-0 fw-bold">EduPredict Assistant</h6>
+            <small style="opacity:0.8;">Menu-driven · Predict · Study Plans · FAQs</small>
+          </div>
+        </div>
+        <button class="btn btn-sm" style="background:rgba(255,255,255,0.15);color:#fff;" id="clearBtn">
+          <i class="bi bi-trash3"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Chat Messages -->
+    <div class="card flex-grow-1 overflow-hidden" style="border-radius:0 0 12px 12px;border-top:none;">
+      <div class="card-body p-3 overflow-auto" id="chatMessages" style="background:var(--bg);">
+        <!-- Welcome Message -->
+        <div class="d-flex align-items-start gap-2 mb-3" id="welcomeMsg">
+          <div style="width:34px;height:34px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;font-size:.9rem;">
+            <i class="bi bi-robot"></i>
+          </div>
+          <div class="p-3 rounded" style="background:var(--surface);border:1px solid var(--border);max-width:85%;border-radius:12px 12px 12px 4px;">
+            <strong class="text-primary">EduPredict Assistant</strong>
+            <div class="mt-1 bot-response">
+              👋 <strong>Hello! I'm your AI assistant.</strong><br><br>
+
+              <div style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;padding:12px 16px;border-radius:10px;margin:8px 0;">
+                <div style="font-size:.9rem;font-weight:600;margin-bottom:6px;">🤖 EduPredict Menu</div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:.78rem;">
+                  <div>🔮 <strong>1</strong> — Predict Result</div>
+                  <div>📖 <strong>2</strong> — Explain Prediction</div>
+                  <div>📚 <strong>3</strong> — Study Plan</div>
+                  <div>📈 <strong>4</strong> — Improve Attendance</div>
+                  <div>🎯 <strong>5</strong> — Improve Marks</div>
+                  <div>❓ <strong>6</strong> — FAQs</div>
+                  <div>📞 <strong>7</strong> — Contact Admin</div>
+                  <div>👨‍🎓 <strong>8</strong> — Student Lookup</div>
+                  <div>📊 <strong>9</strong> — System Stats</div>
+                </div>
+              </div>
+
+              <div style="margin-top:8px;">Type a <strong>number</strong> or click a button below! 👇</div>
+            </div>
+            <div class="d-flex flex-wrap gap-1 mt-2">
+              <button class="quick-btn" onclick="sendMsg('1')" style="background:rgba(79,70,229,0.1);color:#4f46e5;border:1px solid rgba(79,70,229,0.2);border-radius:20px;padding:4px 12px;font-size:.75rem;cursor:pointer;transition:all .2s;">🔮 Predict</button>
+              <button class="quick-btn" onclick="sendMsg('3')" style="background:rgba(16,185,129,0.1);color:#10b981;border:1px solid rgba(16,185,129,0.2);border-radius:20px;padding:4px 12px;font-size:.75rem;cursor:pointer;">📚 Study Plan</button>
+              <button class="quick-btn" onclick="sendMsg('6')" style="background:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2);border-radius:20px;padding:4px 12px;font-size:.75rem;cursor:pointer;">❓ FAQs</button>
+              <button class="quick-btn" onclick="sendMsg('8')" style="background:rgba(14,165,233,0.1);color:#0ea5e9;border:1px solid rgba(14,165,233,0.2);border-radius:20px;padding:4px 12px;font-size:.75rem;cursor:pointer;">👨‍🎓 Lookup</button>
+              <button class="quick-btn" onclick="sendMsg('menu')" style="background:rgba(99,102,241,0.1);color:#6366f1;border:1px solid rgba(99,102,241,0.2);border-radius:20px;padding:4px 12px;font-size:.75rem;cursor:pointer;">🏠 Menu</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- History -->
+        <div id="historyContainer"></div>
+
+        <!-- Typing Indicator -->
+        <div id="typingIndicator" class="d-none">
+          <div class="d-flex align-items-start gap-2 mb-3">
+            <div style="width:34px;height:34px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;">
+              <i class="bi bi-robot" style="font-size:.8rem;"></i>
+            </div>
+            <div class="p-3 rounded" style="background:var(--surface);border:1px solid var(--border);border-radius:12px 12px 12px 4px;">
+              <div class="d-flex gap-1">
+                <span style="width:8px;height:8px;background:#94a3b8;border-radius:50%;animation:typing 1.4s infinite ease-in-out;"></span>
+                <span style="width:8px;height:8px;background:#94a3b8;border-radius:50%;animation:typing 1.4s infinite ease-in-out;animation-delay:.2s;"></span>
+                <span style="width:8px;height:8px;background:#94a3b8;border-radius:50%;animation:typing 1.4s infinite ease-in-out;animation-delay:.4s;"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Bar -->
+      <div class="px-3 py-1 border-top d-flex gap-1 flex-wrap" style="background:var(--surface);">
+        <button class="btn btn-sm" style="font-size:.7rem;padding:2px 8px;border-radius:12px;" onclick="sendMsg('1')">🔮 Predict</button>
+        <button class="btn btn-sm" style="font-size:.7rem;padding:2px 8px;border-radius:12px;" onclick="sendMsg('3')">📚 Study Plan</button>
+        <button class="btn btn-sm" style="font-size:.7rem;padding:2px 8px;border-radius:12px;" onclick="sendMsg('4')">📈 Attendance</button>
+        <button class="btn btn-sm" style="font-size:.7rem;padding:2px 8px;border-radius:12px;" onclick="sendMsg('5')">🎯 Marks</button>
+        <button class="btn btn-sm" style="font-size:.7rem;padding:2px 8px;border-radius:12px;" onclick="sendMsg('6')">❓ FAQ</button>
+        <button class="btn btn-sm" style="font-size:.7rem;padding:2px 8px;border-radius:12px;" onclick="sendMsg('7')">📞 Contact</button>
+        <button class="btn btn-sm" style="font-size:.7rem;padding:2px 8px;border-radius:12px;" onclick="sendMsg('menu')">🏠 Menu</button>
+      </div>
+
+      <!-- Input -->
+      <div class="card-footer border-top p-2">
+        <form id="chatForm" class="d-flex gap-2">
+          <input type="text" class="form-control" id="chatInput"
+                 placeholder="Type a number or ask me anything..."
+                 autocomplete="off" autofocus
+                 style="border-radius:20px;padding:8px 16px;">
+          <button type="submit" class="btn btn-primary" id="sendBtn" style="border-radius:50%;width:40px;height:40px;padding:0;display:flex;align-items:center;justify-content:center;">
+            <i class="bi bi-send-fill" style="font-size:.9rem;"></i>
+          </button>
+        </form>
+        <div class="mt-1">
+          <small class="text-muted">Type <strong>menu</strong> anytime · Numbers 1-9 for menu options</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes typing {
+  0%,60%,100%{transform:translateY(0);opacity:.4}
+  30%{transform:translateY(-4px);opacity:1}
+}
+#chatMessages::-webkit-scrollbar{width:5px}
+#chatMessages::-webkit-scrollbar-thumb{background:var(--border);border-radius:10px}
+.bot-response{font-size:.9rem;line-height:1.6}
+.bot-response strong{color:inherit}
+.bot-response code{background:rgba(79,70,229,0.1);padding:1px 5px;border-radius:4px;font-size:.85rem}
+.quick-btn:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,.1)}
+</style>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const chatMessages = document.getElementById('chatMessages');
+const historyContainer = document.getElementById('historyContainer');
+const chatForm = document.getElementById('chatForm');
+const chatInput = document.getElementById('chatInput');
+const sendBtn = document.getElementById('sendBtn');
+let loading = false;
+
+loadHistory();
+
+async function loadHistory() {
+  try {
+    const res = await fetch('/chatbot/api/history');
+    const data = await res.json();
+    if (data.success && data.history) {
+      data.history.forEach(m => addMessage(m.role, m.message, m.type));
+    }
+  } catch(e) {}
+}
+
+chatForm.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const msg = chatInput.value.trim();
+  if (!msg || loading) return;
+  chatInput.value = '';
+  loading = true;
+  sendBtn.disabled = true;
+
+  addMessage('user', msg);
+  document.getElementById('typingIndicator').classList.remove('d-none');
+  scrollBottom();
+
+  try {
+    const res = await fetch('/chatbot/api/message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': '{{ csrf_token() }}'
+      },
+      body: JSON.stringify({message: msg})
+    });
+    const data = await res.json();
+    document.getElementById('typingIndicator').classList.add('d-none');
+    if (data.success) addMessage('bot', data.response, data.type);
+  } catch(e) {
+    document.getElementById('typingIndicator').classList.add('d-none');
+    addMessage('bot', '⚠️ Network error. Please try again.');
+  }
+
+  loading = false;
+  sendBtn.disabled = false;
+  chatInput.focus();
+});
+
+function addMessage(role, text, type) {
+  const div = document.createElement('div');
+  div.className = 'd-flex align-items-start gap-2 mb-3';
+
+  if (role === 'user') {
+    div.innerHTML = `
+      <div style="flex:1;display:flex;justify-content:flex-end;">
+        <div class="p-3 rounded" style="background:var(--primary);color:#fff;max-width:75%;border-radius:12px 12px 4px 12px;font-size:.9rem;line-height:1.5;">
+          ${escapeHtml(text)}
+        </div>
+      </div>`;
+  } else {
+    const isMenu = type === 'menu' || text.includes('EduPredict Menu');
+    div.innerHTML = `
+      <div style="width:34px;height:34px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0;font-size:.9rem;">
+        <i class="bi bi-robot"></i>
+      </div>
+      <div class="p-3 rounded" style="background:var(--surface);border:1px solid var(--border);max-width:80%;border-radius:12px 12px 12px 4px;${isMenu ? 'width:100%;' : ''}">
+        <strong class="text-primary" style="font-size:.85rem;">EduPredict Assistant</strong>
+        <div class="mt-1 bot-response">${formatResponse(text)}</div>
+      </div>`;
+  }
+
+  historyContainer.appendChild(div);
+  scrollBottom();
+}
+
+function formatResponse(text) {
+  let h = escapeHtml(text);
+  // Bold
+  h = h.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  // Italic
+  h = h.replace(/\*(.*?)\*/g, '<em>$1</em>');
+  // Code
+  h = h.replace(/`(.*?)`/g, '<code>$1</code>');
+  // Table rows
+  h = h.replace(/\|(.+)\|/g, '<span style="font-family:monospace;">$1</span>');
+  // Newlines
+  h = h.replace(/\n/g, '<br>');
+  return h;
+}
+
+function escapeHtml(t) {
+  const d = document.createElement('div');
+  d.textContent = t;
+  return d.innerHTML;
+}
+
+function scrollBottom() {
+  setTimeout(() => {
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }, 50);
+}
+
+function sendMsg(msg) {
+  chatInput.value = msg;
+  chatForm.dispatchEvent(new Event('submit'));
+}
+
+document.getElementById('clearBtn').addEventListener('click', async function() {
+  await fetch('/chatbot/api/clear', {
+    method: 'POST',
+    headers: {'X-CSRFToken': '{{ csrf_token() }}'}
+  });
+  historyContainer.innerHTML = '';
+  document.getElementById('welcomeMsg')?.scrollIntoView();
+});
+
+// Keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+  // Numbers 1-9 for quick menu access
+  if (!chatInput.matches(':focus') && e.key >= '1' && e.key <= '9') {
+    chatInput.value = e.key;
+    chatForm.dispatchEvent(new Event('submit'));
+  }
+});
+</script>
+{% endblock %}

@@ -43,3 +43,114 @@
 [2026-04-09 10:13:09] WARNING  | auth                 | Failed login attempt for 'adminr' from 127.0.0.1
 [2026-04-09 10:13:26] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
 [2026-04-09 10:13:28] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-07-15 16:43:43] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-15 16:44:02] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-15 16:44:02] INFO     | __init__             | ✅  Default admin user created.
+[2026-07-15 16:44:02] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-15 16:47:08] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-15 16:47:08] INFO     | __init__             | ✅  Default admin user created.
+[2026-07-15 16:47:08] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-15 16:47:46] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-15 16:47:46] INFO     | __init__             | ✅  Default admin user created.
+[2026-07-15 16:47:46] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-15 16:52:45] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-15 16:52:45] INFO     | __init__             | ✅  Default admin user created.
+[2026-07-15 16:52:45] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-15 16:52:46] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-07-15 16:52:53] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-15 16:52:53] INFO     | __init__             | ✅  Default admin user created.
+[2026-07-15 16:52:53] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-15 16:52:54] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-07-15 23:30:33] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-15 23:35:44] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-15 23:39:35] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-15 23:49:26] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-15 23:49:27] INFO     | __init__             | ✅  Default admin user created.
+[2026-07-15 23:49:27] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-15 23:49:28] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-15 23:49:28] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-15 23:49:54] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-07-15 23:49:57] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-07-15 23:58:50] INFO     | students             | Student MCA202601 added. Prediction: {'result': 'PASS', 'pass_probability': 0.9883706743166583, 'fail_probability': 0.01162932568334174, 'model_name': 'Logistic Regression', 'model_version': '20260715_233006', 'confidence_level': 'Very High', 'feature_importance': []}
+[2026-07-16 00:17:19] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 00:17:19] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 00:17:20] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 00:17:20] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 00:17:37] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-07-16 00:21:40] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 00:21:40] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 00:21:41] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 00:21:41] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 00:22:08] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-07-16 00:23:48] INFO     | auth                 | Admin 'admin' logged out.
+[2026-07-16 00:24:06] WARNING  | auth                 | Failed login attempt for 'raj' from 127.0.0.1
+[2026-07-16 07:23:01] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 07:23:02] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 07:23:03] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 07:23:03] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 07:23:20] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-07-16 07:23:25] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-07-16 07:44:18] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 07:44:18] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 07:44:19] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 07:44:20] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 07:44:44] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-07-16 07:46:46] INFO     | auth                 | Admin 'admin' logged out.
+[2026-07-16 07:47:00] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-07-16 07:51:06] INFO     | auth                 | Admin 'admin' logged out.
+[2026-07-16 07:51:17] WARNING  | auth                 | Failed login attempt for 'MCA2024001' from 127.0.0.1
+[2026-07-16 07:51:31] WARNING  | auth                 | Failed login attempt for 'MCA2024001' from 127.0.0.1
+[2026-07-16 07:51:39] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-07-16 07:52:06] INFO     | auth                 | Admin 'admin' logged out.
+[2026-07-16 07:52:16] WARNING  | auth                 | Failed login attempt for 'MCA2024001' from 127.0.0.1
+[2026-07-16 07:52:23] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-07-16 08:10:07] INFO     | auth                 | Admin 'admin' logged out.
+[2026-07-16 08:10:23] WARNING  | auth                 | Failed login attempt for 'MCA2024001' from 127.0.0.1
+[2026-07-16 08:13:05] WARNING  | auth                 | Failed login attempt for 'MCA2024001' from 127.0.0.1
+[2026-07-16 08:13:20] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-07-16 08:25:09] INFO     | students             | Student MCA202601 deleted.
+[2026-07-16 08:28:58] INFO     | students             | Student MCA2026001 added. Prediction: {'result': 'PASS', 'pass_probability': 0.9995240502957329, 'fail_probability': 0.00047594970426712013, 'model_name': 'Logistic Regression', 'model_version': '20260715_233006', 'confidence_level': 'Very High', 'feature_importance': []}
+[2026-07-16 08:38:51] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 08:38:51] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 08:38:52] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 08:38:52] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 08:39:13] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-07-16 08:58:13] INFO     | students             | Student MCA2026001 deleted.
+[2026-07-16 12:25:12] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 12:25:12] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 12:25:13] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 12:25:13] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 13:53:15] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 13:53:16] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 13:53:17] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 13:53:17] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 13:53:56] WARNING  | auth                 | Failed login attempt for 'admin' from 127.0.0.1
+[2026-07-16 13:54:17] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-07-16 13:54:23] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-07-16 14:12:23] INFO     | auth                 | Admin 'admin' logged out.
+[2026-07-16 14:12:40] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-07-16 14:15:28] INFO     | auth                 | Admin 'admin' logged out.
+[2026-07-16 14:49:03] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 14:49:03] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 14:49:04] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 14:49:04] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 14:49:30] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 14:49:30] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 14:49:31] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 14:49:32] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 15:17:07] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-07-16 15:17:11] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-07-16 15:25:20] INFO     | students             | Student MCA2027001 added. Prediction: {'result': 'PASS', 'pass_probability': 0.973502107654352, 'fail_probability': 0.026497892345648033, 'model_name': 'Logistic Regression', 'model_version': '20260715_233006', 'confidence_level': 'Very High', 'feature_importance': []}
+[2026-07-16 21:05:42] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 21:05:43] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 21:05:44] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-16 21:05:44] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-16 21:06:03] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-07-16 21:06:08] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-07-17 12:09:25] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-17 12:09:25] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-17 12:09:27] INFO     | logger               | Logging initialized at level=DEBUG, dir=logs
+[2026-07-17 12:09:27] INFO     | __init__             | ✅  Student Prediction System started.
+[2026-07-17 12:10:14] INFO     | auth                 | Admin 'admin' logged in from 127.0.0.1
+[2026-07-17 12:10:21] INFO     | ml_service           | Loaded model: Logistic Regression
+[2026-07-17 12:12:26] INFO     | students             | Student MCA2027001 deleted.

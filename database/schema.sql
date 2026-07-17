@@ -13,7 +13,7 @@ USE student_prediction_db;
 
 -- ── 1. Admins ──────────────────────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS admins (
-  id            INT UNSIGNED    AUTO_INCREMENT PRIMARY KEY,
+  id            INT             AUTO_INCREMENT PRIMARY KEY,
   username      VARCHAR(80)     NOT NULL,
   email         VARCHAR(120)    NOT NULL,
   password_hash VARCHAR(256)    NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS admins (
 
 -- ── 2. Students ────────────────────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS students (
-  id                    INT UNSIGNED    AUTO_INCREMENT PRIMARY KEY,
+  id                    INT             AUTO_INCREMENT PRIMARY KEY,
   student_id            VARCHAR(20)     NOT NULL  COMMENT 'e.g. MCA2024001',
   name                  VARCHAR(100)    NOT NULL,
   email                 VARCHAR(120)    NOT NULL,
@@ -62,8 +62,8 @@ CREATE TABLE IF NOT EXISTS students (
 
 -- ── 3. Prediction Logs ─────────────────────────────────────────────────────
 CREATE TABLE IF NOT EXISTS prediction_logs (
-  id               INT UNSIGNED    AUTO_INCREMENT PRIMARY KEY,
-  student_id       INT UNSIGNED    NOT NULL,
+  id               INT             AUTO_INCREMENT PRIMARY KEY,
+  student_id       INT             NOT NULL,
 
   result           ENUM('PASS','FAIL') NOT NULL,
   pass_probability DECIMAL(6,5)    NOT NULL,
@@ -85,14 +85,30 @@ CREATE TABLE IF NOT EXISTS prediction_logs (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
+-- ── 4. Student Auth (for student self-service portal) ─────────────────────
+CREATE TABLE IF NOT EXISTS student_auth (
+  id               INT             AUTO_INCREMENT PRIMARY KEY,
+  student_id       INT             NOT NULL,
+  username         VARCHAR(50)     NOT NULL,
+  password_hash    VARCHAR(256)    NOT NULL,
+  is_active        TINYINT(1)      NOT NULL DEFAULT 1,
+  last_login       DATETIME        DEFAULT NULL,
+  created_at       DATETIME        NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+  UNIQUE KEY uq_student_auth_username (username),
+  UNIQUE KEY uq_student_auth_student (student_id),
+
+  CONSTRAINT fk_student_auth_student
+    FOREIGN KEY (student_id) REFERENCES students(id)
+    ON DELETE CASCADE ON UPDATE CASCADE,
+
+  INDEX idx_student_auth_student_id (student_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
 -- ═══════════════════════════════════════════════════════════════════════════
 -- SAMPLE DATA (for development / demo)
 -- ═══════════════════════════════════════════════════════════════════════════
-
--- Default admin  (password = Admin@1234, hashed by Flask at startup)
--- The application auto-creates this via _seed_admin(); row below is reference only.
--- INSERT INTO admins (username, email, password_hash) VALUES
---   ('admin', 'admin@prediction.com', '<generated_hash>');
 
 -- Sample students
 INSERT INTO students

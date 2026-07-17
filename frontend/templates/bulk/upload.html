@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Bulk Upload{% endblock %}
+{% block page_title %}Bulk CSV Upload{% endblock %}
+
+{% block content %}
+<div class="row g-3">
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span>Upload CSV File</span>
+        <a href="{{ url_for('bulk.download_template') }}" class="btn btn-sm btn-outline-primary"><i class="bi bi-download"></i> Download Template</a>
+      </div>
+      <div class="card-body">
+        <div class="alert alert-info">
+          <strong>Required columns:</strong> <code>name, email, department, semester, subject1-5_marks, internal_marks, attendance_pct, study_hours_per_day, assignments_submitted, previous_backlogs</code>
+          <br><strong>Optional:</strong> <code>student_id</code> (auto-generated if blank)
+        </div>
+
+        <form method="POST" enctype="multipart/form-data" id="uploadForm">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <div class="mb-3">
+            <label class="form-label">Select CSV File</label>
+            <input type="file" class="form-control" name="csv_file" accept=".csv" required id="csvFile">
+          </div>
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            <i class="bi bi-cloud-upload"></i> Upload & Import
+          </button>
+          <div id="loading" class="d-none mt-2 text-muted">
+            <div class="spinner-border spinner-border-sm"></div> Processing...
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-header">Instructions</div>
+      <div class="card-body">
+        <ol class="small mb-0">
+          <li>Download the CSV template</li>
+          <li>Fill in student data (one row per student)</li>
+          <li>Upload the file using the form</li>
+          <li>View the import summary</li>
+        </ol>
+        <hr>
+        <div><small>Valid departments:</small></div>
+        {% for d in ['MCA','BCA','CS','IT','EC','EE','ME','CE'] %}
+        <span class="badge bg-secondary">{{ d }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if show_result and result %}
+<div class="card mt-3">
+  <div class="card-header">Import Summary</div>
+  <div class="card-body">
+    <div class="row g-2 mb-3">
+      <div class="col-3"><div class="card p-3 text-center"><strong class="fs-4">{{ result.total }}</strong><small>Total</small></div></div>
+      <div class="col-3"><div class="card p-3 text-center text-success"><strong class="fs-4">{{ result.inserted }}</strong><small>Inserted ✓</small></div></div>
+      <div class="col-3"><div class="card p-3 text-center text-warning"><strong class="fs-4">{{ result.skipped }}</strong><small>Skipped</small></div></div>
+      <div class="col-3"><div class="card p-3 text-center text-danger"><strong class="fs-4">{{ result.errors }}</strong><small>Errors</small></div></div>
+    </div>
+    {% if result.error_details %}
+    <div style="max-height:200px;overflow-y:auto">
+      {% for err in result.error_details %}
+      <div class="text-danger small">{{ err }}</div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.getElementById('uploadForm')?.addEventListener('submit', function() {
+  document.getElementById('submitBtn').disabled = true;
+  document.getElementById('loading').classList.remove('d-none');
+});
+</script>
+{% endblock %}

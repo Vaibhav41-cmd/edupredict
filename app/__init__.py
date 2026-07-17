@@ -60,12 +60,20 @@ def create_app(config_class=None):
     from app.routes.students import students_bp
     from app.routes.predictions import predictions_bp
     from app.routes.api import api_bp
+    from app.routes.alerts import alerts_bp
+    from app.routes.bulk_upload import bulk_bp
+    from app.routes.chatbot import chatbot_bp
+    from app.routes.student_portal import student_portal_bp
 
     app.register_blueprint(auth_bp)
     app.register_blueprint(dashboard_bp)
     app.register_blueprint(students_bp)
     app.register_blueprint(predictions_bp)
     app.register_blueprint(api_bp, url_prefix="/api/v1")
+    app.register_blueprint(alerts_bp)
+    app.register_blueprint(bulk_bp)
+    app.register_blueprint(chatbot_bp)
+    app.register_blueprint(student_portal_bp)
 
     # ── Setup Logging ──────────────────────────────────────────────────────────
     from app.utils.logger import setup_logging

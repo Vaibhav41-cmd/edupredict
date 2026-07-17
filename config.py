@@ -42,6 +42,15 @@ class BaseConfig:
     SCALER_FILE = "scaler.joblib"
     METADATA_FILE = "model_metadata.joblib"
 
+    # ── Email / Alerts ─────────────────────────────────────────────────────────
+    SMTP_HOST = os.getenv("SMTP_HOST", "")
+    SMTP_PORT = int(os.getenv("SMTP_PORT", 587))
+    SMTP_USER = os.getenv("SMTP_USER", "")
+    SMTP_PASS = os.getenv("SMTP_PASS", "")
+    FROM_EMAIL = os.getenv("FROM_EMAIL", "")
+    ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "")
+    APP_URL = os.getenv("APP_URL", "http://localhost:5000")
+
     # ── Logging ────────────────────────────────────────────────────────────────
     LOG_DIR = os.getenv("LOG_DIR", "logs")
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
@@ -60,6 +69,8 @@ class TestingConfig(BaseConfig):
     TESTING = True
     SQLALCHEMY_DATABASE_URI = "sqlite:///:memory:"
     WTF_CSRF_ENABLED = False
+    SQLALCHEMY_ENGINE_OPTIONS = {}
+    LOG_LEVEL = "DEBUG"
 
 
 class ProductionConfig(BaseConfig):

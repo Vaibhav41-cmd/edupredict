@@ -19,7 +19,6 @@
     *,*::before,*::after{box-sizing:border-box}
     body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);margin:0}
 
-    /* Sidebar */
     .sidebar{position:fixed;top:0;left:0;width:var(--sidebar-w);height:100vh;background:#0f172a;display:flex;flex-direction:column;z-index:1000;transition:transform .3s ease}
     .sidebar-brand{padding:20px 24px;border-bottom:1px solid rgba(255,255,255,.08)}
     .sidebar-brand h5{color:#fff;font-size:.85rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;margin:4px 0 0}
@@ -33,21 +32,17 @@
     .sidebar-footer{padding:16px 20px;border-top:1px solid rgba(255,255,255,.08);font-size:.8rem;color:#475569}
     .sidebar-footer a{color:#ef4444;text-decoration:none;font-weight:500}
 
-    /* Topbar */
     .topbar{position:fixed;top:0;left:var(--sidebar-w);right:0;height:var(--topbar-h);background:var(--surface);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 28px;z-index:999}
     .topbar .page-title{font-size:1rem;font-weight:600}
     .admin-badge{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--muted)}
     .admin-avatar{width:34px;height:34px;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:.85rem}
 
-    /* Main */
     .main-content{margin-left:var(--sidebar-w);padding-top:var(--topbar-h);min-height:100vh}
     .content-body{padding:28px}
 
-    /* Cards */
     .card{border:1px solid var(--border);border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
     .card-header{background:transparent;border-bottom:1px solid var(--border);padding:16px 20px;font-weight:600;font-size:.9rem}
 
-    /* Stat Cards */
     .stat-card{border-radius:12px;padding:20px 24px;color:#fff;position:relative;overflow:hidden}
     .stat-card::after{content:'';position:absolute;right:-20px;top:-20px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,.1)}
     .stat-card .stat-value{font-size:2rem;font-weight:700;line-height:1}
@@ -57,32 +52,48 @@
     .stat-danger{background:linear-gradient(135deg,#ef4444,#dc2626)}
     .stat-warning{background:linear-gradient(135deg,#f59e0b,#d97706)}
 
-    /* Badges */
     .badge-pass{background:#dcfce7;color:#15803d;border-radius:6px;padding:3px 10px;font-size:.78rem;font-weight:600;display:inline-block}
     .badge-fail{background:#fee2e2;color:#b91c1c;border-radius:6px;padding:3px 10px;font-size:.78rem;font-weight:600;display:inline-block}
 
-    /* Tables */
     .table{font-size:.875rem}
     .table th{font-weight:600;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;border-bottom-width:1px}
     .table td{vertical-align:middle}
 
-    /* Forms */
     .form-label{font-weight:500;font-size:.875rem;color:var(--muted);margin-bottom:5px}
-    .form-control,.form-select{border-color:var(--border);border-radius:8px;font-size:.875rem;padding:9px 13px}
-    .form-control:focus,.form-select:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(79,70,229,.15)}
+    .form-control,.form-select{
+      border-color:var(--border);
+      border-radius:8px;
+      font-size:.875rem;
+      padding:9px 13px;
+      color:#1e293b !important;
+      background:#ffffff !important;
+    }
+    .form-control:focus,.form-select:focus{
+      border-color:var(--primary);
+      box-shadow:0 0 0 3px rgba(79,70,229,.15)
+    }
 
-    /* Alerts */
+    input[type="number"] {
+      color: #1e293b !important;
+      -webkit-text-fill-color: #1e293b !important;
+      opacity: 1 !important;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      opacity: 1;
+      height: 28px;
+      cursor: pointer;
+      background: #f1f5f9;
+      border-left: 1px solid #e2e8f0;
+    }
+    input::placeholder { color: #94a3b8 !important; opacity: 1 !important; }
+
     .alert{border-radius:10px;font-size:.875rem;border:none}
     .alert-success{background:#dcfce7;color:#15803d}
     .alert-danger{background:#fee2e2;color:#b91c1c}
     .alert-warning{background:#fef3c7;color:#92400e}
     .alert-info{background:#dbeafe;color:#1e40af}
 
-    /* Prob Bar */
-    .prob-bar{height:8px;border-radius:4px;background:var(--border);overflow:hidden}
-    .prob-bar-fill{height:100%;border-radius:4px;transition:width .6s ease}
-
-    /* Responsive */
     @media(max-width:768px){
       .sidebar{transform:translateX(-100%)}
       .sidebar.open{transform:translateX(0)}
@@ -121,8 +132,18 @@
     <a href="{{ url_for('predictions.list_predictions') }}" class="nav-link {% if request.endpoint and 'predictions' in request.endpoint %}active{% endif %}">
       <i class="bi bi-lightning-charge-fill"></i> All Predictions
     </a>
-    <a href="{{ url_for('api.health') }}" target="_blank" class="nav-link">
-      <i class="bi bi-activity"></i> API Health
+    <div class="nav-section-label">Tools</div>
+    <a href="{{ url_for('alerts.dashboard') }}" class="nav-link {% if request.endpoint and 'alerts' in request.endpoint %}active{% endif %}">
+      <i class="bi bi-exclamation-triangle-fill"></i> Email Alerts
+    </a>
+    <a href="{{ url_for('bulk.upload') }}" class="nav-link {% if request.endpoint and 'bulk' in request.endpoint %}active{% endif %}">
+      <i class="bi bi-cloud-upload-fill"></i> Bulk Upload
+    </a>
+    <a href="{{ url_for('chatbot.index') }}" class="nav-link {% if request.endpoint and 'chatbot' in request.endpoint %}active{% endif %}">
+      <i class="bi bi-robot"></i> AI Chatbot
+    </a>
+    <a href="{{ url_for('student_portal.admin_manage') }}" class="nav-link {% if request.endpoint and 'student_portal.admin_manage' in request.endpoint %}active{% endif %}">
+      <i class="bi bi-person-badge"></i> Student Portal
     </a>
   </nav>
   <div class="sidebar-footer">

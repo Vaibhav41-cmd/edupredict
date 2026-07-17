@@ -74,8 +74,9 @@
                 <label class="form-label">Subject {{ i }}</label>
                 <div class="input-group">
                   <input type="number" name="subject{{ i }}_marks" class="form-control subject-marks"
-                    value="{{ form_data.get('subject'~i~'_marks','') }}"
-                    min="0" max="100" step="0.5" placeholder="0–100" required/>
+                  value="{{ form_data.get('subject'~i~'_marks','') }}"
+                  min="0" max="100" step="0.5" placeholder="0–100" required
+                  style="color:#000000;background:#ffffff;-webkit-text-fill-color:#000000;"/>
                   <span class="input-group-text" style="font-size:.75rem;color:#64748b">/100</span>
                 </div>
               </div>
