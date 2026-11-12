@@ -1,221 +1,150 @@
-# Student Pass/Fail Prediction System
-## MCA Final Year Project | Machine Learning + Flask + MySQL
+# EduPredict — Student Pass/Fail Prediction System
 
----
+A working MCA Semester III research-project prototype that uses machine learning to estimate student PASS/FAIL outcomes from academic and engagement indicators. The application combines model evaluation with a Flask web interface, student records, prediction history, dashboards, and an interactive demo.
 
-## 📁 Project Structure
+> **Academic context:** Master of Computer Applications (MCA), Semester III · **MCA-521: Research Project** · Faculty of Science and Technology, Kavayitri Bahinabai Chaudhari North Maharashtra University, Jalgaon. The report cover follows the supplied college reference: S.S.V.P. Sanstha’s Late Karmaveer Dr. P. R. Ghogrey Science College, Dhule, Department of Computer Science.
 
-```
-student_prediction_system/
-├── app/
-│   ├── __init__.py              # Flask app factory
-│   ├── models/
-│   │   ├── user.py              # Admin user model (Flask-Login)
-│   │   └── student.py          # Student + PredictionLog models
-│   ├── routes/
-│   │   ├── auth.py              # Login / Logout
-│   │   ├── dashboard.py         # Admin dashboard
-│   │   ├── students.py          # Student CRUD
-│   │   ├── predictions.py       # Prediction history
-│   │   └── api.py               # REST API (v1)
-│   ├── services/
-│   │   └── ml_service.py        # ML prediction service (singleton)
-│   └── utils/
-│       ├── logger.py            # Rotating file logger
-│       └── validators.py        # Input validation
-├── ml/
-│   ├── train.py                 # Model training pipeline
-│   ├── student_data.csv         # Training data (auto-generated)
-│   └── saved_models/
-│       ├── best_model.joblib    # Best ML model
-│       ├── scaler.joblib        # Feature scaler
-│       └── model_metadata.joblib
-├── frontend/
-│   ├── templates/
-│   │   ├── base.html
-│   │   ├── login.html
-│   │   ├── dashboard.html
-│   │   ├── students/
-│   │   │   ├── list.html, add.html, view.html, edit.html
-│   │   └── predictions/
-│   │       └── list.html
-│   └── static/css/, js/
-├── database/
-│   └── schema.sql               # MySQL DDL + sample data
-├── logs/
-│   └── app.log                  # Rotating application log
-├── config.py                    # Multi-environment config
-├── run.py                       # Entry point
-├── requirements.txt
-└── .env.example                 # Environment variable template
-```
+**Important:** Predictions are estimates for early academic support. They are not official grades, guarantees, or substitutes for faculty judgment. The included profiles and login credentials are demonstration data only.
 
----
+## Project features
 
-## ⚙️ Setup Guide (Step by Step)
+- **Interactive live predictor** at `/demo/` with presets, sliders, prediction probabilities, feature-importance cues, and academic recommendations.
+- **Four-model evaluation:** Logistic Regression, RBF SVM, Gradient Boosting, and Random Forest. The saved Logistic Regression model is selected by ROC-AUC.
+- **Student record management:** add, view, edit, and search student profiles.
+- **Prediction history:** timestamped PASS/FAIL prediction logs, probabilities, model version, and feature snapshots.
+- **Administrator dashboard and risk views** for cohort summaries and follow-up.
+- **Student self-service portal** for viewing a student's own profile and prediction.
+- **CSV bulk upload**, chatbot support, and REST API.
+- **SQLite Demo Mode** that runs without XAMPP/MySQL and seeds 30 sample student records with real predictions from the saved model.
+- **MySQL configuration** for a database-backed deployment.
+- **MCA-521 deliverables:** formatted report (`.docx` and `.pdf`), presentation (`.pptx`), figures, and scripts to regenerate the documents under [`report/`](report/).
 
-### Prerequisites
-- Python 3.10+
-- XAMPP (MySQL + Apache)
-- Git
+## Run the demo
 
----
+### Requirements
 
-### Step 1 — Clone & Create Virtual Environment
+- Python 3.10 or newer
+- `pip`
+- A modern web browser
+
+MySQL/XAMPP is **not required** for the demo.
+
+### Install and start
 
 ```bash
-cd C:/xampp/htdocs   # or any directory
-git clone <repo-url> student_prediction_system
-cd student_prediction_system
-
-python -m venv venv
-# Windows:
-venv\Scripts\activate
-# Mac/Linux:
-source venv/bin/activate
+git clone https://github.com/Vaibhav41-cmd/edupredict.git
+cd edupredict
+python -m venv .venv
 ```
 
-### Step 2 — Install Dependencies
+Activate the environment:
+
+```bash
+# Windows PowerShell
+.venv\Scripts\Activate.ps1
+# macOS / Linux
+source .venv/bin/activate
+```
+
+Install dependencies and launch the zero-setup demo:
 
 ```bash
 pip install -r requirements.txt
+python demo.py
 ```
 
-### Step 3 — Configure Environment
+Open **http://127.0.0.1:5000/** (or `/demo/`) in a browser. The application binds to `0.0.0.0:5000` for local and preview access. On first launch, SQLite tables, an administrator, and 30 sample students are created automatically. The demo database is `database/edupredict_demo.db` and is ignored by Git.
 
-```bash
-cp .env.example .env
-# Edit .env with your settings:
-#   DB_PASSWORD=  (leave blank for XAMPP default)
-#   SECRET_KEY=   (set a random 32+ char string)
-```
+### Demo accounts
 
-### Step 4 — Setup MySQL Database
+| Role | Username | Demo password | Example |
+|---|---|---|---|
+| Administrator | `admin` | `Admin@1234` | Admin dashboard |
+| Student, predicted PASS | `MCA2024001` | `MCA2024001` | Rahul Sharma portal |
+| Student, at-risk / predicted FAIL | `MCA2024004` | `MCA2024004` | Sneha Joshi portal |
 
-1. Start XAMPP → Start MySQL + Apache
-2. Open **phpMyAdmin** → http://localhost/phpmyadmin
-3. Click **Import** → select `database/schema.sql` → Go
+The `/demo/` and login pages also provide one-click demo access. Change seeded credentials and use a private `SECRET_KEY` before deploying beyond a local demonstration.
 
-OR via command line:
-```bash
-mysql -u root -p < database/schema.sql
-```
+## Train or use the saved model
 
-### Step 5 — Train the ML Model
+Pretrained model, scaler, and metadata files are included under `ml/saved_models/`. For a fresh training run:
 
 ```bash
 python ml/train.py
 ```
 
-Expected output:
-```
-MODEL TRAINING & EVALUATION
-════════════════════════════
-▶  Training: Logistic Regression   Accuracy=0.8800 ...
-▶  Training: Random Forest         Accuracy=0.9250 ...
-▶  Training: Gradient Boosting     Accuracy=0.9100 ...
-▶  Training: SVM                   Accuracy=0.8950 ...
+Then launch the general application with `python run.py`. The app factory loads the configured environment from `FLASK_ENV`; `python demo.py` explicitly selects SQLite Demo Mode.
 
-🏆  Best model: Random Forest (ROC-AUC=0.9712)
-✅  All artifacts saved to: ml/saved_models
-```
+## Model and evaluation
 
-### Step 6 — Run the Application
+The supplied dataset contains **2,000 records**, 11 numerical predictors, and a binary target: 1,343 PASS (67.15%) and 657 FAIL (32.85%). The recorded evaluation uses a stratified 80:20 split (1,600 training / 400 test records), feature standardization, and five-fold cross-validation.
+
+| Classifier | Accuracy | Precision | Recall | F1 | ROC-AUC | 5-fold CV accuracy |
+|---|---:|---:|---:|---:|---:|---:|
+| Logistic Regression (selected by ROC-AUC) | 83.50% | 86.12% | 89.96% | 88.00% | **0.9082** | 84.62% ± 1.80% |
+| RBF SVM | **84.75%** | 86.62% | 91.45% | 88.97% | 0.8978 | 82.94% ± 2.13% |
+| Gradient Boosting | 83.50% | 86.38% | 89.59% | 87.96% | 0.8967 | 83.44% ± 1.25% |
+| Random Forest | 83.00% | 84.30% | 91.82% | 87.90% | 0.8866 | 83.56% ± 0.92% |
+
+Logistic Regression is selected by **ROC-AUC**, although RBF SVM has the higher observed accuracy on this split. Logistic Regression's test confusion matrix is TP=242, TN=92, FP=39, FN=27; its FAIL-class recall is 70.23%, so some at-risk cases are missed. Results are specific to the supplied dataset and split; external validation is needed before real institutional use.
+
+### Model input features
+
+Five subject marks (0–100), internal marks (0–50), attendance (0–100%), study hours per day, assignments submitted, previous backlogs, and derived average subject marks.
+
+## Application routes
+
+| Path | Purpose |
+|---|---|
+| `/` | Redirects to the live demo |
+| `/demo/` | Interactive predictor, model comparison, report downloads |
+| `/login` | Administrator sign-in |
+| `/student/login` | Student portal sign-in |
+| `/api/v1/health` | API health check |
+| `/api/v1/students` | Paginated student listing |
+| `/api/v1/students/<id>` | Student record lookup |
+| `/api/v1/students/<id>/predict` | Re-run prediction for a student |
+| `/api/v1/predict/quick` | Quick prediction without saving a student record |
+| `/api/v1/model/metrics` | Model evaluation metadata |
+| `/api/v1/stats/summary` | Cohort summary |
+| `/demo/report/pdf` | Download the MCA-521 report PDF |
+| `/demo/report/docx` | Download the editable report DOCX |
+| `/demo/report/pptx` | Download the project presentation PPTX |
+
+POST endpoints use CSRF protection in browser forms and requests.
+
+## MySQL configuration (optional)
+
+The default demo needs no database configuration. To configure MySQL for deployment, copy `.env.example` to `.env`, set a strong `SECRET_KEY`, and configure `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USER`, and `DB_PASSWORD` (or an explicit `DATABASE_URL`). Create the database/schema as described in [`database/schema.sql`](database/schema.sql), then run `python run.py`. Never commit `.env` or production credentials.
+
+## Tests
+
+Install pytest if it is not already available, then run:
 
 ```bash
-python run.py
+python -m pytest tests/ -v
 ```
 
-Open **http://localhost:5000** in your browser.
+The tests cover data validation, model behavior, demo seeding and prediction routes, administrator and student portal flows, report downloads, and key API/UI routes.
 
-**Default Login:**
-- Username: `admin`
-- Password: `Admin@1234`
+## Repository layout
 
----
+```text
+app/                 Flask factory, ORM models, route blueprints, services
+frontend/            Jinja templates, CSS, and browser-side JavaScript
+ml/                  Training pipeline, datasets, saved model artifacts
+database/            MySQL schema and sample records
+report/              MCA-521 report, presentation, figures, and generators
+tests/               ML and demo integration tests
+config.py            SQLite/MySQL and environment configuration
+demo.py              Zero-setup SQLite demo launcher
+run.py               General Flask application launcher
+```
 
-## 🔌 REST API Endpoints
+## Report and presentation
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/api/v1/health` | System health check |
-| GET | `/api/v1/students` | List all students (paginated) |
-| GET | `/api/v1/students/<id>` | Get single student |
-| POST | `/api/v1/students/<id>/predict` | Re-run prediction |
-| POST | `/api/v1/predict/quick` | Quick prediction (no DB storage) |
-| GET | `/api/v1/model/metrics` | ML model metrics & comparison |
-| GET | `/api/v1/stats/summary` | Dashboard summary stats |
+- [`EduPredict_MCA521_Project_Report.docx`](report/EduPredict_MCA521_Project_Report.docx) — editable report
+- [`EduPredict_MCA521_Project_Report.pdf`](report/EduPredict_MCA521_Project_Report.pdf) — print/share copy
+- [`EduPredict_MCA521_Presentation.pptx`](report/EduPredict_MCA521_Presentation.pptx) — project presentation
 
----
-
-## 🤖 ML Features (Input Variables)
-
-| Feature | Range | Weight |
-|---------|-------|--------|
-| Subject 1–5 Marks | 0–100 | 35% |
-| Internal Marks | 0–50 | 20% |
-| Attendance % | 0–100 | 25% |
-| Study Hours/Day | 0–18 | 10% |
-| Assignments Submitted | 0–10 | 5% |
-| Previous Backlogs | 0–20 | -5% |
-| Average Marks | derived | used |
-
-## 🔬 Models Compared
-
-| Model | Type | Key Strength |
-|-------|------|-------------|
-| Logistic Regression | Linear | Fast, interpretable |
-| Random Forest | Ensemble | High accuracy, robust |
-| Gradient Boosting | Boosting | Best for imbalanced data |
-| SVM (RBF) | Kernel | Good with small datasets |
-
-**Selection Criterion:** Best ROC-AUC score on 20% holdout test set + 5-fold cross-validation.
-
----
-
-## ❓ Viva Questions & Answers
-
-**Q1. What ML algorithm did you choose and why?**
-A: We trained Logistic Regression, Random Forest, Gradient Boosting, and SVM, then selected the best via ROC-AUC. Random Forest typically wins because it handles non-linear feature interactions and is robust to outliers. We use 5-fold stratified cross-validation to ensure the selection isn't biased by one random split.
-
-**Q2. What is cross-validation and why do you use it?**
-A: Cross-validation (k-fold) splits the training data into k subsets, trains on k-1 and validates on 1, rotating until every subset is used. This gives a more reliable estimate of generalization performance than a single train/test split.
-
-**Q3. Explain the confusion matrix.**
-A: A 2×2 matrix showing TP (correctly predicted PASS), TN (correctly predicted FAIL), FP (predicted PASS but actually FAIL), FN (predicted FAIL but actually PASS). From it we derive Precision = TP/(TP+FP) and Recall = TP/(TP+FN).
-
-**Q4. What is ROC-AUC?**
-A: The ROC curve plots True Positive Rate vs False Positive Rate at all classification thresholds. AUC (Area Under Curve) = 1.0 is a perfect classifier; 0.5 is random. We use it as our primary model-selection metric because it's threshold-independent.
-
-**Q5. What is feature scaling and why is it needed?**
-A: Feature scaling (StandardScaler: z = (x-μ)/σ) ensures all features contribute equally to distance-based or gradient-based models. Without it, attendance (0–100) would dominate over backlogs (0–10) even if backlogs is more predictive.
-
-**Q6. How does Flask-Login work?**
-A: Flask-Login stores the user's ID in a secure, signed session cookie. The `@login_required` decorator on routes checks if a valid session exists; if not, it redirects to the login page. Passwords are hashed with PBKDF2-SHA256 via Werkzeug.
-
-**Q7. What is the MVC pattern in this project?**
-A: Models = SQLAlchemy ORM classes (app/models/). Views = Jinja2 HTML templates (frontend/templates/). Controllers = Flask Blueprint route functions (app/routes/). The ML service layer (app/services/) handles business logic, keeping routes thin.
-
-**Q8. How do you prevent SQL injection?**
-A: SQLAlchemy's ORM uses parameterized queries internally — never string-concatenated SQL. All user input goes through validator functions before being passed to the ORM.
-
-**Q9. What is joblib used for?**
-A: joblib is scikit-learn's recommended serialization library for saving ML models. It's more efficient than pickle for large NumPy arrays because it uses memory-mapped files.
-
-**Q10. What is the difference between precision and recall?**
-A: Precision = of all predicted PASS, how many actually passed (avoids false alarms). Recall = of all actual PASS, how many did we catch (avoids missing at-risk students). In education, recall is more critical — missing a student who will fail is worse than a false alarm.
-
----
-
-## 🚀 Future Scope
-
-1. **Deep Learning** — LSTM for time-series performance tracking across semesters
-2. **Explainable AI (XAI)** — SHAP values to show which feature influenced each student's prediction
-3. **Email Alerts** — Auto-notify at-risk students (attendance < 75%, avg marks < 40)
-4. **Data Import** — Bulk CSV/Excel upload for registrar office integration
-5. **Student Portal** — Separate read-only login for students to view their own prediction
-6. **Mobile App** — React Native / Flutter frontend consuming the existing REST API
-7. **Federated Learning** — Train across multiple college branches without sharing raw data
-8. **A/B Testing** — Compare model versions in production with gradual rollout
-9. **Power BI / Tableau Integration** — Connect to the MySQL DB for institutional dashboards
-10. **Docker Deployment** — Containerize with docker-compose (Flask + MySQL + Nginx)
+The report leaves student, guide, and academic-year details blank for completion. Its college logo and institutional presentation were adapted from the user-supplied previous-year report; the project research content and performance results describe this repository.
