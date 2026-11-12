@@ -1,0 +1,407 @@
+{% extends "base.html" %}
+{% block title %}Interactive Live Demo — EduPredict (MCA-521){% endblock %}
+{% block page_title %}<i class="bi bi-stars me-2 text-primary"></i>Interactive Live Demo &amp; Quick Predictor{% endblock %}
+
+{% macro demo_body() %}
+<!-- Hero Banner -->
+<div class="card mb-4 border-0 overflow-hidden" style="background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 55%,#312e81 100%);color:#fff;border-radius:16px;">
+  <div class="card-body p-4">
+    <div class="row align-items-center g-3">
+      <div class="col-lg-7">
+        <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-2" style="background:rgba(129,140,248,.2);border:1px solid rgba(129,140,248,.35);font-size:.76rem;font-weight:600;color:#c7d2fe;">
+          <i class="bi bi-lightning-charge-fill text-warning"></i>
+          MCA Semester III · MCA-521 Research Project Working Demo
+        </div>
+        <h3 class="fw-bold mb-2">EduPredict — Student Pass/Fail Prediction System</h3>
+        <p class="mb-3" style="color:#cbd5e1;font-size:.92rem;max-width:640px;">
+          Test real-time Machine Learning predictions across 11 academic &amp; behavioral indicators, switch between Admin Analytics &amp; Student Self-Service portals in one click, or inspect trained classifier benchmarks.
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          {% if current_user.is_authenticated %}
+            <a href="{{ url_for('dashboard.index') }}" class="btn btn-light btn-sm fw-semibold px-3">
+              <i class="bi bi-speedometer2 me-1 text-primary"></i>Open Admin Dashboard
+            </a>
+            <a href="{{ url_for('chatbot.index') }}" class="btn btn-outline-light btn-sm fw-semibold px-3">
+              <i class="bi bi-robot me-1"></i>Open AI Chatbot
+            </a>
+          {% elif demo_mode %}
+            <form method="POST" action="{{ url_for('demo.demo_admin_login') }}" class="d-inline">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+              <button type="submit" class="btn btn-light btn-sm fw-semibold px-3">
+                <i class="bi bi-shield-lock-fill me-1 text-primary"></i>1-Click Admin Dashboard
+              </button>
+            </form>
+            <form method="POST" action="{{ url_for('demo.demo_student_login', student_code='MCA2024001') }}" class="d-inline">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+              <button type="submit" class="btn btn-success btn-sm fw-semibold px-3">
+                <i class="bi bi-mortarboard-fill me-1"></i>Student Portal (PASS Demo)
+              </button>
+            </form>
+            <form method="POST" action="{{ url_for('demo.demo_student_login', student_code='MCA2024004') }}" class="d-inline">
+              <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+              <button type="submit" class="btn btn-danger btn-sm fw-semibold px-3">
+                <i class="bi bi-exclamation-triangle-fill me-1"></i>Student Portal (At-Risk Demo)
+              </button>
+            </form>
+          {% else %}
+            <a href="{{ url_for('auth.login') }}" class="btn btn-light btn-sm fw-semibold px-3">Admin Login</a>
+            <a href="{{ url_for('student_portal.login') }}" class="btn btn-outline-light btn-sm fw-semibold px-3">Student Login</a>
+          {% endif %}
+          {% if has_pdf %}
+            <a href="{{ url_for('demo.download_report', fmt='pdf') }}" class="btn btn-warning btn-sm fw-semibold px-3 text-dark">
+              <i class="bi bi-file-earmark-pdf-fill me-1"></i>Report (PDF)
+            </a>
+          {% endif %}
+          {% if has_docx %}
+            <a href="{{ url_for('demo.download_report', fmt='docx') }}" class="btn btn-info btn-sm fw-semibold px-3 text-dark">
+              <i class="bi bi-file-earmark-word-fill me-1"></i>Report (DOCX)
+            </a>
+          {% endif %}
+          <a href="{{ url_for('demo.download_report', fmt='pptx') }}" class="btn btn-outline-light btn-sm fw-semibold px-3">
+            <i class="bi bi-file-earmark-slides-fill me-1"></i>Presentation (PPTX)
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="row g-2 text-center">
+          <div class="col-6">
+            <div class="p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);">
+              <div class="fs-3 fw-bold">{{ total_students }}</div>
+              <div style="font-size:.76rem;color:#cbd5e1;">Demo Students Seeded</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);">
+              <div class="fs-3 fw-bold text-success">{{ pass_rate }}%</div>
+              <div style="font-size:.76rem;color:#cbd5e1;">Cohort Pass Rate</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);">
+              <div class="fs-4 fw-bold text-info">{{ "%.2f"|format(ml_metrics.roc_auc or 0.91) }}</div>
+              <div style="font-size:.76rem;color:#cbd5e1;">Best ROC-AUC Score</div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="p-3 rounded-3" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);">
+              <div class="fs-4 fw-bold text-warning">4 Models</div>
+              <div style="font-size:.76rem;color:#cbd5e1;">LR · RF · GB · SVM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Interactive Predictor Row -->
+<div class="row g-4">
+  <!-- Left: Input Controls -->
+  <div class="col-lg-7">
+    <div class="card h-100">
+      <div class="card-header d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <span><i class="bi bi-sliders me-2 text-primary"></i>Live ML Prediction Sandbox (11 Features)</span>
+        <div class="d-flex flex-wrap gap-1">
+          <button type="button" class="btn btn-sm btn-outline-success py-1 px-2" style="font-size:.75rem" onclick="applyPreset('topper')">🌟 Topper</button>
+          <button type="button" class="btn btn-sm btn-outline-primary py-1 px-2" style="font-size:.75rem" onclick="applyPreset('consistent')">✅ Pass</button>
+          <button type="button" class="btn btn-sm btn-outline-warning py-1 px-2" style="font-size:.75rem" onclick="applyPreset('borderline')">⚖️ Borderline</button>
+          <button type="button" class="btn btn-sm btn-outline-danger py-1 px-2" style="font-size:.75rem" onclick="applyPreset('atrisk')">🚨 At-Risk</button>
+        </div>
+      </div>
+      <div class="card-body">
+        <form id="demoPredictForm">
+          <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="fw-semibold" style="font-size:.82rem;color:#475569;text-transform:uppercase;letter-spacing:.04em;">5 Subject Marks (0–100)</span>
+              <span class="badge bg-primary-subtle text-primary">Computed Avg: <strong id="demoAvgLabel">82.80</strong> / 100</span>
+            </div>
+            <div class="row g-2">
+              {% set defaults = [82, 85, 79, 88, 80] %}
+              {% for i in range(1, 6) %}
+              <div class="col-6 col-sm">
+                <label class="form-label mb-1" style="font-size:.76rem">Subject {{ i }}</label>
+                <input type="number" class="form-control demo-sub" id="sub{{ i }}" min="0" max="100" step="1" value="{{ defaults[i-1] }}" required/>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <hr class="my-3"/>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label d-flex justify-content-between mb-1">
+                <span>Internal Marks (0–50)</span>
+                <strong class="text-primary" id="lblInternal">42</strong>
+              </label>
+              <input type="range" class="form-range" id="inpInternal" min="0" max="50" step="1" value="42"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label d-flex justify-content-between mb-1">
+                <span>Attendance Percentage (%)</span>
+                <strong class="text-primary" id="lblAttendance">88%</strong>
+              </label>
+              <input type="range" class="form-range" id="inpAttendance" min="0" max="100" step="0.5" value="88"/>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label d-flex justify-content-between mb-1">
+                <span>Study Hrs / Day</span>
+                <strong class="text-primary" id="lblStudy">5.0h</strong>
+              </label>
+              <input type="range" class="form-range" id="inpStudy" min="0" max="12" step="0.5" value="5.0"/>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label d-flex justify-content-between mb-1">
+                <span>Assignments (0–10)</span>
+                <strong class="text-primary" id="lblAssign">9</strong>
+              </label>
+              <input type="range" class="form-range" id="inpAssign" min="0" max="10" step="1" value="9"/>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label d-flex justify-content-between mb-1">
+                <span>Previous Backlogs</span>
+                <strong class="text-danger" id="lblBacklogs">0</strong>
+              </label>
+              <input type="range" class="form-range" id="inpBacklogs" min="0" max="10" step="1" value="0"/>
+            </div>
+          </div>
+
+          <div class="mt-4 d-flex gap-2">
+            <button type="submit" class="btn btn-primary px-4 fw-semibold flex-grow-1" id="runDemoBtn">
+              <i class="bi bi-cpu-fill me-2"></i>Run Real-Time ML Prediction
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: Live ML Output Panel -->
+  <div class="col-lg-5">
+    <div class="card h-100">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <span><i class="bi bi-activity me-2 text-success"></i>ML Inference Output</span>
+        <span class="badge bg-light text-secondary" id="outModelBadge">{{ ml_metrics.best_model_name or 'Logistic Regression' }}</span>
+      </div>
+      <div class="card-body d-flex flex-column justify-content-between" id="demoOutputPanel">
+        <div>
+          <div id="verdictBox" class="p-4 rounded-3 text-center mb-3" style="background:#f0fdf4;border:2px solid #10b981;">
+            <div id="verdictIcon" style="font-size:2.4rem;line-height:1;">✅</div>
+            <div id="verdictTitle" class="fs-2 fw-bold text-success mt-1">PASS</div>
+            <div class="small text-muted">Confidence: <strong id="verdictConf">Very High</strong></div>
+            <div class="row g-2 mt-3">
+              <div class="col-6">
+                <div class="p-2 rounded bg-white border">
+                  <div class="fw-bold text-success fs-5" id="probPassVal">94.2%</div>
+                  <div style="font-size:.72rem;color:#64748b;">Pass Probability</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-2 rounded bg-white border">
+                  <div class="fw-bold text-danger fs-5" id="probFailVal">5.8%</div>
+                  <div style="font-size:.72rem;color:#64748b;">Fail Probability</div>
+                </div>
+              </div>
+            </div>
+            <div class="prob-bar mt-3" style="height:10px;">
+              <div id="probBarFill" class="prob-bar-fill bg-success" style="width:94.2%;"></div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="fw-semibold mb-2" style="font-size:.8rem;color:#475569;text-transform:uppercase;letter-spacing:.04em;">
+              <i class="bi bi-lightbulb-fill text-warning me-1"></i>Automated Academic Recommendations
+            </div>
+            <ul id="recList" class="list-unstyled mb-0 small" style="line-height:1.55;"></ul>
+          </div>
+        </div>
+
+        <div class="pt-2 border-top">
+          <div class="fw-semibold mb-2" style="font-size:.78rem;color:#64748b;">Top Influential Model Features</div>
+          <div id="featImportanceBox"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Classifier Benchmark Table -->
+{% if model_comparison %}
+<div class="card mt-4">
+  <div class="card-header d-flex justify-content-between align-items-center">
+    <span><i class="bi bi-bar-chart-steps me-2 text-primary"></i>Trained Classifier Comparison (2,000 Records · 80:20 Stratified Split · 5-Fold CV)</span>
+    <span class="badge bg-success-subtle text-success">Selected Best: {{ ml_metrics.best_model_name }} (ROC-AUC {{ "%.4f"|format(ml_metrics.roc_auc) }})</span>
+  </div>
+  <div class="table-responsive">
+    <table class="table mb-0">
+      <thead>
+        <tr>
+          <th class="px-3">Classifier</th>
+          <th>Accuracy</th>
+          <th>Precision</th>
+          <th>Recall</th>
+          <th>F1-Score</th>
+          <th>ROC-AUC</th>
+          <th>5-Fold CV Mean ± Std</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for m in model_comparison %}
+        <tr {% if m.model_name == ml_metrics.best_model_name %}style="background:#f0f4ff;font-weight:600"{% endif %}>
+          <td class="px-3">
+            {% if m.model_name == ml_metrics.best_model_name %}
+              <i class="bi bi-trophy-fill text-warning me-1"></i>
+            {% endif %}
+            {{ m.model_name }}
+          </td>
+          <td>{{ "%.2f"|format(m.accuracy * 100) }}%</td>
+          <td>{{ "%.2f"|format(m.precision * 100) }}%</td>
+          <td>{{ "%.2f"|format(m.recall * 100) }}%</td>
+          <td>{{ "%.2f"|format(m.f1_score * 100) }}%</td>
+          <td><span class="badge bg-primary-subtle text-primary">{{ "%.4f"|format(m.roc_auc) }}</span></td>
+          <td>{{ "%.2f"|format(m.cv_mean * 100) }}% ± {{ "%.2f"|format(m.cv_std * 100) }}%</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endif %}
+{% endmacro %}
+
+{% block content %}
+  {{ demo_body() }}
+{% endblock %}
+
+{% block auth_content %}
+<nav class="navbar navbar-expand-lg border-bottom bg-white sticky-top px-3 px-lg-5 py-2">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-dark" href="{{ url_for('demo.index') }}">
+      <span class="d-inline-flex align-items-center justify-content-center rounded-3 text-white" style="width:34px;height:34px;background:#4f46e5;">
+        <i class="bi bi-mortarboard-fill"></i>
+      </span>
+      <span>EduPredict <small class="text-muted fw-normal" style="font-size:.78rem;">Live Demo</small></span>
+    </a>
+    <div class="d-flex gap-2">
+      <a href="{{ url_for('auth.login') }}" class="btn btn-sm btn-outline-primary"><i class="bi bi-person-lock me-1"></i>Admin Login</a>
+      <a href="{{ url_for('student_portal.login') }}" class="btn btn-sm btn-primary"><i class="bi bi-mortarboard me-1"></i>Student Login</a>
+    </div>
+  </div>
+</nav>
+<div class="container py-4">
+  {{ demo_body() }}
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const PRESETS = {
+  topper:     { subs:[90,88,92,86,89], internal:46, att:94.0, study:6.5, assign:10, backlogs:0 },
+  consistent: { subs:[72,75,68,74,71], internal:37, att:81.0, study:4.5, assign:8,  backlogs:0 },
+  borderline: { subs:[52,48,55,50,49], internal:26, att:64.0, study:2.5, assign:5,  backlogs:2 },
+  atrisk:     { subs:[32,36,28,35,30], internal:15, att:44.0, study:1.0, assign:2,  backlogs:4 }
+};
+
+function syncLabels() {
+  const subs = [1,2,3,4,5].map(i => parseFloat(document.getElementById('sub'+i).value || 0));
+  const avg = subs.reduce((a,b)=>a+b,0)/5;
+  document.getElementById('demoAvgLabel').textContent = avg.toFixed(2);
+  document.getElementById('lblInternal').textContent = document.getElementById('inpInternal').value + '/50';
+  document.getElementById('lblAttendance').textContent = document.getElementById('inpAttendance').value + '%';
+  document.getElementById('lblStudy').textContent = document.getElementById('inpStudy').value + 'h';
+  document.getElementById('lblAssign').textContent = document.getElementById('inpAssign').value + '/10';
+  document.getElementById('lblBacklogs').textContent = document.getElementById('inpBacklogs').value;
+}
+
+function applyPreset(name) {
+  const p = PRESETS[name];
+  if (!p) return;
+  p.subs.forEach((v, idx) => { document.getElementById('sub'+(idx+1)).value = v; });
+  document.getElementById('inpInternal').value = p.internal;
+  document.getElementById('inpAttendance').value = p.att;
+  document.getElementById('inpStudy').value = p.study;
+  document.getElementById('inpAssign').value = p.assign;
+  document.getElementById('inpBacklogs').value = p.backlogs;
+  syncLabels();
+  runDemoPrediction();
+}
+
+async function runDemoPrediction(e) {
+  if (e) e.preventDefault();
+  syncLabels();
+  const payload = {
+    subject1_marks: parseFloat(document.getElementById('sub1').value || 0),
+    subject2_marks: parseFloat(document.getElementById('sub2').value || 0),
+    subject3_marks: parseFloat(document.getElementById('sub3').value || 0),
+    subject4_marks: parseFloat(document.getElementById('sub4').value || 0),
+    subject5_marks: parseFloat(document.getElementById('sub5').value || 0),
+    internal_marks: parseFloat(document.getElementById('inpInternal').value || 0),
+    attendance_pct: parseFloat(document.getElementById('inpAttendance').value || 0),
+    study_hours_per_day: parseFloat(document.getElementById('inpStudy').value || 0),
+    assignments_submitted: parseInt(document.getElementById('inpAssign').value || 0),
+    previous_backlogs: parseInt(document.getElementById('inpBacklogs').value || 0),
+  };
+
+  try {
+    const res = await fetch("{{ url_for('demo.api_predict') }}", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-CSRFToken": "{{ csrf_token() }}"
+      },
+      body: JSON.stringify(payload)
+    });
+    const json = await res.json();
+    if (!json.success) return;
+    const d = json.data;
+    const isPass = d.result === "PASS";
+
+    const box = document.getElementById('verdictBox');
+    box.style.background = isPass ? '#f0fdf4' : '#fff1f2';
+    box.style.borderColor = isPass ? '#10b981' : '#ef4444';
+    document.getElementById('verdictIcon').textContent = isPass ? '✅' : '❌';
+
+    const title = document.getElementById('verdictTitle');
+    title.textContent = d.result;
+    title.className = 'fs-2 fw-bold mt-1 ' + (isPass ? 'text-success' : 'text-danger');
+    document.getElementById('verdictConf').textContent = d.confidence_level;
+    document.getElementById('probPassVal').textContent = d.pass_probability.toFixed(1) + '%';
+    document.getElementById('probFailVal').textContent = d.fail_probability.toFixed(1) + '%';
+    document.getElementById('outModelBadge').textContent = d.model_name;
+
+    const bar = document.getElementById('probBarFill');
+    bar.style.width = d.pass_probability.toFixed(1) + '%';
+    bar.className = 'prob-bar-fill ' + (isPass ? 'bg-success' : 'bg-danger');
+
+    const recList = document.getElementById('recList');
+    recList.innerHTML = d.recommendations.map(t =>
+      `<li class="mb-1 d-flex align-items-start gap-2"><i class="bi bi-check2-circle text-primary mt-1"></i><span>${t}</span></li>`
+    ).join('');
+
+    const featBox = document.getElementById('featImportanceBox');
+    if (d.feature_importance && d.feature_importance.length) {
+      featBox.innerHTML = d.feature_importance.map(f => {
+        const pct = Math.min(100, Math.round(f.importance * 100 * 2.2));
+        const label = f.feature.replace(/_/g, ' ');
+        return `<div class="mb-1">
+          <div class="d-flex justify-content-between" style="font-size:.73rem;">
+            <span class="text-capitalize">${label}</span>
+            <span class="fw-semibold">${(f.importance * 100).toFixed(1)}%</span>
+          </div>
+          <div class="prob-bar" style="height:6px;"><div class="prob-bar-fill bg-primary" style="width:${pct}%"></div></div>
+        </div>`;
+      }).join('');
+    }
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+document.querySelectorAll('.demo-sub, #inpInternal, #inpAttendance, #inpStudy, #inpAssign, #inpBacklogs')
+  .forEach(el => el.addEventListener('input', () => { syncLabels(); runDemoPrediction(); }));
+
+document.getElementById('demoPredictForm')?.addEventListener('submit', runDemoPrediction);
+syncLabels();
+runDemoPrediction();
+</script>
+{% endblock %}

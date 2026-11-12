@@ -55,21 +55,21 @@
           <td>
             <div class="d-flex align-items-center gap-2">
               <div class="prob-bar" style="width:90px">
-                <div class="prob-bar-fill bg-success" style="width:{{ p.pass_probability }}%"></div>
+                <div class="prob-bar-fill bg-success" style="width:{{ '%.1f'|format(p.pass_probability) }}%"></div>
               </div>
-              <small class="text-success fw-600">{{ p.pass_probability }}%</small>
+              <small class="text-success fw-600">{{ '%.1f'|format(p.pass_probability) }}%</small>
             </div>
           </td>
           <td>
             <div class="d-flex align-items-center gap-2">
               <div class="prob-bar" style="width:90px">
-                <div class="prob-bar-fill bg-danger" style="width:{{ p.fail_probability }}%"></div>
+                <div class="prob-bar-fill bg-danger" style="width:{{ '%.1f'|format(p.fail_probability) }}%"></div>
               </div>
-              <small class="text-danger fw-600">{{ p.fail_probability }}%</small>
+              <small class="text-danger fw-600">{{ '%.1f'|format(p.fail_probability) }}%</small>
             </div>
           </td>
           <td><small class="text-muted">{{ p.model_name }}</small></td>
-          <td><small class="text-muted">{{ p.predicted_at[:16].replace('T',' ') }}</small></td>
+          <td><small class="text-muted">{{ p.predicted_at[:16].replace('T', ' ') if p.predicted_at else '—' }}</small></td>
         </tr>
         {% else %}
         <tr>

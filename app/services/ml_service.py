@@ -164,17 +164,23 @@ class MLService:
             return "Low"
 
     def _get_top_features(self) -> list:
-        """Return top 5 feature importances (for Random Forest)."""
+        """Return top 5 normalized feature importances (supports tree & linear models)."""
         try:
             model = self._model
-            # Handle pipeline
             if hasattr(model, "named_steps"):
                 clf = model.named_steps.get("clf", model)
             else:
                 clf = model
 
+            importances = None
             if hasattr(clf, "feature_importances_"):
-                importances = clf.feature_importances_
+                importances = np.asarray(clf.feature_importances_, dtype=float)
+            elif hasattr(clf, "coef_"):
+                weights = np.abs(np.asarray(clf.coef_[0], dtype=float))
+                total = weights.sum()
+                importances = (weights / total) if total > 0 else weights
+
+            if importances is not None:
                 indices = np.argsort(importances)[::-1][:5]
                 return [
                     {"feature": FEATURE_NAMES[i], "importance": round(float(importances[i]), 4)}

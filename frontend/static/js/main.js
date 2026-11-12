@@ -7,10 +7,12 @@
 
 /* ── Utility: AJAX helper ─────────────────────────────────────────────────── */
 async function apiFetch(url, method = "GET", body = null) {
-  const opts = {
-    method,
-    headers: { "Content-Type": "application/json", "X-Requested-With": "XMLHttpRequest" },
-  };
+  const csrfMeta = document.querySelector('meta[name="csrf-token"]');
+  const headers = { "Content-Type": "application/json", "X-Requested-With": "XMLHttpRequest" };
+  if (csrfMeta && csrfMeta.content) {
+    headers["X-CSRFToken"] = csrfMeta.content;
+  }
+  const opts = { method, headers };
   if (body) opts.body = JSON.stringify(body);
   const res = await fetch(url, opts);
   const data = await res.json();

@@ -1,18 +1,19 @@
 {% extends "base.html" %}
-{% block title %}Admin Login — Student Prediction System{% endblock %}
+{% block title %}Admin Login — EduPredict Student Prediction System{% endblock %}
 {% block auth_content %}
-<div style="min-height:100vh;background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f172a 100%);display:flex;align-items:center;justify-content:center;padding:20px">
-  <div style="width:100%;max-width:420px">
+<div style="min-height:100vh;background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f172a 100%);display:flex;align-items:center;justify-content:center;padding:24px">
+  <div style="width:100%;max-width:450px">
     <div class="text-center mb-4">
-      <div style="width:64px;height:64px;background:linear-gradient(135deg,#4f46e5,#7c3aed);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.8rem;color:#fff">
+      <div style="width:64px;height:64px;background:linear-gradient(135deg,#4f46e5,#7c3aed);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.8rem;color:#fff;box-shadow:0 12px 30px rgba(79,70,229,.35)">
         <i class="bi bi-mortarboard-fill"></i>
       </div>
-      <h4 style="color:#fff;font-weight:700;margin-bottom:4px">Student Prediction System</h4>
-      <p style="color:#64748b;font-size:.875rem;margin:0">ML-powered Academic Analytics</p>
+      <h4 style="color:#fff;font-weight:700;margin-bottom:4px">EduPredict — Student Prediction System</h4>
+      <p style="color:#94a3b8;font-size:.86rem;margin:0">MCA-521 Research Project · ML Academic Analytics</p>
     </div>
-    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:32px">
+
+    <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px">
       <h5 style="color:#fff;font-weight:600;margin-bottom:4px">Admin Login</h5>
-      <p style="color:#64748b;font-size:.8rem;margin-bottom:24px">Sign in to access the admin dashboard</p>
+      <p style="color:#94a3b8;font-size:.8rem;margin-bottom:20px">Sign in to manage students, ML predictions &amp; alerts</p>
       {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}{% for category, message in messages %}
           <div class="alert alert-{{ category }} py-2 mb-3" style="font-size:.85rem">{{ message }}</div>
@@ -21,25 +22,53 @@
       <form method="POST" action="{{ url_for('auth.login') }}" novalidate>
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
         <div class="mb-3">
-          <label style="color:#94a3b8;font-size:.85rem;font-weight:500;display:block;margin-bottom:6px">Username</label>
-          <input type="text" name="username" class="form-control"
-            style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#fff;border-radius:8px;padding:10px 14px"
+          <label style="color:#cbd5e1;font-size:.84rem;font-weight:500;display:block;margin-bottom:6px">Username</label>
+          <input type="text" name="username" id="loginUser" class="form-control"
+            style="background:rgba(255,255,255,.95)!important;border:1px solid rgba(255,255,255,.15);color:#0f172a!important;border-radius:8px;padding:10px 14px"
             placeholder="admin" value="{{ request.form.get('username','') }}" required autofocus/>
         </div>
         <div class="mb-4">
-          <label style="color:#94a3b8;font-size:.85rem;font-weight:500;display:block;margin-bottom:6px">Password</label>
-          <input type="password" name="password" class="form-control"
-            style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#fff;border-radius:8px;padding:10px 14px"
+          <label style="color:#cbd5e1;font-size:.84rem;font-weight:500;display:block;margin-bottom:6px">Password</label>
+          <input type="password" name="password" id="loginPass" class="form-control"
+            style="background:rgba(255,255,255,.95)!important;border:1px solid rgba(255,255,255,.15);color:#0f172a!important;border-radius:8px;padding:10px 14px"
             placeholder="••••••••" required/>
         </div>
-        <button type="submit" class="btn w-100 py-2 fw-600"
+        <button type="submit" class="btn w-100 py-2"
           style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;border-radius:8px;font-weight:600">
           <i class="bi bi-box-arrow-in-right me-2"></i>Sign In
         </button>
       </form>
+
+      {% if demo_mode %}
+      <hr style="border-color:rgba(255,255,255,.15);margin:20px 0 16px"/>
+      <div style="font-size:.76rem;color:#c7d2fe;font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">
+        <i class="bi bi-lightning-charge-fill text-warning me-1"></i>Quick Interactive Demo Access
+      </div>
+      <div class="d-grid gap-2">
+        <form method="POST" action="{{ url_for('demo.demo_admin_login') }}">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+          <button type="submit" class="btn btn-sm w-100 py-2 fw-semibold" style="background:#10b981;color:#fff;border-radius:8px;">
+            <i class="bi bi-magic me-1"></i>1-Click Admin Login (Demo Mode)
+          </button>
+        </form>
+        <div class="row g-2">
+          <div class="col-6">
+            <a href="{{ url_for('demo.index') }}" class="btn btn-sm btn-outline-light w-100 py-2" style="border-radius:8px;font-size:.8rem;">
+              <i class="bi bi-sliders me-1"></i>Live Predictor
+            </a>
+          </div>
+          <div class="col-6">
+            <a href="{{ url_for('student_portal.login') }}" class="btn btn-sm btn-outline-info w-100 py-2" style="border-radius:8px;font-size:.8rem;">
+              <i class="bi bi-mortarboard me-1"></i>Student Portal
+            </a>
+          </div>
+        </div>
+      </div>
+      {% endif %}
     </div>
-    <div class="text-center mt-3" style="color:#334155;font-size:.78rem">
-      Default credentials: <span style="color:#818cf8">admin / Admin@1234</span>
+
+    <div class="text-center mt-3" style="color:#64748b;font-size:.78rem">
+      Default Admin Credentials: <span style="color:#a5b4fc;font-weight:600">admin / Admin@1234</span>
     </div>
   </div>
 </div>

@@ -16,7 +16,6 @@ from app.models.user import Admin
 auth_bp = Blueprint("auth", __name__)
 
 
-@auth_bp.route("/", methods=["GET"])
 @auth_bp.route("/login", methods=["GET", "POST"])
 def login():
     """Admin login page."""
