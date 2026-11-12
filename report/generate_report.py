@@ -3,6 +3,7 @@ from pathlib import Path
 from docx import Document
 from docx.shared import Inches, Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.style import WD_STYLE_TYPE
 from docx.enum.section import WD_SECTION
 from docx.enum.table import WD_TABLE_ALIGNMENT, WD_CELL_VERTICAL_ALIGNMENT
 from docx.oxml import OxmlElement
@@ -139,27 +140,28 @@ t=doc.add_table(rows=2,cols=3); t.alignment=WD_TABLE_ALIGNMENT.CENTER; t.style='
 for c,v in zip(t.rows[0].cells,['Project Guide','Head of Department','Principal']): c.text='\n\n\n'+v
 for c,v in zip(t.rows[1].cells,['Name / Signature','Name / Signature','Name / Signature']): c.text=v
 q=doc.add_paragraph('External Examiner: ______________________________     Date: ____________________'); q.paragraph_format.space_before=Pt(12)
-doc.add_page_break(); doc.add_heading('DECLARATION',0)
+declaration_heading=doc.add_heading('DECLARATION',0); declaration_heading.paragraph_format.page_break_before=True
 doc.add_paragraph('I/We declare that the project report entitled “Student Pass/Fail Prediction System using Machine Learning (EduPredict)” is prepared for MCA-521: Research Project. The work and its sources are represented honestly; material drawn from other sources is acknowledged in the references. The project’s demo dataset, evaluation results and limitations are described as implemented and are not presented as institutional student outcomes. This report has not been submitted elsewhere for an academic award.')
 doc.add_paragraph('Student Name(s): ____________________________________________\nSignature(s): ______________________________     Date: ____________________\nPlace: Dhule')
-doc.add_page_break(); doc.add_heading('ACKNOWLEDGEMENT',0)
+ack_heading=doc.add_heading('ACKNOWLEDGEMENT',0); ack_heading.paragraph_format.page_break_before=True
 doc.add_paragraph('I/We express sincere gratitude to the project guide for academic guidance, feedback and encouragement throughout this research project. We thank the Head of the Department and the faculty members of the Department of Computer Science, Late Karmaveer Dr. P. R. Ghogrey Science College, Dhule, for their support and access to an academic environment. We also acknowledge the authors and maintainers of the research papers, open-source libraries and technical documentation cited in this report. Any student names, guide names and dates on the certificate pages are intentionally left for the candidate(s) and college to complete and verify.')
 doc.add_paragraph('Student Name(s): ______________________________\nSignature(s): _________________________________')
-doc.add_page_break(); doc.add_heading('Abstract',0)
+abstract_heading=doc.add_heading('Abstract',0); abstract_heading.paragraph_format.page_break_before=True
 doc.add_paragraph("This report presents EduPredict, a working web-based student pass/fail prediction system developed as an MCA Semester III (MCA-521) research project. The application combines student academic records, a supervised machine-learning pipeline, persistent prediction logs, administrator analytics and a student self-service portal. Four classifiers are compared on a stratified held-out evaluation; Logistic Regression is selected according to ROC-AUC. A Flask-based interface provides real-time prediction, feature cues and academic recommendations. The system runs in a self-contained SQLite demonstration mode with seeded sample profiles and can be configured for MySQL. Evaluation on the supplied 2,000-record dataset reports 83.50% Logistic Regression accuracy and 0.9082 ROC-AUC. These results are dataset-specific and the prediction is intended only as an early-support signal, not a grading decision. The report documents requirements, methodology, architecture, design, implementation, testing, results, limitations and references.")
 doc.add_paragraph('Keywords: educational data mining, student performance, classification, Flask, scikit-learn, early warning, decision support.')
-doc.add_page_break(); doc.add_heading('Table of Contents',0)
+toc_heading=doc.add_heading('Table of Contents',0); toc_heading.paragraph_format.page_break_before=True
+toc_style=doc.styles.add_style('TOC Compact', WD_STYLE_TYPE.PARAGRAPH)
+toc_style.font.name='Times New Roman'; toc_style._element.rPr.rFonts.set(qn('w:eastAsia'),'Times New Roman'); toc_style.font.size=Pt(9.5)
+toc_style.paragraph_format.line_spacing=1.0; toc_style.paragraph_format.space_after=Pt(1)
 for title in ['Certificate','Declaration','Acknowledgement','Abstract']:
-    doc.add_paragraph(title,style='Heading 2')
+    pp=doc.add_paragraph(title,style='TOC Compact'); pp.runs[0].bold=True
 for i,(chapter,sections) in enumerate(chapters,1):
-    doc.add_paragraph(chapter,style='Heading 2')
-    for title,_ in sections: doc.add_paragraph(title,style='Normal')
-
-doc.add_page_break()
+    pp=doc.add_paragraph(chapter,style='TOC Compact'); pp.runs[0].bold=True
+    for title,_ in sections: doc.add_paragraph('    '+title,style='TOC Compact')
 image_map={'Flowchart':'prediction_flow.png','System Architecture':'system_architecture.png','Database Design':'data_model.png','System Design Diagrams':'data_model.png','Output Screenshots':'demo_output_screenshot.png','Results and Observations':'model_metrics.png'}
 for ci,(chapter,sections) in enumerate(chapters):
-    if ci: doc.add_page_break()
-    doc.add_heading(chapter,1)
+    chapter_heading=doc.add_heading(chapter,1)
+    chapter_heading.paragraph_format.page_break_before=True
     for title,body in sections:
         doc.add_heading(title,2)
         for para in body.split('\n'):
@@ -185,8 +187,10 @@ def footer_pdf(canvas,doc_):
     canvas.saveState(); canvas.setFont('Times-Roman',9); canvas.drawCentredString(A4[0]/2,0.48*inch,f'MCA-521 · EduPredict Project Report  |  Page {doc_.page}'); canvas.restoreState()
 story=[]
 story += [Spacer(1,.35*inch),Paragraph('KAVAYITRI BAHINABAI CHAUDHARI NORTH MAHARASHTRA UNIVERSITY, JALGAON',ParagraphStyle('Uni',parent=center,fontName='Times-Bold',fontSize=12,leading=15)),Paragraph('FACULTY OF SCIENCE AND TECHNOLOGY',ParagraphStyle('Fac',parent=center,fontName='Times-Bold',fontSize=13,leading=16)),Spacer(1,8),Paragraph('S.S.V.P. SANSTHA’S<br/><b>LATE KARMAVEER DR. P. R. GHOGREY SCIENCE COLLEGE, DHULE</b><br/>DEPARTMENT OF COMPUTER SCIENCE',center),Spacer(1,7),PDFImage(str(AS/'college_logo.jpg'),width=1.65*inch,height=1.06*inch),Spacer(1,8),Paragraph('PROJECT REPORT',ParagraphStyle('Cover',parent=center,fontName='Times-Bold',fontSize=22,leading=28)),Spacer(1,10),Paragraph('STUDENT PASS/FAIL PREDICTION SYSTEM<br/>USING MACHINE LEARNING',ParagraphStyle('CoverTitle',parent=center,fontName='Times-Bold',fontSize=20,leading=27)),Spacer(1,8),Paragraph('EduPredict',ParagraphStyle('CoverBrand',parent=center,fontName='Times-Bold',fontSize=21)),Spacer(1,8),Paragraph('Submitted in partial fulfilment of the requirements for<br/><b>Master of Computer Applications (MCA)</b><br/><b>Semester III · Course Code MCA-521 – Research Project</b><br/>W.E.F. 2024–25 · Total Marks 100 (CIE 40 + SEE 60)',center),Spacer(1,16),Paragraph('Project Guide: ______________________________<br/>Student Name(s): ______________________________<br/>Academic Year: ______________________________',center),PageBreak(),Paragraph('CERTIFICATE',h1),Paragraph('S.S.V.P. SANSTHA’S<br/><b>LATE KARMAVEER DR. P. R. GHOGREY SCIENCE COLLEGE, DHULE</b><br/>DEPARTMENT OF COMPUTER SCIENCE',center),Spacer(1,6),PDFImage(str(AS/'college_logo.jpg'),width=1.1*inch,height=.71*inch),Spacer(1,8),Paragraph('This is to certify that the MCA Semester III research project entitled “Student Pass/Fail Prediction System using Machine Learning (EduPredict)” has been carried out by the undersigned student(s) under the guidance of the project guide, in partial fulfilment of the requirements for MCA-521: Research Project of the Master of Computer Applications programme, Faculty of Science and Technology, Kavayitri Bahinabai Chaudhari North Maharashtra University, Jalgaon, during the academic year __________. To the best of our knowledge, this work has not previously been submitted for another degree or award.',body_style),Spacer(1,18),Paragraph('Date: ____________________     Place: Dhule',body_style),Spacer(1,36),Table([['Project Guide','Head of Department','Principal'],['Name / Signature','Name / Signature','Name / Signature']],colWidths=[2*inch]*3,rowHeights=[.45*inch,.6*inch]),Spacer(1,16),Paragraph('External Examiner: ______________________________     Date: ____________________',body_style),PageBreak(),Paragraph('DECLARATION',h1),Paragraph('I/We declare that the project report entitled “Student Pass/Fail Prediction System using Machine Learning (EduPredict)” is prepared for MCA-521: Research Project. The work and its sources are represented honestly; material drawn from other sources is acknowledged in the references. The project’s demo dataset, evaluation results and limitations are described as implemented and are not presented as institutional student outcomes. This report has not been submitted elsewhere for an academic award.<br/><br/>Student Name(s): ____________________________________________<br/><br/>Signature(s): ______________________________     Date: ____________________<br/>Place: Dhule',body_style),PageBreak(),Paragraph('ACKNOWLEDGEMENT',h1),Paragraph('I/We express sincere gratitude to the project guide for academic guidance, feedback and encouragement throughout this research project. We thank the Head of the Department and the faculty members of the Department of Computer Science, Late Karmaveer Dr. P. R. Ghogrey Science College, Dhule, for their support and access to an academic environment. We also acknowledge the authors and maintainers of the research papers, open-source libraries and technical documentation cited in this report. Any student names, guide names and dates on the certificate pages are intentionally left for the candidate(s) and college to complete and verify.<br/><br/><br/>Student Name(s): ______________________________<br/><br/>Signature(s): _________________________________',body_style),PageBreak(),Paragraph('Abstract',h1),Paragraph(next(p.text for p in doc.paragraphs if p.text.startswith('This report presents EduPredict')),body_style),Paragraph('Keywords: educational data mining, student performance, classification, Flask, scikit-learn, early warning, decision support.',body_style),PageBreak(),Paragraph('Table of Contents',h1),Paragraph('Certificate<br/>Declaration<br/>Acknowledgement<br/>Abstract',body_style)]
+toc_ch=ParagraphStyle('TOCChapter',parent=body_style,fontName='Times-Bold',fontSize=10,leading=12,spaceBefore=2,spaceAfter=1)
+toc_sub=ParagraphStyle('TOCSub',parent=body_style,fontName='Times-Roman',fontSize=9,leading=10,spaceAfter=0,leftIndent=12)
 for ch,secs in chapters:
-    story.append(Paragraph(ch,h2)); story += [Paragraph(t,body_style) for t,_ in secs]
+    story.append(Paragraph(ch,toc_ch)); story += [Paragraph(t,toc_sub) for t,_ in secs]
 story.append(PageBreak())
 for ci,(ch,secs) in enumerate(chapters):
     if ci: story.append(PageBreak())
